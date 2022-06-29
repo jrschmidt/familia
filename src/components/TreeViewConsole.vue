@@ -3,10 +3,9 @@
     <h6>TreeViewConsole component</h6>
   </div>
 </template>
-
-<script setup>
 // <TreeViewWindow/>
 
+<script setup>
 
 // import TreeViewWindow from './TreeViewWindow.vue'
 
