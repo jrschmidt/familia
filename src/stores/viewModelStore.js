@@ -1,3 +1,9 @@
 import { defineStore } from 'pinia'
 
-export const useViewModelStore = defineStore('viewModel', {})
+export const useViewModelStore = defineStore('viewModel', {
+  state: () => {
+    return {
+      testLabel: "test label"
+    }
+  }
+})

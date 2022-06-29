@@ -6,6 +6,9 @@
 // <TreeViewWindow/>
 
 <script setup>
+import { useViewModelStore } from '@/stores/viewModelStore'
+
+const viewModelStore = useViewModelStore()
 
 // import TreeViewWindow from './TreeViewWindow.vue'
 
