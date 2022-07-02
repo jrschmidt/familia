@@ -5,7 +5,14 @@ export const useViewModelStore = defineStore('viewModel', {
     return {
       storeStatus: 'uninitialized',
       rootPersonId: null,
+      generations: 0,
       peoplePairs: []
+    }
+  },
+
+  actions: {
+    initialize () {
+      this.storeStatus = 'initialized'
     }
   }
 })
