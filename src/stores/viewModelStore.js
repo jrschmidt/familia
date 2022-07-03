@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import * as constants from '../view-model-constants'
 
 export const useViewModelStore = defineStore('viewModel', {
   state: () => {
@@ -11,8 +12,10 @@ export const useViewModelStore = defineStore('viewModel', {
   },
 
   actions: {
-    initialize () {
+    initialize (familyTreeData) {
       this.storeStatus = 'initialized'
+      this.generations = constants.viewModelConfig.generations
+      this.rootPersonId = familyTreeData.rootPerson
     }
   }
 })

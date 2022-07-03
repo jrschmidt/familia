@@ -60,6 +60,10 @@
 // necessary changes when the display is shifted.
 
 
+export const viewModelConfig = {
+  generations: 5
+}
+
 export const staticPairLabels = [
   'gen0root',
   'gen1pair0',

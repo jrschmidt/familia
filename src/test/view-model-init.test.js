@@ -22,5 +22,7 @@ describe('view model initialization', () => {
     viewModel.initialize(familyTreeData)
 
     expect(viewModel.storeStatus).toEqual('initialized')
+    expect(viewModel.generations).toEqual(5)
+    expect(viewModel.rootPersonId).toEqual('p0001')
   })
 })
