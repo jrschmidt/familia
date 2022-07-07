@@ -4,42 +4,22 @@ import { setActivePinia, createPinia } from 'pinia'
 import { useViewModelStore } from '../stores/viewModelStore'
 
 import { pairInitConstants, viewModelConfig as configData } from '../view-model-constants'
+import { familyTreeData } from '../data/family-tree-data.js'
 
-describe('view model initialization before receiving data ("pre-initialization")', () => {
-  beforeEach( () => {
-    setActivePinia(createPinia())
-  })
+describe('correctly populates people pair data in initial positions', () => {
 
-  test('the store contains empty values before being initialized', () => {
+  test('correctly populates people pair data in initial positions', () => {
     const viewModel = useViewModelStore()
 
-    expect(viewModel.storeStatus).toEqual('uninitialized')
-    expect(viewModel.rootPersonId).toEqual(null)
-    expect(viewModel.generations).toEqual(0)
-    expect(viewModel.peoplePairs).toEqual([])
-  })
+    populateViewModel(viewModel, familyTreeData)
 
-  test('the store initializes with correct config values', () => {
-    const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants)
-
-    expect(viewModel.storeStatus).toEqual('initialized')
-    expect(viewModel.generations).toEqual(5)
-  })
-
-  test('correctly initializes people pair data for view model', () => {
-    const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants)
-
-    expect(viewModel.peoplePairs.length).toEqual(40)
-
-    // 'Static' pair objects (count: 16)
+    expect(viewModel.peoplePairs.length).toBe(40)
 
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen0root',
-        classes: ['gen0root', 'static', 'singleton'],
-        people: []
+        classes: ['gen0root', 'static', 'singleton',],
+        people: ['p0001']
       }
     )
 
@@ -47,7 +27,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen1pair0',
         classes: ['gen1pair0', 'static', 'normal'],
-        people: []
+        people: ['p0002', 'p0017']
       }
     )
 
@@ -55,7 +35,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen2pair0',
         classes: ['gen2pair0', 'static', 'normal'],
-        people: []
+        people: ['p0003', 'p0004']
       }
     )
 
@@ -63,7 +43,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen2pair1',
         classes: ['gen2pair1', 'static', 'normal'],
-        people: []
+        people: ['p0018', 'p0019']
       }
     )
 
@@ -71,7 +51,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen3pair0',
         classes: ['gen3pair0', 'static', 'normal'],
-        people: []
+        people: ['p0005', 'p0006']
       }
     )
 
@@ -79,7 +59,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen3pair1',
         classes: ['gen3pair1', 'static', 'normal'],
-        people: []
+        people: ['p0007', 'p0008']
       }
     )
 
@@ -87,7 +67,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen3pair2',
         classes: ['gen3pair2', 'static', 'normal'],
-        people: []
+        people: ['p0020', 'p0021']
       }
     )
 
@@ -95,7 +75,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen3pair3',
         classes: ['gen3pair3', 'static', 'normal'],
-        people: []
+        people: ['p0022', 'p0023']
       }
     )
 
@@ -103,7 +83,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen4pair0',
         classes: ['gen4pair0', 'static', 'compressed'],
-        people: []
+        people: ['p0009', 'p0010']
       }
     )
 
@@ -111,7 +91,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen4pair1',
         classes: ['gen4pair1', 'static', 'compressed'],
-        people: []
+        people: ['p0011', 'p0012']
       }
     )
 
@@ -119,7 +99,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen4pair2',
         classes: ['gen4pair2', 'static', 'compressed'],
-        people: []
+        people: ['p0013', 'p0014']
       }
     )
 
@@ -127,7 +107,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen4pair3',
         classes: ['gen4pair3', 'static', 'compressed'],
-        people: []
+        people: ['p0015', 'p0016']
       }
     )
 
@@ -135,8 +115,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen4pair4',
         classes: ['gen4pair4', 'static', 'compressed'],
-        people: [
-        ]
+        people: ['p0024', 'p0025']
       }
     )
 
@@ -144,8 +123,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen4pair5',
         classes: ['gen4pair5', 'static', 'compressed'],
-        people: [
-        ]
+        people: ['p0026', 'p0027']
       }
     )
 
@@ -153,7 +131,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen4pair6',
         classes: ['gen4pair6', 'static', 'compressed'],
-        people: []
+        people: ['p0028', 'p0029']
       }
     )
 
@@ -161,11 +139,9 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen4pair7',
         classes: ['gen4pair7', 'static', 'compressed'],
-        people: []
+        people: ['p0030', 'p0031']
       }
     )
-
-    // 'Fixed ghost' pair objects (count: 16)
 
     expect(viewModel.peoplePairs).toContainEqual(
       {
@@ -294,8 +270,6 @@ describe('view model initialization before receiving data ("pre-initialization")
         people: []
       }
     )
-
-    // 'Outside ghost' pair objects (count: 8)
 
     expect(viewModel.peoplePairs).toContainEqual(
       {

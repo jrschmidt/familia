@@ -11,11 +11,19 @@ export const useViewModelStore = defineStore('viewModel', {
     }
   },
 
+  getters: {},
+
   actions: {
-    initialize (familyTreeData) {
+    initialize (configData, pairInitConstants) {
       this.storeStatus = 'initialized'
-      this.generations = constants.viewModelConfig.generations
-      this.rootPersonId = familyTreeData.rootPerson
+      this.generations = configData.generations
+      this.peoplePairs = pairInitConstants.map( (item) => {
+        let pairData = {}
+        pairData.label = item[0]
+        pairData.classes = item[1]
+        pairData.people = []
+        return pairData
+      })
     }
   }
 })
