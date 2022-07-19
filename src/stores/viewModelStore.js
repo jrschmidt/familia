@@ -7,7 +7,8 @@ export const useViewModelStore = defineStore('viewModel', {
       storeStatus: 'uninitialized',
       rootPersonId: null,
       generations: 0,
-      peoplePairs: []
+      peoplePairs: [],
+      rows: null
     }
   },
 
@@ -24,6 +25,7 @@ export const useViewModelStore = defineStore('viewModel', {
         pairData.people = []
         return pairData
       })
+      this.rows = Array(this.generations).fill( [] )
     }
   }
 })
