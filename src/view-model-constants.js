@@ -107,265 +107,269 @@ export const pairInitConstants = [
     ['ghost7', ['ghost7', 'ghost', 'no-show'] ]
 ]
 
-export const staticPairLabels = [
-  'gen0root',
-  'gen1pair0',
-  'gen2pair0',
-  'gen2pair1',
-  'gen3pair0',
-  'gen3pair1',
-  'gen3pair2',
-  'gen3pair3',
-  'gen4pair0',
-  'gen4pair1',
-  'gen4pair2',
-  'gen4pair3',
-  'gen4pair4',
-  'gen4pair5',
-  'gen4pair6',
-  'gen4pair7'
-]
+// WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
+// WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
+// WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
 
-export const fixedGhostPairLabels = [
-  'gen0rootghost',
-  'gen1pair0ghost',
-  'gen2pair0ghost',
-  'gen2pair1ghost',
-  'gen3pair0ghost',
-  'gen3pair1ghost',
-  'gen3pair2ghost',
-  'gen3pair3ghost',
-  'gen4pair0ghost',
-  'gen4pair1ghost',
-  'gen4pair2ghost',
-  'gen4pair3ghost',
-  'gen4pair4ghost',
-  'gen4pair5ghost',
-  'gen4pair6ghost',
-  'gen4pair7ghost'
-]
+// export const staticPairLabels = [
+//   'gen0root',
+//   'gen1pair0',
+//   'gen2pair0',
+//   'gen2pair1',
+//   'gen3pair0',
+//   'gen3pair1',
+//   'gen3pair2',
+//   'gen3pair3',
+//   'gen4pair0',
+//   'gen4pair1',
+//   'gen4pair2',
+//   'gen4pair3',
+//   'gen4pair4',
+//   'gen4pair5',
+//   'gen4pair6',
+//   'gen4pair7'
+// ]
 
-export const outsideGhostPairLabels = [
-  'ghost0',
-  'ghost1',
-  'ghost2',
-  'ghost3',
-  'ghost4',
-  'ghost5',
-  'ghost6',
-  'ghost7'
-]
+// export const fixedGhostPairLabels = [
+//   'gen0rootghost',
+//   'gen1pair0ghost',
+//   'gen2pair0ghost',
+//   'gen2pair1ghost',
+//   'gen3pair0ghost',
+//   'gen3pair1ghost',
+//   'gen3pair2ghost',
+//   'gen3pair3ghost',
+//   'gen4pair0ghost',
+//   'gen4pair1ghost',
+//   'gen4pair2ghost',
+//   'gen4pair3ghost',
+//   'gen4pair4ghost',
+//   'gen4pair5ghost',
+//   'gen4pair6ghost',
+//   'gen4pair7ghost'
+// ]
 
-export const pairLabels = staticPairLabels
-  .concat(fixedGhostPairLabels)
-  .concat(outsideGhostPairLabels)
+// export const outsideGhostPairLabels = [
+//   'ghost0',
+//   'ghost1',
+//   'ghost2',
+//   'ghost3',
+//   'ghost4',
+//   'ghost5',
+//   'ghost6',
+//   'ghost7'
+// ]
 
-export const pairComponentShapes = {
-  gen0root: 'singleton',
-  gen1pair0: 'normal',
-  gen2pair0: 'normal',
-  gen2pair1: 'normal',
-  gen3pair0: 'normal',
-  gen3pair1: 'normal',
-  gen3pair2: 'normal',
-  gen3pair3: 'normal',
-  gen4pair0: 'compressed',
-  gen4pair1: 'compressed',
-  gen4pair2: 'compressed',
-  gen4pair3: 'compressed',
-  gen4pair4: 'compressed',
-  gen4pair5: 'compressed',
-  gen4pair6: 'compressed',
-  gen4pair7: 'compressed'
-}
+// export const pairLabels = staticPairLabels
+//   .concat(fixedGhostPairLabels)
+//   .concat(outsideGhostPairLabels)
 
-export const toFatherMoves = {
-  gen0root: 'fade',
-  gen1pair0: 'gen0root',
-  gen2pair0: 'gen1pair0',
-  gen2pair1: 'fade',
-  gen3pair0: 'gen2pair0',
-  gen3pair1: 'gen2pair1',
-  gen3pair2: 'fade',
-  gen3pair3: 'fade',
-  gen4pair0: 'gen3pair0',
-  gen4pair1: 'gen3pair1',
-  gen4pair2: 'gen3pair2',
-  gen4pair3: 'gen3pair3',
-  gen4pair4: 'fade',
-  gen4pair5: 'fade',
-  gen4pair6: 'fade',
-  gen4pair7: 'fade'
-}
+// export const pairComponentShapes = {
+//   gen0root: 'singleton',
+//   gen1pair0: 'normal',
+//   gen2pair0: 'normal',
+//   gen2pair1: 'normal',
+//   gen3pair0: 'normal',
+//   gen3pair1: 'normal',
+//   gen3pair2: 'normal',
+//   gen3pair3: 'normal',
+//   gen4pair0: 'compressed',
+//   gen4pair1: 'compressed',
+//   gen4pair2: 'compressed',
+//   gen4pair3: 'compressed',
+//   gen4pair4: 'compressed',
+//   gen4pair5: 'compressed',
+//   gen4pair6: 'compressed',
+//   gen4pair7: 'compressed'
+// }
 
-export const toMotherMoves = {
-  gen0root: 'fade',
-  gen1pair0: 'gen0root',
-  gen2pair0: 'fade',
-  gen2pair1: 'gen1pair0',
-  gen3pair0: 'fade',
-  gen3pair1: 'fade',
-  gen3pair2: 'gen2pair0',
-  gen3pair3: 'gen2pair1',
-  gen4pair0: 'fade',
-  gen4pair1: 'fade',
-  gen4pair2: 'fade',
-  gen4pair3: 'fade',
-  gen4pair4: 'gen3pair0',
-  gen4pair5: 'gen3pair1',
-  gen4pair6: 'gen3pair2',
-  gen4pair7: 'gen3pair3'
-}
+// export const toFatherMoves = {
+//   gen0root: 'fade',
+//   gen1pair0: 'gen0root',
+//   gen2pair0: 'gen1pair0',
+//   gen2pair1: 'fade',
+//   gen3pair0: 'gen2pair0',
+//   gen3pair1: 'gen2pair1',
+//   gen3pair2: 'fade',
+//   gen3pair3: 'fade',
+//   gen4pair0: 'gen3pair0',
+//   gen4pair1: 'gen3pair1',
+//   gen4pair2: 'gen3pair2',
+//   gen4pair3: 'gen3pair3',
+//   gen4pair4: 'fade',
+//   gen4pair5: 'fade',
+//   gen4pair6: 'fade',
+//   gen4pair7: 'fade'
+// }
 
-export const toChildMovesMaleRoot = {
-  gen0root: 'gen1pair0',
-  gen1pair0: 'gen2pair0',
-  gen2pair0: 'gen3pair0',
-  gen2pair1: 'gen3pair1',
-  gen3pair0: 'gen4pair0',
-  gen3pair1: 'gen4pair1',
-  gen3pair2: 'gen4pair2',
-  gen3pair3: 'gen4pair3',
-  gen4pair0: 'fade',
-  gen4pair1: 'fade',
-  gen4pair2: 'fade',
-  gen4pair3: 'fade',
-  gen4pair4: 'fade',
-  gen4pair5: 'fade',
-  gen4pair6: 'fade',
-  gen4pair7: 'fade'
-}
+// export const toMotherMoves = {
+//   gen0root: 'fade',
+//   gen1pair0: 'gen0root',
+//   gen2pair0: 'fade',
+//   gen2pair1: 'gen1pair0',
+//   gen3pair0: 'fade',
+//   gen3pair1: 'fade',
+//   gen3pair2: 'gen2pair0',
+//   gen3pair3: 'gen2pair1',
+//   gen4pair0: 'fade',
+//   gen4pair1: 'fade',
+//   gen4pair2: 'fade',
+//   gen4pair3: 'fade',
+//   gen4pair4: 'gen3pair0',
+//   gen4pair5: 'gen3pair1',
+//   gen4pair6: 'gen3pair2',
+//   gen4pair7: 'gen3pair3'
+// }
 
-export const toChildMovesFemaleRoot = {
-  gen0root: 'gen1pair0',
-  gen1pair0: 'gen2pair1',
-  gen2pair0: 'gen3pair2',
-  gen2pair1: 'gen3pair3',
-  gen3pair0: 'gen4pair4',
-  gen3pair1: 'gen4pair5',
-  gen3pair2: 'gen4pair6',
-  gen3pair3: 'gen4pair7',
-  gen4pair0: 'fade',
-  gen4pair1: 'fade',
-  gen4pair2: 'fade',
-  gen4pair3: 'fade',
-  gen4pair4: 'fade',
-  gen4pair5: 'fade',
-  gen4pair6: 'fade',
-  gen4pair7: 'fade'
-}
+// export const toChildMovesMaleRoot = {
+//   gen0root: 'gen1pair0',
+//   gen1pair0: 'gen2pair0',
+//   gen2pair0: 'gen3pair0',
+//   gen2pair1: 'gen3pair1',
+//   gen3pair0: 'gen4pair0',
+//   gen3pair1: 'gen4pair1',
+//   gen3pair2: 'gen4pair2',
+//   gen3pair3: 'gen4pair3',
+//   gen4pair0: 'fade',
+//   gen4pair1: 'fade',
+//   gen4pair2: 'fade',
+//   gen4pair3: 'fade',
+//   gen4pair4: 'fade',
+//   gen4pair5: 'fade',
+//   gen4pair6: 'fade',
+//   gen4pair7: 'fade'
+// }
 
-export const graphOfPairLinks = {
-  gen0root: {
-    parentsOfMaleLocation: 'gen1pair0',
-    parentsOfFemaleLocation: 'gen1pair0',
-    childLocation: null,
-    classes: ['gen0root',  'static',  'singleton']
-  },
+// export const toChildMovesFemaleRoot = {
+//   gen0root: 'gen1pair0',
+//   gen1pair0: 'gen2pair1',
+//   gen2pair0: 'gen3pair2',
+//   gen2pair1: 'gen3pair3',
+//   gen3pair0: 'gen4pair4',
+//   gen3pair1: 'gen4pair5',
+//   gen3pair2: 'gen4pair6',
+//   gen3pair3: 'gen4pair7',
+//   gen4pair0: 'fade',
+//   gen4pair1: 'fade',
+//   gen4pair2: 'fade',
+//   gen4pair3: 'fade',
+//   gen4pair4: 'fade',
+//   gen4pair5: 'fade',
+//   gen4pair6: 'fade',
+//   gen4pair7: 'fade'
+// }
 
-  gen1pair0: {
-    parentsOfMaleLocation: 'gen2pair0',
-    parentsOfFemaleLocation: 'gen2pair1',
-    childLocation: 'gen0root',
-    classes: ['gen1pair0',  'static',  'normal']
-  },
-
-  gen2pair0: {
-    parentsOfMaleLocation: 'gen3pair0',
-    parentsOfFemaleLocation: 'gen3pair1',
-    childLocation: 'gen1pair0',
-    classes: ['gen2pair0',  'static',  'normal']
-  },
-
-  gen2pair1: {
-    parentsOfMaleLocation: 'gen3pair2',
-    parentsOfFemaleLocation: 'gen3pair3',
-    childLocation: 'gen1pair0',
-    classes: ['gen2pair1',  'static',  'normal']
-  },
-
-  gen3pair0: {
-    parentsOfMaleLocation: 'gen4pair0',
-    parentsOfFemaleLocation: 'gen4pair1',
-    childLocation: 'gen2pair0',
-    classes: ['gen3pair0',  'static',  'normal']
-  },
-
-  gen3pair1: {
-    parentsOfMaleLocation: 'gen4pair2',
-    parentsOfFemaleLocation: 'gen4pair3',
-    childLocation: 'gen2pair0',
-    classes: ['gen3pair1',  'static',  'normal']
-  },
-
-  gen3pair2: {
-    parentsOfMaleLocation: 'gen4pair4',
-    parentsOfFemaleLocation: 'gen4pair5',
-    childLocation: 'gen2pair1',
-    classes: ['gen3pair2',  'static',  'normal']
-  },
-
-  gen3pair3: {
-    parentsOfMaleLocation: 'gen4pair6',
-    parentsOfFemaleLocation: 'gen4pair7',
-    childLocation: 'gen2pair1',
-    classes: ['gen3pair3',  'static',  'normal']
-  },
-
-  gen4pair0: {
-    parentsOfMaleLocation: null,
-    parentsOfFemaleLocation: null,
-    childLocation: 'gen3pair0',
-    classes: ['gen4pair0',  'static',  'compressed']
-  },
-
-  gen4pair1: {
-    parentsOfMaleLocation: null,
-    parentsOfFemaleLocation: null,
-    childLocation: 'gen3pair0',
-    classes: ['gen4pair1',  'static',  'compressed']
-  },
-
-  gen4pair2: {
-    parentsOfMaleLocation: null,
-    parentsOfFemaleLocation: null,
-    childLocation: 'gen3pair1',
-    classes: ['gen4pair2',  'static',  'compressed']
-  },
-
-  gen4pair3: {
-    parentsOfMaleLocation: null,
-    parentsOfFemaleLocation: null,
-    childLocation: 'gen3pair1',
-    classes: ['gen4pair3',  'static',  'compressed']
-  },
-
-  gen4pair4: {
-    parentsOfMaleLocation: null,
-    parentsOfFemaleLocation: null,
-    childLocation: 'gen3pair2',
-    classes: ['gen4pair4',  'static',  'compressed']
-  },
-
-  gen4pair5: {
-    parentsOfMaleLocation: null,
-    parentsOfFemaleLocation: null,
-    childLocation: 'gen3pair2',
-    classes: ['gen4pair5',  'static',  'compressed']
-  },
-
-  gen4pair6: {
-    parentsOfMaleLocation: null,
-    parentsOfFemaleLocation: null,
-    childLocation: 'gen3pair3',
-    classes: ['gen4pair6',  'static',  'compressed']
-  },
-
-  gen4pair7: {
-    parentsOfMaleLocation: null,
-    parentsOfFemaleLocation: null,
-    childLocation: 'gen3pair3',
-    classes: ['gen4pair7',  'static',  'compressed']
-  }
-
-}
+// export const graphOfPairLinks = {
+//   gen0root: {
+//     parentsOfMaleLocation: 'gen1pair0',
+//     parentsOfFemaleLocation: 'gen1pair0',
+//     childLocation: null,
+//     classes: ['gen0root',  'static',  'singleton']
+//   },
+//
+//   gen1pair0: {
+//     parentsOfMaleLocation: 'gen2pair0',
+//     parentsOfFemaleLocation: 'gen2pair1',
+//     childLocation: 'gen0root',
+//     classes: ['gen1pair0',  'static',  'normal']
+//   },
+//
+//   gen2pair0: {
+//     parentsOfMaleLocation: 'gen3pair0',
+//     parentsOfFemaleLocation: 'gen3pair1',
+//     childLocation: 'gen1pair0',
+//     classes: ['gen2pair0',  'static',  'normal']
+//   },
+//
+//   gen2pair1: {
+//     parentsOfMaleLocation: 'gen3pair2',
+//     parentsOfFemaleLocation: 'gen3pair3',
+//     childLocation: 'gen1pair0',
+//     classes: ['gen2pair1',  'static',  'normal']
+//   },
+//
+//   gen3pair0: {
+//     parentsOfMaleLocation: 'gen4pair0',
+//     parentsOfFemaleLocation: 'gen4pair1',
+//     childLocation: 'gen2pair0',
+//     classes: ['gen3pair0',  'static',  'normal']
+//   },
+//
+//   gen3pair1: {
+//     parentsOfMaleLocation: 'gen4pair2',
+//     parentsOfFemaleLocation: 'gen4pair3',
+//     childLocation: 'gen2pair0',
+//     classes: ['gen3pair1',  'static',  'normal']
+//   },
+//
+//   gen3pair2: {
+//     parentsOfMaleLocation: 'gen4pair4',
+//     parentsOfFemaleLocation: 'gen4pair5',
+//     childLocation: 'gen2pair1',
+//     classes: ['gen3pair2',  'static',  'normal']
+//   },
+//
+//   gen3pair3: {
+//     parentsOfMaleLocation: 'gen4pair6',
+//     parentsOfFemaleLocation: 'gen4pair7',
+//     childLocation: 'gen2pair1',
+//     classes: ['gen3pair3',  'static',  'normal']
+//   },
+//
+//   gen4pair0: {
+//     parentsOfMaleLocation: null,
+//     parentsOfFemaleLocation: null,
+//     childLocation: 'gen3pair0',
+//     classes: ['gen4pair0',  'static',  'compressed']
+//   },
+//
+//   gen4pair1: {
+//     parentsOfMaleLocation: null,
+//     parentsOfFemaleLocation: null,
+//     childLocation: 'gen3pair0',
+//     classes: ['gen4pair1',  'static',  'compressed']
+//   },
+//
+//   gen4pair2: {
+//     parentsOfMaleLocation: null,
+//     parentsOfFemaleLocation: null,
+//     childLocation: 'gen3pair1',
+//     classes: ['gen4pair2',  'static',  'compressed']
+//   },
+//
+//   gen4pair3: {
+//     parentsOfMaleLocation: null,
+//     parentsOfFemaleLocation: null,
+//     childLocation: 'gen3pair1',
+//     classes: ['gen4pair3',  'static',  'compressed']
+//   },
+//
+//   gen4pair4: {
+//     parentsOfMaleLocation: null,
+//     parentsOfFemaleLocation: null,
+//     childLocation: 'gen3pair2',
+//     classes: ['gen4pair4',  'static',  'compressed']
+//   },
+//
+//   gen4pair5: {
+//     parentsOfMaleLocation: null,
+//     parentsOfFemaleLocation: null,
+//     childLocation: 'gen3pair2',
+//     classes: ['gen4pair5',  'static',  'compressed']
+//   },
+//
+//   gen4pair6: {
+//     parentsOfMaleLocation: null,
+//     parentsOfFemaleLocation: null,
+//     childLocation: 'gen3pair3',
+//     classes: ['gen4pair6',  'static',  'compressed']
+//   },
+//
+//   gen4pair7: {
+//     parentsOfMaleLocation: null,
+//     parentsOfFemaleLocation: null,
+//     childLocation: 'gen3pair3',
+//     classes: ['gen4pair7',  'static',  'compressed']
+//   }
+//
+// }
