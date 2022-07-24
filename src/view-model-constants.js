@@ -107,6 +107,16 @@ export const pairInitConstants = [
     ['ghost7', ['ghost7', 'ghost', 'no-show'] ]
 ]
 
+export const pairLabelMap = [
+  ['gen0root'],
+  ['gen1pair0', 'gen1pair0'],
+  ['gen2pair0', 'gen2pair0', 'gen2pair1', 'gen2pair1'],
+  ['gen3pair0', 'gen3pair0', 'gen3pair1', 'gen3pair1', 'gen3pair2', 'gen3pair2', 'gen3pair3', 'gen3pair3'],
+  ['gen4pair0', 'gen4pair0', 'gen4pair1', 'gen4pair1', 'gen4pair2', 'gen4pair2', 'gen4pair3', 'gen4pair3',
+    'gen4pair4', 'gen4pair4', 'gen4pair5', 'gen4pair5', 'gen4pair6', 'gen4pair6', 'gen4pair7', 'gen4pair7']
+]
+
+
 // WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
 // WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
 // WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.

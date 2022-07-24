@@ -1,7 +1,9 @@
 import { defineStore } from 'pinia'
 import * as constants from '../view-model-constants'
+import { populateViewModel } from '../view-model-methods/populate-view-model'
 
 export const useViewModelStore = defineStore('viewModel', {
+
   state: () => {
     return {
       storeStatus: 'uninitialized',
@@ -15,7 +17,8 @@ export const useViewModelStore = defineStore('viewModel', {
   getters: {},
 
   actions: {
-    initialize (configData, pairInitConstants) {
+
+    initialize(configData, pairInitConstants) {
       this.storeStatus = 'initialized'
       this.generations = configData.generations
       this.peoplePairs = pairInitConstants.map( (item) => {
@@ -26,6 +29,11 @@ export const useViewModelStore = defineStore('viewModel', {
         return pairData
       })
       this.rows = Array(this.generations).fill( [] )
+    },
+
+    populate(familyTreeData) {
+      populateViewModel(this, familyTreeData)
     }
+
   }
 })

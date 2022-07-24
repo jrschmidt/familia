@@ -34,14 +34,19 @@ describe('populates people pair data', () => {
       ['gen4pair7', ['p0030', 'p0031'] ]
     ]
 
-    populateViewModel(viewModel, familyTreeData)
+    viewModel.populate(familyTreeData)
       testData.forEach( (item) => {
         expect(viewModel.peoplePairs.some( (pair) => {
           return ( pair.label === item[0] )
         })).toBeTruthy()
-        // expect(viewModel.peoplePairs.some( (pair) => {
-        //   return ( pair.people === item[1] )
-        // })).toBeTruthy()
+        expect(viewModel.peoplePairs.some( (pair) => {
+          return ( pair.people.includes(item[1][0]) )
+        })).toBeTruthy()
+        if (item[1].length > 2) {          
+          expect(viewModel.peoplePairs.some( (pair) => {
+            return ( pair.people.includes(item[1][1]) )
+          })).toBeTruthy()
+        }
       })
 
   })
