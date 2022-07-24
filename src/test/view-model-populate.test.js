@@ -3,9 +3,9 @@ import { test, beforeEach, describe, expect } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useViewModelStore } from '../stores/viewModelStore'
 
-import { populateViewModel } from '../view-model-methods/populate-view-model'
 import { pairInitConstants, viewModelConfig as configData } from '../view-model-constants'
 import { familyTreeData } from '../data/family-tree-data.js'
+import { populateViewModel } from '../view-model-methods/populate-view-model'
 
 describe('populates people pair data', () => {
 
@@ -42,7 +42,7 @@ describe('populates people pair data', () => {
         expect(viewModel.peoplePairs.some( (pair) => {
           return ( pair.people.includes(item[1][0]) )
         })).toBeTruthy()
-        if (item[1].length > 2) {          
+        if (item[1].length > 2) {
           expect(viewModel.peoplePairs.some( (pair) => {
             return ( pair.people.includes(item[1][1]) )
           })).toBeTruthy()

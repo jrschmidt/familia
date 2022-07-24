@@ -6,17 +6,15 @@
 // <TreeViewWindow/>
 
 <script setup>
-import { useViewModelStore } from '@/stores/viewModelStore'
+import { useViewModelStore } from '../stores/viewModelStore'
+import { pairInitConstants, viewModelConfig as configData } from '../view-model-constants'
+import { familyTreeData } from '../data/family-tree-data.js'
 
-const viewModelStore = useViewModelStore()
+const viewModel = useViewModelStore()
+viewModel.initialize(configData, pairInitConstants)
+
 
 // import TreeViewWindow from './TreeViewWindow.vue'
-
-// import { provide } from 'vue'
-
-// import { familyTreeData } from '../family-tree-data.js'
-
-// provide ('familyTreeData', familyTreeData)
 </script>
 
 <style lang="css">
