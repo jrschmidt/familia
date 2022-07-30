@@ -12,9 +12,10 @@
 <script setup>
 import PersonPair from './PersonPair.vue'
 
+import { ref } from 'vue'
 import { useViewModelStore } from '../stores/viewModelStore'
 const viewModel = useViewModelStore()
-const pairs = viewModel.peoplePairs
+const pairs = ref(viewModel.peoplePairs)
 
 
 // <PersonPair
