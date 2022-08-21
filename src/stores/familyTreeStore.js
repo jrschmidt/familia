@@ -7,7 +7,8 @@ export const useFamilyTreeStore = defineStore('familyTree', {
 
   state: () => {
     return {
-      rootPerson: null
+      rootPerson: null,
+      people: {}
     }
   },
 
