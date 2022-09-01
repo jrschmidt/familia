@@ -19,6 +19,7 @@ export const populateViewModel = (viewModel, familyTreeData) => {
       rows[gen + 1] = rows[gen + 1].concat([personInfo.fatherId, personInfo.motherId])
     })
   }
+  viewModel.rows = rows
 
   viewModel.peoplePairs.forEach( (pair) => {
     pair.people = []
