@@ -5,9 +5,9 @@
 
 import { pairLabelMap } from '../view-model-constants'
 
-export const populateViewModel = (viewModel, familyTreeData) => {
+export const populateViewModel = (viewModel, familyTree) => {
   viewModel.storeStatus = 'populated'
-  viewModel.rootPersonId = familyTreeData.rootPerson
+  viewModel.rootPersonId = familyTree.rootPerson
 
   // First the person id's are placed in rows for each generation.
   let rows = [...viewModel.rows]
@@ -15,7 +15,7 @@ export const populateViewModel = (viewModel, familyTreeData) => {
 
   for (let gen = 0; gen < viewModel.generations - 1; gen++) {
     rows[gen].forEach( (personId) => {
-      let personInfo = familyTreeData.people[personId]
+      let personInfo = familyTree.people[personId]
       rows[gen + 1] = rows[gen + 1].concat([personInfo.fatherId, personInfo.motherId])
     })
   }

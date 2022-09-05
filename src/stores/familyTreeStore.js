@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 
 // For now, directly import the sample family tree data from a file.
-// import { familyTreeData } from '../data/family-tree-data.js'
+import { familyTreeData } from '../data/family-tree-data.js'
 
 export const useFamilyTreeStore = defineStore('familyTree', {
 
@@ -16,9 +16,10 @@ export const useFamilyTreeStore = defineStore('familyTree', {
 
   actions: {
 
-    // loadTree() {
-    //   state = {...familyTreeData}
-    // },
+    loadTree() {
+      this.rootPerson = familyTreeData.rootPerson
+      this.people = familyTreeData.people
+    }
 
   }
 })

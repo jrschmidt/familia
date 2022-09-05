@@ -8,14 +8,15 @@
 <script setup>
 import TreeViewWindow from './TreeViewWindow.vue'
 import { useViewModelStore } from '../stores/viewModelStore'
+import { useFamilyTreeStore } from '../stores/familyTreeStore'
 import { pairInitConstants, viewModelConfig as configData } from '../view-model-constants'
 
-// For now, directly import the sample family tree data from a file.
-import { familyTreeData } from '../data/family-tree-data.js'
+const familyTree = useFamilyTreeStore()
+familyTree.loadTree()
 
 const viewModel = useViewModelStore()
 viewModel.initialize(configData, pairInitConstants)
-viewModel.populate(familyTreeData)
+viewModel.populate(familyTree)
 
 </script>
 
