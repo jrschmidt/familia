@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import * as constants from '../view-model-constants'
 import { populateViewModel } from '../view-model-methods/populate-view-model'
+import { shiftToFather } from '../view-model-methods/shift-to-father'
 
 export const useViewModelStore = defineStore('viewModel', {
 
@@ -33,6 +34,10 @@ export const useViewModelStore = defineStore('viewModel', {
 
     populate(familyTreeData) {
       populateViewModel(this, familyTreeData)
+    },
+
+    shiftToFather(familyTreeData) {
+      shiftToFather(this, familyTreeData)
     }
 
   }

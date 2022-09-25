@@ -116,29 +116,49 @@ export const pairLabelMap = [
     'gen4pair4', 'gen4pair4', 'gen4pair5', 'gen4pair5', 'gen4pair6', 'gen4pair6', 'gen4pair7', 'gen4pair7']
 ]
 
+export const labelPairMap = {
+  gen0root: [[0,0]],
+  gen1pair0: [[1,0], [1,1]],
+  gen2pair0: [[2,0], [2,1]],
+  gen2pair1: [[2,2], [2,3]],
+  gen3pair0: [[3,0], [3,1]],
+  gen3pair1: [[3,2], [3,3]],
+  gen3pair2: [[3,4], [3,5]],
+  gen3pair3: [[3,6], [3,7]],
+  gen4pair0: [[4,0], [4,1]],
+  gen4pair1: [[4,2], [4,3]],
+  gen4pair2: [[4,4], [4,5]],
+  gen4pair3: [[4,6], [4,7]],
+  gen4pair4: [[4,8], [4,9]],
+  gen4pair5: [[4,10], [4,11]],
+  gen4pair6: [[4,12], [4,13]],
+  gen4pair7: [[4,14], [4,15]]
+}
+
+export const staticPairLabels = [
+    'gen0root',
+    'gen1pair0',
+    'gen2pair0',
+    'gen2pair1',
+    'gen3pair0',
+    'gen3pair1',
+    'gen3pair2',
+    'gen3pair3',
+    'gen4pair0',
+    'gen4pair1',
+    'gen4pair2',
+    'gen4pair3',
+    'gen4pair4',
+    'gen4pair5',
+    'gen4pair6',
+    'gen4pair7'
+  ]
+
 
 // WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
 // WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
 // WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
 
-// export const staticPairLabels = [
-//   'gen0root',
-//   'gen1pair0',
-//   'gen2pair0',
-//   'gen2pair1',
-//   'gen3pair0',
-//   'gen3pair1',
-//   'gen3pair2',
-//   'gen3pair3',
-//   'gen4pair0',
-//   'gen4pair1',
-//   'gen4pair2',
-//   'gen4pair3',
-//   'gen4pair4',
-//   'gen4pair5',
-//   'gen4pair6',
-//   'gen4pair7'
-// ]
 
 // export const fixedGhostPairLabels = [
 //   'gen0rootghost',

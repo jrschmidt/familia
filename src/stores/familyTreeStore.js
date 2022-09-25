@@ -12,7 +12,11 @@ export const useFamilyTreeStore = defineStore('familyTree', {
     }
   },
 
-  getters: {},
+  getters: {
+    getFather: (state) => {
+      return (personId) => state.people[personId]
+    }
+  },
 
   actions: {
 
