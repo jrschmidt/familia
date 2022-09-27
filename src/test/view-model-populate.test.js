@@ -48,6 +48,25 @@ describe('correctly places people pair data', () => {
       ['gen4pair5', ['p0511', 'p0512'] ],
       ['gen4pair6', ['p0513', 'p0514'] ],
       ['gen4pair7', ['p0515', 'p0516'] ]
+    ],
+
+    shiftToMother: [
+      ['gen0root', ['p0017'] ],
+      ['gen1pair0', ['p0018', 'p0019'] ],
+      ['gen2pair0', ['p0020', 'p0021'] ],
+      ['gen2pair1', ['p0022', 'p0023'] ],
+      ['gen3pair0', ['p0024', 'p0025'] ],
+      ['gen3pair1', ['p0026', 'p0027'] ],
+      ['gen3pair2', ['p0028', 'p0029'] ],
+      ['gen3pair3', ['p0030', 'p0031'] ],
+      ['gen4pair0', ['p0517', 'p0518'] ],
+      ['gen4pair1', ['p0519', 'p0520'] ],
+      ['gen4pair2', ['p0521', 'p0522'] ],
+      ['gen4pair3', ['p0523', 'p0524'] ],
+      ['gen4pair4', ['p0525', 'p0526'] ],
+      ['gen4pair5', ['p0527', 'p0528'] ],
+      ['gen4pair6', ['p0529', 'p0530'] ],
+      ['gen4pair7', ['p0531', 'p0532'] ]
     ]
   }
 
@@ -82,5 +101,14 @@ describe('correctly places people pair data', () => {
     viewModel.populate(familyTreeData)
     viewModel.shiftToFather(familyTreeData)
     testPositions(viewModel, expectedData.shiftToFather)
+  })
+
+  test('correctly places people pair data after shiftToMother()', () => {
+    setActivePinia(createPinia())
+    const viewModel = useViewModelStore()
+    viewModel.initialize(configData, pairInitConstants)
+    viewModel.populate(familyTreeData)
+    viewModel.shiftToMother(familyTreeData)
+    testPositions(viewModel, expectedData.shiftToMother)
   })
 })
