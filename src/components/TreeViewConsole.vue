@@ -1,6 +1,8 @@
 <template>
   <div class="tree-view-console">
     <h6>TreeViewConsole component</h6>
+    <button v-on:click="shiftFather()">Shift to father</button>
+    <button v-on:click="shiftMother()">Shift to mother</button>
     <TreeViewWindow/>
   </div>
 </template>
@@ -18,6 +20,15 @@ const viewModel = useViewModelStore()
 viewModel.initialize(configData, pairInitConstants)
 viewModel.populate(familyTree)
 
+const shiftFather = () => {
+  console.log('Shift to father was clicked.')
+  viewModel.shiftToFather(familyTree)
+}
+
+const shiftMother = () => {
+  console.log('Shift to mother was clicked.')
+  viewModel.shiftToMother(familyTree)
+}
 </script>
 
 <style lang="css">
