@@ -33,7 +33,7 @@ describe('view model initialization before receiving data ("pre-initialization")
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants)
 
-    expect(viewModel.peoplePairs.length).toEqual(40)
+    expect(viewModel.peoplePairs.length).toEqual(32)
 
     // 'Static' pair objects (count: 16)
 
@@ -167,7 +167,7 @@ describe('view model initialization before receiving data ("pre-initialization")
       }
     )
 
-    // 'Fixed ghost' pair objects (count: 16)
+    // 'Ghost' pair objects (count: 16)
 
     expect(viewModel.peoplePairs).toContainEqual(
       {
@@ -293,72 +293,6 @@ describe('view model initialization before receiving data ("pre-initialization")
       {
         label: 'gen4pair7-ghost',
         classes: ['gen4pair7', 'ghost', 'no-show'],
-        people: []
-      }
-    )
-
-    // 'Floating ghost' pair objects (count: 8)
-
-    expect(viewModel.peoplePairs).toContainEqual(
-      {
-        label: 'ghost-float-0',
-        classes: ['ghost-float-0', 'ghost', 'no-show'],
-        people: []
-      }
-    )
-
-    expect(viewModel.peoplePairs).toContainEqual(
-      {
-        label: 'ghost-float-1',
-        classes: ['ghost-float-1', 'ghost', 'no-show'],
-        people: []
-      }
-    )
-
-    expect(viewModel.peoplePairs).toContainEqual(
-      {
-        label: 'ghost-float-2',
-        classes: ['ghost-float-2', 'ghost', 'no-show'],
-        people: []
-      }
-    )
-
-    expect(viewModel.peoplePairs).toContainEqual(
-      {
-        label: 'ghost-float-3',
-        classes: ['ghost-float-3', 'ghost', 'no-show'],
-        people: []
-      }
-    )
-
-    expect(viewModel.peoplePairs).toContainEqual(
-      {
-        label: 'ghost-float-4',
-        classes: ['ghost-float-4', 'ghost', 'no-show'],
-        people: []
-      }
-    )
-
-    expect(viewModel.peoplePairs).toContainEqual(
-      {
-        label: 'ghost-float-5',
-        classes: ['ghost-float-5', 'ghost', 'no-show'],
-        people: []
-      }
-    )
-
-    expect(viewModel.peoplePairs).toContainEqual(
-      {
-        label: 'ghost-float-6',
-        classes: ['ghost-float-6', 'ghost', 'no-show'],
-        people: []
-      }
-    )
-
-    expect(viewModel.peoplePairs).toContainEqual(
-      {
-        label: 'ghost-float-7',
-        classes: ['ghost-float-7', 'ghost', 'no-show'],
         people: []
       }
     )

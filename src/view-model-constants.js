@@ -96,16 +96,8 @@ export const pairInitConstants = [
     ['gen4pair4-ghost', ['gen4pair4', 'ghost', 'no-show'] ],
     ['gen4pair5-ghost', ['gen4pair5', 'ghost', 'no-show'] ],
     ['gen4pair6-ghost', ['gen4pair6', 'ghost', 'no-show'] ],
-    ['gen4pair7-ghost', ['gen4pair7', 'ghost', 'no-show'] ],
-    ['ghost-float-0', ['ghost-float-0', 'ghost', 'no-show'] ],
-    ['ghost-float-1', ['ghost-float-1', 'ghost', 'no-show'] ],
-    ['ghost-float-2', ['ghost-float-2', 'ghost', 'no-show'] ],
-    ['ghost-float-3', ['ghost-float-3', 'ghost', 'no-show'] ],
-    ['ghost-float-4', ['ghost-float-4', 'ghost', 'no-show'] ],
-    ['ghost-float-5', ['ghost-float-5', 'ghost', 'no-show'] ],
-    ['ghost-float-6', ['ghost-float-6', 'ghost', 'no-show'] ],
-    ['ghost-float-7', ['ghost-float-7', 'ghost', 'no-show'] ]
-]
+    ['gen4pair7-ghost', ['gen4pair7', 'ghost', 'no-show'] ]
+  ]
 
 export const pairLabelMap = [
   ['gen0root'],
