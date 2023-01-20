@@ -3,7 +3,6 @@
     <PersonPair
       v-for="(pair) in pairs"
       v-bind:key="pair.label"
-      v-bind:class="pair.classes"
       v-bind:pair="pair"
     />
   </div>

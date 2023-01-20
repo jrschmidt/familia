@@ -27,7 +27,7 @@ export const useViewModelStore = defineStore('viewModel', {
         let pairData = {}
         pairData.label = item[0]
         pairData.people = []
-        pairData.classes = {
+        pairData.classStatus = {
           location: item[1][0],
           pairtype: item[1][1],
           shape: item[1][2],

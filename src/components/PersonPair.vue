@@ -1,5 +1,8 @@
 <template>
-  <div class="person-pair">
+  <div
+    class="person-pair"
+    v-bind:class="[location, pairtype, shape, visibility]"
+  >
     <PersonTag
       class="pt-left"
       v-if="pair.people.length > 0"
@@ -17,9 +20,26 @@
 
 <script setup>
 import PersonTag from './PersonTag.vue'
+import { computed } from 'vue'
 
 const props = defineProps({
   pair: Object
+})
+
+const location = computed(() => {
+  return props.pair.classStatus.location
+})
+
+const pairtype = computed(() => {
+  return props.pair.classStatus.pairtype
+})
+
+const shape = computed(() => {
+  return props.pair.classStatus.shape
+})
+
+const visibility = computed(() => {
+  return props.pair.classStatus.visibility
 })
 </script>
 
