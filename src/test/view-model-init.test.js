@@ -40,7 +40,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen0root',
-        classes: ['gen0root', 'static', 'singleton'],
+        classes: {
+          location: 'gen0root',
+          pairtype: 'static',
+          shape: 'singleton',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -48,7 +53,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen1pair0',
-        classes: ['gen1pair0', 'static', 'normal'],
+        classes: {
+          location: 'gen1pair0',
+          pairtype: 'static',
+          shape: 'normal',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -56,7 +66,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen2pair0',
-        classes: ['gen2pair0', 'static', 'normal'],
+        classes: {
+          location: 'gen2pair0',
+          pairtype: 'static',
+          shape: 'normal',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -64,7 +79,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen2pair1',
-        classes: ['gen2pair1', 'static', 'normal'],
+        classes: {
+          location: 'gen2pair1',
+          pairtype: 'static',
+          shape: 'normal',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -72,7 +92,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen3pair0',
-        classes: ['gen3pair0', 'static', 'normal'],
+        classes: {
+          location: 'gen3pair0',
+          pairtype: 'static',
+          shape: 'normal',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -80,7 +105,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen3pair1',
-        classes: ['gen3pair1', 'static', 'normal'],
+        classes: {
+          location: 'gen3pair1',
+          pairtype: 'static',
+          shape: 'normal',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -88,7 +118,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen3pair2',
-        classes: ['gen3pair2', 'static', 'normal'],
+        classes: {
+          location: 'gen3pair2',
+          pairtype: 'static',
+          shape: 'normal',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -96,7 +131,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen3pair3',
-        classes: ['gen3pair3', 'static', 'normal'],
+        classes: {
+          location: 'gen3pair3',
+          pairtype: 'static',
+          shape: 'normal',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -104,7 +144,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair0',
-        classes: ['gen4pair0', 'static', 'compressed'],
+        classes: {
+          location: 'gen4pair0',
+          pairtype: 'static',
+          shape: 'compressed',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -112,7 +157,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair1',
-        classes: ['gen4pair1', 'static', 'compressed'],
+        classes: {
+          location: 'gen4pair1',
+          pairtype: 'static',
+          shape: 'compressed',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -120,7 +170,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair2',
-        classes: ['gen4pair2', 'static', 'compressed'],
+        classes: {
+          location: 'gen4pair2',
+          pairtype: 'static',
+          shape: 'compressed',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -128,7 +183,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair3',
-        classes: ['gen4pair3', 'static', 'compressed'],
+        classes: {
+          location: 'gen4pair3',
+          pairtype: 'static',
+          shape: 'compressed',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -136,7 +196,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair4',
-        classes: ['gen4pair4', 'static', 'compressed'],
+        classes: {
+          location: 'gen4pair4',
+          pairtype: 'static',
+          shape: 'compressed',
+          visibility: 'visible'
+        },
         people: [
         ]
       }
@@ -145,7 +210,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair5',
-        classes: ['gen4pair5', 'static', 'compressed'],
+        classes: {
+          location: 'gen4pair5',
+          pairtype: 'static',
+          shape: 'compressed',
+          visibility: 'visible'
+        },
         people: [
         ]
       }
@@ -154,7 +224,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair6',
-        classes: ['gen4pair6', 'static', 'compressed'],
+        classes: {
+          location: 'gen4pair6',
+          pairtype: 'static',
+          shape: 'compressed',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -162,7 +237,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair7',
-        classes: ['gen4pair7', 'static', 'compressed'],
+        classes: {
+          location: 'gen4pair7',
+          pairtype: 'static',
+          shape: 'compressed',
+          visibility: 'visible'
+        },
         people: []
       }
     )
@@ -172,7 +252,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen0root-ghost',
-        classes: ['gen0root', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen0root',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -180,7 +265,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen1pair0-ghost',
-        classes: ['gen1pair0', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen1pair0',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -188,7 +278,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen2pair0-ghost',
-        classes: ['gen2pair0', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen2pair0',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -196,7 +291,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen2pair1-ghost',
-        classes: ['gen2pair1', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen2pair1',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -204,7 +304,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen3pair0-ghost',
-        classes: ['gen3pair0', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen3pair0',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -212,7 +317,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen3pair1-ghost',
-        classes: ['gen3pair1', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen3pair1',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -220,7 +330,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen3pair2-ghost',
-        classes: ['gen3pair2', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen3pair2',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -228,7 +343,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen3pair3-ghost',
-        classes: ['gen3pair3', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen3pair3',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -236,7 +356,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair0-ghost',
-        classes: ['gen4pair0', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen4pair0',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -244,7 +369,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair1-ghost',
-        classes: ['gen4pair1', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen4pair1',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -252,7 +382,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair2-ghost',
-        classes: ['gen4pair2', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen4pair2',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -260,7 +395,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair3-ghost',
-        classes: ['gen4pair3', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen4pair3',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -268,7 +408,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair4-ghost',
-        classes: ['gen4pair4', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen4pair4',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -276,7 +421,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair5-ghost',
-        classes: ['gen4pair5', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen4pair5',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -284,7 +434,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair6-ghost',
-        classes: ['gen4pair6', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen4pair6',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )
@@ -292,7 +447,12 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.peoplePairs).toContainEqual(
       {
         label: 'gen4pair7-ghost',
-        classes: ['gen4pair7', 'ghost', 'no-show'],
+        classes: {
+          location: 'gen4pair7',
+          pairtype: 'ghost',
+          shape: '',
+          visibility: 'no-show'
+        },
         people: []
       }
     )

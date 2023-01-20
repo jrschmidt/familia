@@ -26,8 +26,13 @@ export const useViewModelStore = defineStore('viewModel', {
       this.peoplePairs = pairInitConstants.map( (item) => {
         let pairData = {}
         pairData.label = item[0]
-        pairData.classes = item[1]
         pairData.people = []
+        pairData.classes = {
+          location: item[1][0],
+          pairtype: item[1][1],
+          shape: item[1][2],
+          visibility: item[1][3]
+        }
         return pairData
       })
       this.rows = Array(this.generations).fill( [] )
@@ -43,6 +48,10 @@ export const useViewModelStore = defineStore('viewModel', {
 
     shiftToMother(familyTreeData) {
       shiftToMother(this, familyTreeData)
+    },
+
+    togglePairVisibility() {
+      this.peoplePairs.forEach( (pair) => {})
     }
 
   }
