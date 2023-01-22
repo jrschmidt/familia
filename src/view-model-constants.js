@@ -127,7 +127,7 @@ export const labelPairMap = {
   gen4pair7: [[4,14], [4,15]]
 }
 
-export const staticPairLabels = [
+export const pairLocationLabels = [
     'gen0root',
     'gen1pair0',
     'gen2pair0',
@@ -182,7 +182,7 @@ export const staticPairLabels = [
 //   'ghost7'
 // ]
 
-// export const pairLabels = staticPairLabels
+// export const pairLabels = pairLocationLabels
 //   .concat(fixedGhostPairLabels)
 //   .concat(outsideGhostPairLabels)
 
