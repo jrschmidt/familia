@@ -108,7 +108,7 @@ export const pairLabelMap = [
     'gen4pair4', 'gen4pair4', 'gen4pair5', 'gen4pair5', 'gen4pair6', 'gen4pair6', 'gen4pair7', 'gen4pair7']
 ]
 
-export const labelPairMap = {
+export const pairRowMappings = {
   gen0root: [[0,0]],
   gen1pair0: [[1,0], [1,1]],
   gen2pair0: [[2,0], [2,1]],
@@ -127,7 +127,7 @@ export const labelPairMap = {
   gen4pair7: [[4,14], [4,15]]
 }
 
-export const pairLocationLabels = [
+export const pairLocationsList = [
     'gen0root',
     'gen1pair0',
     'gen2pair0',
@@ -145,6 +145,103 @@ export const pairLocationLabels = [
     'gen4pair6',
     'gen4pair7'
   ]
+
+export const shiftPositions = {
+  toFather: {
+    gen0root: 'gen1pair0',
+    gen1pair0: 'gen2pair0',
+    gen2pair0: 'gen3pair0',
+    gen2pair1: 'gen3pair1',
+    gen3pair0: 'gen4pair0',
+    gen3pair1: 'gen4pair1',
+    gen3pair2: 'gen4pair2',
+    gen3pair3: 'gen4pair3',
+    gen4pair0: 'enter',
+    gen4pair1: 'enter',
+    gen4pair2: 'enter',
+    gen4pair3: 'enter',
+    gen4pair4: 'enter',
+    gen4pair5: 'enter',
+    gen4pair6: 'enter',
+    gen4pair7: 'enter'
+  },
+
+  toMother: {
+    gen0root: 'gen1pair1',
+    gen1pair0: 'gen2pair1',
+    gen2pair0: 'gen3pair2',
+    gen2pair1: 'gen3pair3',
+    gen3pair0: 'gen4pair4',
+    gen3pair1: 'gen4pair5',
+    gen3pair2: 'gen4pair6',
+    gen3pair3: 'gen4pair7',
+    gen4pair0: 'enter',
+    gen4pair1: 'enter',
+    gen4pair2: 'enter',
+    gen4pair3: 'enter',
+    gen4pair4: 'enter',
+    gen4pair5: 'enter',
+    gen4pair6: 'enter',
+    gen4pair7: 'enter'
+  },
+
+  toChildMaleRoot: {
+    gen0root: '',
+    gen1pair0: '',
+    gen2pair0: '',
+    gen2pair1: '',
+    gen3pair0: '',
+    gen3pair1: '',
+    gen3pair2: '',
+    gen3pair3: '',
+    gen4pair0: '',
+    gen4pair1: '',
+    gen4pair2: '',
+    gen4pair3: '',
+    gen4pair4: '',
+    gen4pair5: '',
+    gen4pair6: '',
+    gen4pair7: ''
+  },
+
+  toChildFemaleRoot: {
+    gen0root: '',
+    gen1pair0: '',
+    gen2pair0: '',
+    gen2pair1: '',
+    gen3pair0: '',
+    gen3pair1: '',
+    gen3pair2: '',
+    gen3pair3: '',
+    gen4pair0: '',
+    gen4pair1: '',
+    gen4pair2: '',
+    gen4pair3: '',
+    gen4pair4: '',
+    gen4pair5: '',
+    gen4pair6: '',
+    gen4pair7: ''
+  },
+}
+
+export const pairComponentShapes = {
+    gen0root: 'singleton',
+    gen1pair0: 'normal',
+    gen2pair0: 'normal',
+    gen2pair1: 'normal',
+    gen3pair0: 'normal',
+    gen3pair1: 'normal',
+    gen3pair2: 'normal',
+    gen3pair3: 'normal',
+    gen4pair0: 'compressed',
+    gen4pair1: 'compressed',
+    gen4pair2: 'compressed',
+    gen4pair3: 'compressed',
+    gen4pair4: 'compressed',
+    gen4pair5: 'compressed',
+    gen4pair6: 'compressed',
+    gen4pair7: 'compressed'
+  }
 
 
 // WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
@@ -171,39 +268,6 @@ export const pairLocationLabels = [
 //   'gen4pair7ghost'
 // ]
 
-// export const outsideGhostPairLabels = [
-//   'ghost0',
-//   'ghost1',
-//   'ghost2',
-//   'ghost3',
-//   'ghost4',
-//   'ghost5',
-//   'ghost6',
-//   'ghost7'
-// ]
-
-// export const pairLabels = pairLocationLabels
-//   .concat(fixedGhostPairLabels)
-//   .concat(outsideGhostPairLabels)
-
-// export const pairComponentShapes = {
-//   gen0root: 'singleton',
-//   gen1pair0: 'normal',
-//   gen2pair0: 'normal',
-//   gen2pair1: 'normal',
-//   gen3pair0: 'normal',
-//   gen3pair1: 'normal',
-//   gen3pair2: 'normal',
-//   gen3pair3: 'normal',
-//   gen4pair0: 'compressed',
-//   gen4pair1: 'compressed',
-//   gen4pair2: 'compressed',
-//   gen4pair3: 'compressed',
-//   gen4pair4: 'compressed',
-//   gen4pair5: 'compressed',
-//   gen4pair6: 'compressed',
-//   gen4pair7: 'compressed'
-// }
 
 // export const toFatherMoves = {
 //   gen0root: 'fade',

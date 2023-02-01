@@ -1,6 +1,6 @@
 // This method rearranges people in the peoplePair components when a 'shift to mother' change is triggered.
 
-import { labelPairMap, pairLocationLabels } from '../view-model-constants'
+import { pairRowMappings, pairLocationsList } from '../view-model-constants'
 
 export const shiftMotherPeople = (viewModel, familyTree) => {
   let generations = viewModel.generations
@@ -24,10 +24,10 @@ export const shiftMotherPeople = (viewModel, familyTree) => {
 
   viewModel.rows = rows
 
-  pairLocationLabels.forEach( (label) => {
+  pairLocationsList.forEach( (label) => {
     let people = []
     let pairObject = viewModel.peoplePairs.find( pair => pair.label === label)
-    labelPairMap[label].forEach( (indexSet) => {
+    pairRowMappings[label].forEach( (indexSet) => {
       people.push(rows[indexSet[0]][indexSet[1]])
     })
     pairObject.people = people

@@ -1,9 +1,8 @@
 // This method changes the view model to reflect changing the root person to the
 // father of the previous root person, and adding a new generation of ancestors.
 
-import { labelPairMap, pairLocationLabels } from '../view-model-constants'
 import { shiftFatherPeople } from '../view-model-methods/shift-father-people'
-import { shiftFatherPositions } from '../view-model-methods/shift-father-positions'
+import { shiftFatherClasses } from '../view-model-methods/shift-father-classes'
 
 export const shiftToFather = (viewModel, familyTree) => {
   viewModel.storeStatus = 'shifted'
@@ -13,5 +12,5 @@ export const shiftToFather = (viewModel, familyTree) => {
   viewModel.rootPersonId = newRoot
 
   shiftFatherPeople(viewModel, familyTree)
-  shiftFatherPositions(viewModel, familyTree)
+  shiftFatherClasses(viewModel, familyTree)
 }
