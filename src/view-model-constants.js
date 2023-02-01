@@ -167,7 +167,7 @@ export const shiftPositions = {
   },
 
   toMother: {
-    gen0root: 'gen1pair1',
+    gen0root: 'gen1pair0',
     gen1pair0: 'gen2pair1',
     gen2pair0: 'gen3pair2',
     gen2pair1: 'gen3pair3',

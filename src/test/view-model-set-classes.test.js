@@ -161,7 +161,7 @@ describe('correctly places people pair data', () => {
     testClasses(viewModel, expectedData.shiftToFather)
   })
 
-  test.skip('correctly resets people pair classes after shiftToMother()', () => {
+  test('correctly resets people pair classes after shiftToMother()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants)
