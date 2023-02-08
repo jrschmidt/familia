@@ -72,16 +72,13 @@ describe('correctly places people pair data', () => {
 
   const testPositions = (viewModel, expectedData) => {
     expectedData.forEach( (item) => {
-      expect(viewModel.peoplePairs.some( (pair) => {
-        return ( pair.label === item[0] )
-      })).toBeTruthy()
-      expect(viewModel.peoplePairs.some( (pair) => {
-        return ( pair.people[0] === item[1][0] )
-      })).toBeTruthy()
-      if (item[1].length > 1) {
-        expect(viewModel.peoplePairs.some( (pair) => {
-          return ( pair.people[1] === item[1][1] )
-        })).toBeTruthy()
+      let pair = viewModel.peoplePairs.find( (p) => {
+        return ( p.label === item[0] )
+      })
+      expect(pair).toBeTruthy()
+      expect(pair.people[0]).toEqual(item[1][0])
+      if (pair.people.length > 1) {
+        expect(pair.people[1]).toEqual(item[1][1])
       }
     })
   }
@@ -110,5 +107,15 @@ describe('correctly places people pair data', () => {
     viewModel.populate(familyTreeData)
     viewModel.shiftToMother(familyTreeData)
     testPositions(viewModel, expectedData.shiftToMother)
+  })
+
+  test('correctly places people pair data after shiftToChildMaleRoot()', () => {
+    setActivePinia(createPinia())
+    const viewModel = useViewModelStore()
+    viewModel.initialize(configData, pairInitConstants)
+    viewModel.populate(familyTreeData)
+    viewModel.shiftToFather(familyTreeData)
+    viewModel.shiftToChildMaleRoot(familyTreeData)
+    testPositions(viewModel, expectedData.initial)
   })
 })

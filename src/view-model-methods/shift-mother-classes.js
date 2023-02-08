@@ -1,3 +1,5 @@
+// This method changes classes in the peoplePair components when a 'shift to mother' change is triggered.
+
 import { pairLocationsList, shiftPositions, pairComponentShapes } from '../view-model-constants'
 
 export const shiftMotherClasses = (viewModel, familyTree) => {

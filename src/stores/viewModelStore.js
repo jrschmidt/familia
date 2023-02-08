@@ -3,6 +3,7 @@ import * as constants from '../view-model-constants'
 import { populateViewModel } from '../view-model-methods/populate-view-model'
 import { shiftToFather } from '../view-model-methods/shift-to-father'
 import { shiftToMother } from '../view-model-methods/shift-to-mother'
+import { shiftToChildMaleRoot } from '../view-model-methods/shift-to-child-male-root'
 
 export const useViewModelStore = defineStore('viewModel', {
 
@@ -38,16 +39,20 @@ export const useViewModelStore = defineStore('viewModel', {
       this.rows = Array(this.generations).fill( [] )
     },
 
-    populate(familyTreeData) {
-      populateViewModel(this, familyTreeData)
+    populate(familyTree) {
+      populateViewModel(this, familyTree)
     },
 
-    shiftToFather(familyTreeData) {
-      shiftToFather(this, familyTreeData)
+    shiftToFather(familyTree) {
+      shiftToFather(this, familyTree)
     },
 
-    shiftToMother(familyTreeData) {
-      shiftToMother(this, familyTreeData)
+    shiftToMother(familyTree) {
+      shiftToMother(this, familyTree)
+    },
+
+    shiftToChildMaleRoot(familyTree) {
+      shiftToChildMaleRoot(this, familyTree)
     },
 
     togglePairVisibility() {
