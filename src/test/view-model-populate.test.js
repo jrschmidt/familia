@@ -118,4 +118,14 @@ describe('correctly places people pair data', () => {
     viewModel.shiftToChildMaleRoot(familyTreeData)
     testPositions(viewModel, expectedData.initial)
   })
+
+  test('correctly places people pair data after shiftToChildFemaleRoot()', () => {
+    setActivePinia(createPinia())
+    const viewModel = useViewModelStore()
+    viewModel.initialize(configData, pairInitConstants)
+    viewModel.populate(familyTreeData)
+    viewModel.shiftToMother(familyTreeData)
+    viewModel.shiftToChildFemaleRoot(familyTreeData)
+    testPositions(viewModel, expectedData.initial)
+  })
 })

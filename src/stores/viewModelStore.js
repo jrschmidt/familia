@@ -4,6 +4,7 @@ import { populateViewModel } from '../view-model-methods/populate-view-model'
 import { shiftToFather } from '../view-model-methods/shift-to-father'
 import { shiftToMother } from '../view-model-methods/shift-to-mother'
 import { shiftToChildMaleRoot } from '../view-model-methods/shift-to-child-male-root'
+import { shiftToChildFemaleRoot } from '../view-model-methods/shift-to-child-female-root'
 
 export const useViewModelStore = defineStore('viewModel', {
 
@@ -53,6 +54,10 @@ export const useViewModelStore = defineStore('viewModel', {
 
     shiftToChildMaleRoot(familyTree) {
       shiftToChildMaleRoot(this, familyTree)
+    },
+
+    shiftToChildFemaleRoot(familyTree) {
+      shiftToChildFemaleRoot(this, familyTree)
     },
 
     togglePairVisibility() {
