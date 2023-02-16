@@ -7,17 +7,17 @@ export const shiftChildMaleRootClasses = (viewModel, familyTree) => {
 
   // Change classes on static pair objects to 'no-show'.
   pairLocationsList.forEach( (loc) => {
-    let pair = viewModel.peoplePairs.find( pp => pp.label === loc && pp.classStatus.pairtype === 'static' )
+    let pair = viewModel.peoplePairs.find( pp => pp.label === loc )
     pair.classStatus.visibility = 'no-show'
   })
 
   // Change classes on ghost objects to 'visible', add tag for 'from'
   // location, and change 'shape' tag where needed.
   pairLocationsList.forEach( (loc) => {
-    let pair = viewModel.peoplePairs.find( pp => pp.label === loc + '-ghost' && pp.classStatus.pairtype === 'ghost' )
+    let pair = viewModel.peoplePairs.find( pp => pp.label === loc + '-ghost' )
     pair.classStatus.visibility = 'visible'
     let targetLocation = pair.classStatus.location
-    pair.classStatus.location = shiftPositions.toFather[targetLocation]
+    pair.classStatus.location = shiftPositions.toMother[targetLocation]
     pair.classStatus.shape = pairComponentShapes[targetLocation]
   })
 }

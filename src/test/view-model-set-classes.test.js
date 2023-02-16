@@ -10,8 +10,7 @@ describe('correctly places people pair data', () => {
 
   const expectedData = {
     // Expected results for different actions on viewModelStore.
-    // ( before resetClasses() )
-
+    
     initial: [
       // static pairs:
       ['gen0root', ['gen0root', 'static', 'singleton', 'visible'] ],
@@ -30,7 +29,7 @@ describe('correctly places people pair data', () => {
       ['gen4pair5', ['gen4pair5', 'static', 'compressed', 'visible'] ],
       ['gen4pair6', ['gen4pair6', 'static', 'compressed', 'visible'] ],
       ['gen4pair7', ['gen4pair7', 'static', 'compressed', 'visible'] ],
-
+      
       // ghost pairs:
       ['gen0root-ghost', ['gen0root', 'ghost', '', 'no-show'] ],
       ['gen1pair0-ghost', ['gen1pair0', 'ghost', '', 'no-show'] ],
@@ -49,8 +48,10 @@ describe('correctly places people pair data', () => {
       ['gen4pair6-ghost', ['gen4pair6', 'ghost', '', 'no-show'] ],
       ['gen4pair7-ghost', ['gen4pair7', 'ghost', '', 'no-show'] ]
     ],
-
+    
     shiftToFather: [
+      // ( results before resetClasses() )
+      
       // static pairs:
       ['gen0root', ['gen0root', 'static', 'singleton', 'no-show'] ],
       ['gen1pair0', ['gen1pair0', 'static', 'normal', 'no-show'] ],
@@ -68,7 +69,7 @@ describe('correctly places people pair data', () => {
       ['gen4pair5', ['gen4pair5', 'static', 'compressed', 'no-show'] ],
       ['gen4pair6', ['gen4pair6', 'static', 'compressed', 'no-show'] ],
       ['gen4pair7', ['gen4pair7', 'static', 'compressed', 'no-show'] ],
-
+      
       // ghost pairs:
       ['gen0root-ghost', ['gen1pair0', 'ghost', 'singleton', 'visible'] ],
       ['gen1pair0-ghost', ['gen2pair0', 'ghost', 'normal', 'visible'] ],
@@ -87,8 +88,10 @@ describe('correctly places people pair data', () => {
       ['gen4pair6-ghost', ['enter', 'ghost', 'compressed', 'visible'] ],
       ['gen4pair7-ghost', ['enter', 'ghost', 'compressed', 'visible'] ]
     ],
-
+    
     shiftToMother: [
+      // ( results before resetClasses() )
+      
       // static pairs:
       ['gen0root', ['gen0root', 'static', 'singleton', 'no-show'] ],
       ['gen1pair0', ['gen1pair0', 'static', 'normal', 'no-show'] ],
@@ -106,7 +109,7 @@ describe('correctly places people pair data', () => {
       ['gen4pair5', ['gen4pair5', 'static', 'compressed', 'no-show'] ],
       ['gen4pair6', ['gen4pair6', 'static', 'compressed', 'no-show'] ],
       ['gen4pair7', ['gen4pair7', 'static', 'compressed', 'no-show'] ],
-
+      
       // ghost pairs:
       ['gen0root-ghost', ['gen1pair0', 'ghost', 'singleton', 'visible'] ],
       ['gen1pair0-ghost', ['gen2pair1', 'ghost', 'normal', 'visible'] ],
@@ -125,8 +128,10 @@ describe('correctly places people pair data', () => {
       ['gen4pair6-ghost', ['enter', 'ghost', 'compressed', 'visible'] ],
       ['gen4pair7-ghost', ['enter', 'ghost', 'compressed', 'visible'] ]
     ],
-
-    shiftBackToRootMale: [
+    
+    shiftBackToRoot: [
+      // ( results after resetClasses() )
+      
       // static pairs:
       ['gen0root', ['gen0root', 'static', 'singleton', 'visible'] ],
       ['gen1pair0', ['gen1pair0', 'static', 'normal', 'visible'] ],
@@ -144,7 +149,7 @@ describe('correctly places people pair data', () => {
       ['gen4pair5', ['gen4pair5', 'static', 'compressed', 'visible'] ],
       ['gen4pair6', ['gen4pair6', 'static', 'compressed', 'visible'] ],
       ['gen4pair7', ['gen4pair7', 'static', 'compressed', 'visible'] ],
-
+      
       // ghost pairs:
       ['gen0root-ghost', ['gen0root', 'ghost', 'singleton', 'no-show'] ],
       ['gen1pair0-ghost', ['gen1pair0', 'ghost', 'normal', 'no-show'] ],
@@ -163,8 +168,10 @@ describe('correctly places people pair data', () => {
       ['gen4pair6-ghost', ['gen4pair6', 'ghost', 'compressed', 'no-show'] ],
       ['gen4pair7-ghost', ['gen4pair7', 'ghost', 'compressed', 'no-show'] ]
     ],
-
+    
     shiftBackToRootFemale: [
+      // ( results after resetClasses() ) *** (AFTER FIXING) ***
+
       // static pairs:
       ['gen0root', ['gen0root', 'static', 'singleton', 'no-show'] ],
       ['gen1pair0', ['gen1pair0', 'static', 'normal', 'no-show'] ],
@@ -254,10 +261,10 @@ describe('correctly places people pair data', () => {
     viewModel.resetClassesAfterTransition()
     viewModel.shiftToChildMaleRoot(familyTreeData)
     viewModel.resetClassesAfterTransition()
-    testClasses(viewModel, expectedData.shiftBackToRootMale)
+    testClasses(viewModel, expectedData.shiftBackToRoot)
   })
   
-  test.skip('correctly resets people pair classes after shiftToChildFemaleRoot()', () => {
+  test('correctly resets people pair classes after shiftToChildFemaleRoot()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants)
@@ -265,6 +272,7 @@ describe('correctly places people pair data', () => {
     viewModel.shiftToMother(familyTreeData)
     viewModel.resetClassesAfterTransition()
     viewModel.shiftToChildFemaleRoot(familyTreeData)
-    testClasses(viewModel, expectedData.shiftBackToRootFemale)
+    viewModel.resetClassesAfterTransition()
+    testClasses(viewModel, expectedData.shiftBackToRoot)
   })
 })
