@@ -16,46 +16,8 @@ import { useViewModelStore } from '../stores/viewModelStore'
 const viewModel = useViewModelStore()
 const pairs = ref(viewModel.peoplePairs)
 
+// ***** LEGACY SNIPPETS WITH SVG COMPONENTS ARE AT THE ENDOF THIS FILE *****
 
-// <PersonPair
-// v-for="(pair) in pairs"
-// v-bind:key="generatePairId(pair)"
-// v-bind:class="pair.pairClass"
-// v-bind:pair="pair"
-// />
-// <ConnectorSvg
-// v-for="(connector, index) in connectors"
-// v-bind:class="connectors[index]"
-// v-bind:connect-style="getConnectStyle(connectors, index)"
-// />
-
-
-// import PersonPair from './PersonPair.vue'
-// import ConnectorSvg from './ConnectorSvg.vue'
-//
-// import { viewModelInit } from '../view-model-functions.js'
-//
-// import { ref, inject, provide } from 'vue'
-//
-// const familyTreeData = inject('familyTreeData')
-//
-// let viewModelData = viewModelInit(familyTreeData, familyTreeData.rootPerson, 5)
-//
-// const pairs = ref(viewModelData.pairObjects)
-// const connectors = ref(viewModelData.connectorClasses)
-//
-// provide('viewModelData', viewModelData)
-//
-// const generatePairId = (pair) => {
-//   if (pair.people.length === 2)
-//     return pair.people[0] + pair.people[1]
-//   else
-//     return 'singleton' + pair.people[0]
-// }
-//
-// const getConnectStyle = (connectors, index) => {
-//   return connectors[index].split(' ')[0]
-// }
 </script>
 
 <style lang="css">

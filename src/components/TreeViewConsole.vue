@@ -32,7 +32,7 @@ const shiftMother = () => {
 }
 
 const resetClasses = () => {
-  console.log('Shift to mother was clicked.')
+  console.log('Reset was clicked.')
   viewModel.resetClassesAfterTransition()
 }
 </script>

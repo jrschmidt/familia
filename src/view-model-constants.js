@@ -240,7 +240,8 @@ export const pairComponentShapes = {
     gen4pair4: 'compressed',
     gen4pair5: 'compressed',
     gen4pair6: 'compressed',
-    gen4pair7: 'compressed'
+    gen4pair7: 'compressed',
+    enter: ''
   }
 
 

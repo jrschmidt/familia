@@ -4,8 +4,13 @@ import { pairRowMappings, pairLocationsList } from '../view-model-constants'
 
 export const shiftFatherPeople = (viewModel, familyTree) => {
   let generations = viewModel.generations
+  let numberOfPairs = 2 ** (generations -1)
 
   let rows = [...viewModel.rows]
+
+  // Save a flattened copy of rows[] so we can put the people in the 'ghost' pairs later.
+  let rowsFlat = rows.flat()
+  
   // Delete youngest generation.
   rows.shift()
 
@@ -33,4 +38,11 @@ export const shiftFatherPeople = (viewModel, familyTree) => {
     pairObject.people = people
   })
 
+  // Add correct people to ghost pairs for transition.
+  viewModel.peoplePairs[numberOfPairs].people = [ rowsFlat.shift() ]
+  let start = viewModel.peoplePairs.length / 2
+  let end = viewModel.peoplePairs.length - 1
+  for (let i = start; i <= end; i++) {
+    viewModel.peoplePairs[i].people = [rowsFlat.shift(), rowsFlat.shift()]
+  }
 }
