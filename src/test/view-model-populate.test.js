@@ -47,24 +47,23 @@ describe('correctly places people pair data', () => {
       ['gen4pair4', ['p0509', 'p0510'] ],
       ['gen4pair5', ['p0511', 'p0512'] ],
       ['gen4pair6', ['p0513', 'p0514'] ],
-      ['gen4pair7', ['p0515', 'p0516'] ]
-      
-      // ['gen0root-ghost', [] ],
-      // ['gen1pair0-ghost', ['p0002'] ],
-      // ['gen2pair0-ghost', ['p0003', 'p0004'] ],
-      // ['gen2pair1-ghost', [] ],
-      // ['gen3pair0-ghost', ['p0005', 'p0006'] ],
-      // ['gen3pair1-ghost', ['p0007', 'p0008'] ],
-      // ['gen3pair2-ghost', [] ],
-      // ['gen3pair3-ghost', [] ],
-      // ['gen4pair0-ghost', ['p0009', 'p0010'] ],
-      // ['gen4pair1-ghost', ['p0011', 'p0012'] ],
-      // ['gen4pair2-ghost', ['p0013', 'p0014'] ],
-      // ['gen4pair3-ghost', ['p0015', 'p0016'] ],
-      // ['gen4pair4-ghost', [] ],
-      // ['gen4pair5-ghost', [] ],
-      // ['gen4pair6-ghost', [] ],
-      // ['gen4pair7-ghost', [] ]
+      ['gen4pair7', ['p0515', 'p0516'] ],
+      ['gen0root-ghost', ['p0002'] ],
+      ['gen1pair0-ghost', ['p0003', 'p0004'] ],
+      ['gen2pair0-ghost', ['p0005', 'p0006'] ],
+      ['gen2pair1-ghost', ['p0007', 'p0008'] ],
+      ['gen3pair0-ghost', ['p0009', 'p0010'] ],
+      ['gen3pair1-ghost', ['p0011', 'p0012'] ],
+      ['gen3pair2-ghost', ['p0013', 'p0014'] ],
+      ['gen3pair3-ghost', ['p0015', 'p0016'] ],
+      ['gen4pair0-ghost', [] ],
+      ['gen4pair1-ghost', [] ],
+      ['gen4pair2-ghost', [] ],
+      ['gen4pair3-ghost', [] ],
+      ['gen4pair4-ghost', [] ],
+      ['gen4pair5-ghost', [] ],
+      ['gen4pair6-ghost', [] ],
+      ['gen4pair7-ghost', [] ]
 
     ],
 
@@ -86,22 +85,22 @@ describe('correctly places people pair data', () => {
       ['gen4pair6', ['p0529', 'p0530'] ],
       ['gen4pair7', ['p0531', 'p0532'] ],
 
-      ['gen0root-ghost', [] ],
-      ['gen1pair0-ghost', ['p0017'] ],
-      ['gen2pair0-ghost', [] ],
-      ['gen2pair1-ghost', ['p0018', 'p0019'] ],
-      ['gen3pair0-ghost', [] ],
-      ['gen3pair1-ghost', [] ],
-      ['gen3pair2-ghost', ['p0020', 'p0021'] ],
-      ['gen3pair3-ghost', ['p0022', 'p0023'] ],
+      ['gen0root-ghost', ['p0017'] ],
+      ['gen1pair0-ghost', ['p0018', 'p0019'] ],
+      ['gen2pair0-ghost', ['p0020', 'p0021'] ],
+      ['gen2pair1-ghost', ['p0022', 'p0023'] ],
+      ['gen3pair0-ghost', ['p0024', 'p0025'] ],
+      ['gen3pair1-ghost', ['p0026', 'p0027'] ],
+      ['gen3pair2-ghost', ['p0028', 'p0029'] ],
+      ['gen3pair3-ghost', ['p0030', 'p0031'] ],
       ['gen4pair0-ghost', [] ],
       ['gen4pair1-ghost', [] ],
       ['gen4pair2-ghost', [] ],
       ['gen4pair3-ghost', [] ],
-      ['gen4pair4-ghost', ['p0024', 'p0025'] ],
-      ['gen4pair5-ghost', ['p0026', 'p0027'] ],
-      ['gen4pair6-ghost', ['p0028', 'p0029'] ],
-      ['gen4pair7-ghost', ['p0030', 'p0031'] ]
+      ['gen4pair4-ghost', [] ],
+      ['gen4pair5-ghost', [] ],
+      ['gen4pair6-ghost', [] ],
+      ['gen4pair7-ghost', [] ]
 
 
     ]
@@ -141,7 +140,7 @@ describe('correctly places people pair data', () => {
     testPositions(viewModel, expectedData.shiftToFather)
   })
 
-  test.skip('correctly places people pair data after shiftToMother()', () => {
+  test('correctly places people pair data after shiftToMother()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants)

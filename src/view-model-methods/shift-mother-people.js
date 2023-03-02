@@ -3,13 +3,31 @@
 import { pairRowMappings, pairLocationsList } from '../view-model-constants'
 
 export const shiftMotherPeople = (viewModel, familyTree) => {
+  const getPeopleFromStaticPairAt = (pairs, location) => {
+    let pairObject = pairs.find( pair => pair.label === location)
+    return pairObject.people
+  }
+
   let generations = viewModel.generations
   let numberOfPairs = 2 ** (generations -1)
 
   let rows = [...viewModel.rows]
 
-  // Save a flattened copy of rows[] so we can put the people in the 'ghost' pairs later.
-  let rowsFlat = rows.flat()
+  // Add correct people to ghost pairs for transition.
+
+  pairLocationsList.forEach( (label) => {
+    let pairObject = viewModel.peoplePairs.find( pair => pair.label === label + '-ghost')
+    let loc = pairObject.classStatus.location
+    if ( loc != 'enter' ) {
+      let people = getPeopleFromStaticPairAt(viewModel.peoplePairs, loc)
+      if ( pairObject.label === 'gen0root-ghost' ) {
+        people = [ people[1] ]
+      }
+      pairObject.people = people
+    }
+  })
+
+  // Now change people in static pairs.
 
   // Delete youngest generation.
   rows.shift()
@@ -38,11 +56,4 @@ export const shiftMotherPeople = (viewModel, familyTree) => {
     pairObject.people = people
   })
 
-    // Add correct people to ghost pairs for transition.
-    viewModel.peoplePairs[numberOfPairs].people = [ rowsFlat.shift() ]
-    let start = viewModel.peoplePairs.length / 2
-    let end = viewModel.peoplePairs.length - 1
-    for (let i = start; i <= end; i++) {
-      viewModel.peoplePairs[i].people = [rowsFlat.shift(), rowsFlat.shift()]
-    }  
 }

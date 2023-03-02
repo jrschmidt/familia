@@ -11,6 +11,6 @@ export const shiftToMother = (viewModel, familyTree) => {
   let newRoot = familyTree.people[oldRoot].motherId
   viewModel.rootPersonId = newRoot
 
-  shiftMotherPeople(viewModel, familyTree)
   shiftMotherClasses(viewModel, familyTree)
+  shiftMotherPeople(viewModel, familyTree)
 }
