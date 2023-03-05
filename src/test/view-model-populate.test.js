@@ -149,7 +149,7 @@ describe('correctly places people pair data', () => {
     testPositions(viewModel, expectedData.shiftToMother)
   })
 
-  test.skip('correctly places people pair data after shiftToChildMaleRoot()', () => {
+  test('correctly places people pair data after shiftToChildMaleRoot()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants)
@@ -159,7 +159,7 @@ describe('correctly places people pair data', () => {
     testPositions(viewModel, expectedData.initial)
   })
 
-  test.skip('correctly places people pair data after shiftToChildFemaleRoot()', () => {
+  test('correctly places people pair data after shiftToChildFemaleRoot()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants)

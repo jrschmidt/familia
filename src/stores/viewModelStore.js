@@ -5,6 +5,7 @@ import { shiftToFather } from '../view-model-methods/shift-to-father'
 import { shiftToMother } from '../view-model-methods/shift-to-mother'
 import { shiftToChildMaleRoot } from '../view-model-methods/shift-to-child-male-root'
 import { shiftToChildFemaleRoot } from '../view-model-methods/shift-to-child-female-root'
+import { moveGhosts } from '../view-model-methods/move-ghosts'
 import { resetClasses } from '../view-model-methods/reset-classes'
 
 export const useViewModelStore = defineStore('viewModel', {
@@ -59,6 +60,10 @@ export const useViewModelStore = defineStore('viewModel', {
 
     shiftToChildFemaleRoot(familyTree) {
       shiftToChildFemaleRoot(this, familyTree)
+    },
+
+    moveGhosts() {
+      moveGhosts(this)
     },
 
     resetClassesAfterTransition() {
