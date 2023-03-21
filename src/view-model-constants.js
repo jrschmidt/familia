@@ -65,38 +65,38 @@ export const viewModelConfig = {
 }
 
 export const pairInitConstants = [
-    ['gen0root', ['gen0root', 'static', 'singleton', 'visible'] ],
-    ['gen1pair0', ['gen1pair0', 'static', 'normal', 'visible'] ],
-    ['gen2pair0', ['gen2pair0', 'static', 'normal', 'visible'] ],
-    ['gen2pair1', ['gen2pair1', 'static', 'normal', 'visible'] ],
-    ['gen3pair0', ['gen3pair0', 'static', 'normal', 'visible'] ],
-    ['gen3pair1', ['gen3pair1', 'static', 'normal', 'visible'] ],
-    ['gen3pair2', ['gen3pair2', 'static', 'normal', 'visible'] ],
-    ['gen3pair3', ['gen3pair3', 'static', 'normal', 'visible'] ],
-    ['gen4pair0', ['gen4pair0', 'static', 'compressed', 'visible'] ],
-    ['gen4pair1', ['gen4pair1', 'static', 'compressed', 'visible'] ],
-    ['gen4pair2', ['gen4pair2', 'static', 'compressed', 'visible'] ],
-    ['gen4pair3', ['gen4pair3', 'static', 'compressed', 'visible'] ],
-    ['gen4pair4', ['gen4pair4', 'static', 'compressed', 'visible'] ],
-    ['gen4pair5', ['gen4pair5', 'static', 'compressed', 'visible'] ],
-    ['gen4pair6', ['gen4pair6', 'static', 'compressed', 'visible'] ],
-    ['gen4pair7', ['gen4pair7', 'static', 'compressed', 'visible'] ],
-    ['gen0root-ghost', ['gen0root', 'ghost', '', 'no-show'] ],
-    ['gen1pair0-ghost', ['gen1pair0', 'ghost', '', 'no-show'] ],
-    ['gen2pair0-ghost', ['gen2pair0', 'ghost', '', 'no-show'] ],
-    ['gen2pair1-ghost', ['gen2pair1', 'ghost', '', 'no-show'] ],
-    ['gen3pair0-ghost', ['gen3pair0', 'ghost', '', 'no-show'] ],
-    ['gen3pair1-ghost', ['gen3pair1', 'ghost', '', 'no-show'] ],
-    ['gen3pair2-ghost', ['gen3pair2', 'ghost', '', 'no-show'] ],
-    ['gen3pair3-ghost', ['gen3pair3', 'ghost', '', 'no-show'] ],
-    ['gen4pair0-ghost', ['gen4pair0', 'ghost', '', 'no-show'] ],
-    ['gen4pair1-ghost', ['gen4pair1', 'ghost', '', 'no-show'] ],
-    ['gen4pair2-ghost', ['gen4pair2', 'ghost', '', 'no-show'] ],
-    ['gen4pair3-ghost', ['gen4pair3', 'ghost', '', 'no-show'] ],
-    ['gen4pair4-ghost', ['gen4pair4', 'ghost', '', 'no-show'] ],
-    ['gen4pair5-ghost', ['gen4pair5', 'ghost', '', 'no-show'] ],
-    ['gen4pair6-ghost', ['gen4pair6', 'ghost', '', 'no-show'] ],
-    ['gen4pair7-ghost', ['gen4pair7', 'ghost', '', 'no-show'] ]
+    ['gen0root', 'gen0root', ['gen0root', 'static', 'singleton', 'visible'] ],
+    ['gen1pair0', 'gen1pair0', ['gen1pair0', 'static', 'normal', 'visible'] ],
+    ['gen2pair0', 'gen2pair0', ['gen2pair0', 'static', 'normal', 'visible'] ],
+    ['gen2pair1', 'gen2pair1', ['gen2pair1', 'static', 'normal', 'visible'] ],
+    ['gen3pair0', 'gen3pair0', ['gen3pair0', 'static', 'normal', 'visible'] ],
+    ['gen3pair1', 'gen3pair1', ['gen3pair1', 'static', 'normal', 'visible'] ],
+    ['gen3pair2', 'gen3pair2', ['gen3pair2', 'static', 'normal', 'visible'] ],
+    ['gen3pair3', 'gen3pair3', ['gen3pair3', 'static', 'normal', 'visible'] ],
+    ['gen4pair0', 'gen4pair0', ['gen4pair0', 'static', 'compressed', 'visible'] ],
+    ['gen4pair1', 'gen4pair1', ['gen4pair1', 'static', 'compressed', 'visible'] ],
+    ['gen4pair2', 'gen4pair2', ['gen4pair2', 'static', 'compressed', 'visible'] ],
+    ['gen4pair3', 'gen4pair3', ['gen4pair3', 'static', 'compressed', 'visible'] ],
+    ['gen4pair4', 'gen4pair4', ['gen4pair4', 'static', 'compressed', 'visible'] ],
+    ['gen4pair5', 'gen4pair5', ['gen4pair5', 'static', 'compressed', 'visible'] ],
+    ['gen4pair6', 'gen4pair6', ['gen4pair6', 'static', 'compressed', 'visible'] ],
+    ['gen4pair7', 'gen4pair7', ['gen4pair7', 'static', 'compressed', 'visible'] ],
+    ['gen0root-ghost', 'gen0root', ['', 'ghost', '', 'no-show'] ],
+    ['gen1pair0-ghost', 'gen1pair0', ['', 'ghost', '', 'no-show'] ],
+    ['gen2pair0-ghost', 'gen2pair0', ['', 'ghost', '', 'no-show'] ],
+    ['gen2pair1-ghost', 'gen2pair1', ['', 'ghost', '', 'no-show'] ],
+    ['gen3pair0-ghost', 'gen3pair0', ['', 'ghost', '', 'no-show'] ],
+    ['gen3pair1-ghost', 'gen3pair1', ['', 'ghost', '', 'no-show'] ],
+    ['gen3pair2-ghost', 'gen3pair2', ['', 'ghost', '', 'no-show'] ],
+    ['gen3pair3-ghost', 'gen3pair3', ['', 'ghost', '', 'no-show'] ],
+    ['gen4pair0-ghost', 'gen4pair0', ['', 'ghost', '', 'no-show'] ],
+    ['gen4pair1-ghost', 'gen4pair1', ['', 'ghost', '', 'no-show'] ],
+    ['gen4pair2-ghost', 'gen4pair2', ['', 'ghost', '', 'no-show'] ],
+    ['gen4pair3-ghost', 'gen4pair3', ['', 'ghost', '', 'no-show'] ],
+    ['gen4pair4-ghost', 'gen4pair4', ['', 'ghost', '', 'no-show'] ],
+    ['gen4pair5-ghost', 'gen4pair5', ['', 'ghost', '', 'no-show'] ],
+    ['gen4pair6-ghost', 'gen4pair6', ['', 'ghost', '', 'no-show'] ],
+    ['gen4pair7-ghost', 'gen4pair7', ['', 'ghost', '', 'no-show'] ]
   ]
 
 export const pairLabelMap = [
@@ -249,102 +249,6 @@ export const pairComponentShapes = {
 // WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
 // WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
 
-
-// export const fixedGhostPairLabels = [
-//   'gen0rootghost',
-//   'gen1pair0ghost',
-//   'gen2pair0ghost',
-//   'gen2pair1ghost',
-//   'gen3pair0ghost',
-//   'gen3pair1ghost',
-//   'gen3pair2ghost',
-//   'gen3pair3ghost',
-//   'gen4pair0ghost',
-//   'gen4pair1ghost',
-//   'gen4pair2ghost',
-//   'gen4pair3ghost',
-//   'gen4pair4ghost',
-//   'gen4pair5ghost',
-//   'gen4pair6ghost',
-//   'gen4pair7ghost'
-// ]
-
-
-// export const toFatherMoves = {
-//   gen0root: 'fade',
-//   gen1pair0: 'gen0root',
-//   gen2pair0: 'gen1pair0',
-//   gen2pair1: 'fade',
-//   gen3pair0: 'gen2pair0',
-//   gen3pair1: 'gen2pair1',
-//   gen3pair2: 'fade',
-//   gen3pair3: 'fade',
-//   gen4pair0: 'gen3pair0',
-//   gen4pair1: 'gen3pair1',
-//   gen4pair2: 'gen3pair2',
-//   gen4pair3: 'gen3pair3',
-//   gen4pair4: 'fade',
-//   gen4pair5: 'fade',
-//   gen4pair6: 'fade',
-//   gen4pair7: 'fade'
-// }
-
-// export const toMotherMoves = {
-//   gen0root: 'fade',
-//   gen1pair0: 'gen0root',
-//   gen2pair0: 'fade',
-//   gen2pair1: 'gen1pair0',
-//   gen3pair0: 'fade',
-//   gen3pair1: 'fade',
-//   gen3pair2: 'gen2pair0',
-//   gen3pair3: 'gen2pair1',
-//   gen4pair0: 'fade',
-//   gen4pair1: 'fade',
-//   gen4pair2: 'fade',
-//   gen4pair3: 'fade',
-//   gen4pair4: 'gen3pair0',
-//   gen4pair5: 'gen3pair1',
-//   gen4pair6: 'gen3pair2',
-//   gen4pair7: 'gen3pair3'
-// }
-
-// export const toChildMovesMaleRoot = {
-//   gen0root: 'gen1pair0',
-//   gen1pair0: 'gen2pair0',
-//   gen2pair0: 'gen3pair0',
-//   gen2pair1: 'gen3pair1',
-//   gen3pair0: 'gen4pair0',
-//   gen3pair1: 'gen4pair1',
-//   gen3pair2: 'gen4pair2',
-//   gen3pair3: 'gen4pair3',
-//   gen4pair0: 'fade',
-//   gen4pair1: 'fade',
-//   gen4pair2: 'fade',
-//   gen4pair3: 'fade',
-//   gen4pair4: 'fade',
-//   gen4pair5: 'fade',
-//   gen4pair6: 'fade',
-//   gen4pair7: 'fade'
-// }
-
-// export const toChildMovesFemaleRoot = {
-//   gen0root: 'gen1pair0',
-//   gen1pair0: 'gen2pair1',
-//   gen2pair0: 'gen3pair2',
-//   gen2pair1: 'gen3pair3',
-//   gen3pair0: 'gen4pair4',
-//   gen3pair1: 'gen4pair5',
-//   gen3pair2: 'gen4pair6',
-//   gen3pair3: 'gen4pair7',
-//   gen4pair0: 'fade',
-//   gen4pair1: 'fade',
-//   gen4pair2: 'fade',
-//   gen4pair3: 'fade',
-//   gen4pair4: 'fade',
-//   gen4pair5: 'fade',
-//   gen4pair6: 'fade',
-//   gen4pair7: 'fade'
-// }
 
 // export const graphOfPairLinks = {
 //   gen0root: {

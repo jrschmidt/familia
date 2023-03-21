@@ -30,12 +30,13 @@ export const useViewModelStore = defineStore('viewModel', {
       this.peoplePairs = pairInitConstants.map( (item) => {
         let pairData = {}
         pairData.label = item[0]
+        pairData.home = item[1]
         pairData.people = []
         pairData.classStatus = {
-          location: item[1][0],
-          pairtype: item[1][1],
-          shape: item[1][2],
-          visibility: item[1][3]
+          location: item[2][0],
+          pairtype: item[2][1],
+          shape: item[2][2],
+          visibility: item[2][3]
         }
         return pairData
       })

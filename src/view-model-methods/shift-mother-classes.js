@@ -10,14 +10,13 @@ export const shiftMotherClasses = (viewModel, familyTree) => {
     pair.classStatus.visibility = 'no-show'
   })
 
-  // Change classes on ghost objects to 'visible', add tag for 'from'
+  // Change classes on ghost objects to 'visible', add the temporary 'from'
   // location, and change 'shape' tag where needed.
   pairLocationsList.forEach( (loc) => {
     let pair = viewModel.peoplePairs.find( pp => pp.label === loc + '-ghost' )
-    let targetLocation = pair.classStatus.location
-    let fromLocation = shiftPositions.toFather[targetLocation]
-    pair.classStatus.location = shiftPositions.toMother[targetLocation]
-    pair.classStatus.visibility = fromLocation === 'enter' ? 'no-show' : 'visible'
-    pair.classStatus.shape = pairComponentShapes[fromLocation]
+    let location = shiftPositions.toMother[pair.home]
+    pair.classStatus.location = location
+    pair.classStatus.visibility = location === 'enter' ? 'no-show' : 'visible'
+    pair.classStatus.shape = pairComponentShapes[location]
   })
 }
