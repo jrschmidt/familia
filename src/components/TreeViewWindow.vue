@@ -34,81 +34,113 @@ const pairs = ref(viewModel.peoplePairs)
 .person-pair.gen0root {
   left: 420px;
   top: 410px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen1pair0 {
   left: 360px;
   top: 310px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen2pair0 {
   left: 120px;
   top: 210px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen2pair1 {
   left: 600px;
   top: 210px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen3pair0 {
   left: 0px;
   top: 110px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen3pair1 {
   left: 240px;
   top: 110px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen3pair2 {
   left: 480px;
   top: 110px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen3pair3 {
   left: 720px;
   top: 110px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen4pair0 {
   left: 0px;
   top: 10px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen4pair1 {
   left: 120px;
   top: 10px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen4pair2 {
   left: 240px;
   top: 10px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen4pair3 {
   left: 360px;
   top: 10px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen4pair4 {
   left: 480px;
   top: 10px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen4pair5 {
   left: 600px;
   top: 10px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen4pair6 {
   left: 720px;
   top: 10px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 .person-pair.gen4pair7 {
   left: 840px;
   top: 10px;
+  transition-property: left, top;
+  transition-duration: 2000ms;
 }
 
 /* Positioning for the ConnectorSvg components */
