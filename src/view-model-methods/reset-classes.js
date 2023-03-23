@@ -18,13 +18,13 @@ export const resetClasses = (viewModel) => {
     pair.classStatus.visibility = 'visible'
   })
   
-  // Change classes on ghost objects to 'visible', add tag for 'from'
-  // location, and change 'shape' tag where needed.
+  // Change classes on ghost objects to 'visible', and change location and
+  // shape classes to empty strings.
   pairLocationsList.forEach( (loc) => {
     let pair = viewModel.peoplePairs.find( pp => pp.label === loc + '-ghost' )
     pair.classStatus.visibility = 'no-show'
     let targetLocation = getGhostLocation(pair.label)
-    pair.classStatus.location = targetLocation
-    pair.classStatus.shape = pairComponentShapes[targetLocation]
+    pair.classStatus.location = ''
+    pair.classStatus.shape = ''
   })
 }

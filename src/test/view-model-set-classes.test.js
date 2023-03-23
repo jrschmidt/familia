@@ -151,22 +151,22 @@ describe('correctly places people pair data', () => {
       ['gen4pair7', ['gen4pair7', 'static', 'compressed', 'visible'] ],
       
       // ghost pairs:
-      ['gen0root-ghost', ['gen0root', 'ghost', 'singleton', 'no-show'] ],
-      ['gen1pair0-ghost', ['gen1pair0', 'ghost', 'normal', 'no-show'] ],
-      ['gen2pair0-ghost', ['gen2pair0', 'ghost', 'normal', 'no-show'] ],
-      ['gen2pair1-ghost', ['gen2pair1', 'ghost', 'normal', 'no-show'] ],
-      ['gen3pair0-ghost', ['gen3pair0', 'ghost', 'normal', 'no-show'] ],
-      ['gen3pair1-ghost', ['gen3pair1', 'ghost', 'normal', 'no-show'] ],
-      ['gen3pair2-ghost', ['gen3pair2', 'ghost', 'normal', 'no-show'] ],
-      ['gen3pair3-ghost', ['gen3pair3', 'ghost', 'normal', 'no-show'] ],
-      ['gen4pair0-ghost', ['gen4pair0', 'ghost', 'compressed', 'no-show'] ],
-      ['gen4pair1-ghost', ['gen4pair1', 'ghost', 'compressed', 'no-show'] ],
-      ['gen4pair2-ghost', ['gen4pair2', 'ghost', 'compressed', 'no-show'] ],
-      ['gen4pair3-ghost', ['gen4pair3', 'ghost', 'compressed', 'no-show'] ],
-      ['gen4pair4-ghost', ['gen4pair4', 'ghost', 'compressed', 'no-show'] ],
-      ['gen4pair5-ghost', ['gen4pair5', 'ghost', 'compressed', 'no-show'] ],
-      ['gen4pair6-ghost', ['gen4pair6', 'ghost', 'compressed', 'no-show'] ],
-      ['gen4pair7-ghost', ['gen4pair7', 'ghost', 'compressed', 'no-show'] ]
+      ['gen0root-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen1pair0-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen2pair0-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen2pair1-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen3pair0-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen3pair1-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen3pair2-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen3pair3-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen4pair0-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen4pair1-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen4pair2-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen4pair3-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen4pair4-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen4pair5-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen4pair6-ghost', ['', 'ghost', '', 'no-show'] ],
+      ['gen4pair7-ghost', ['', 'ghost', '', 'no-show'] ]
     ],
 
     moveGhostsAfterShiftToParent: [
@@ -254,7 +254,7 @@ describe('correctly places people pair data', () => {
     testClasses(viewModel, expectedData.moveGhostsAfterShiftToParent)
   })
 
-  test.skip('correctly resets people pair classes after shiftToChildMaleRoot()', () => {
+  test('correctly resets people pair classes after shiftToChildMaleRoot()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants)
@@ -266,7 +266,7 @@ describe('correctly places people pair data', () => {
     testClasses(viewModel, expectedData.shiftBackToRoot)
   })
   
-  test.skip('correctly resets people pair classes after shiftToChildFemaleRoot()', () => {
+  test('correctly resets people pair classes after shiftToChildFemaleRoot()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants)
