@@ -16,6 +16,7 @@ export const useViewModelStore = defineStore('viewModel', {
       rootPersonId: null,
       generations: 0,
       peoplePairs: [],
+      connectors: [],
       rows: null
     }
   },
@@ -24,7 +25,7 @@ export const useViewModelStore = defineStore('viewModel', {
 
   actions: {
 
-    initialize(configData, pairInitConstants) {
+    initialize(configData, pairInitConstants, connectorInitConstants) {
       this.storeStatus = 'initialized'
       this.generations = configData.generations
       this.peoplePairs = pairInitConstants.map( (item) => {
@@ -41,6 +42,18 @@ export const useViewModelStore = defineStore('viewModel', {
         return pairData
       })
       this.rows = Array(this.generations).fill( [] )
+
+      this.connectors = connectorInitConstants.map( (item) => {
+        let connectorData = {}
+        connectorData.label = item[0]
+        connectorData.home = item[1]
+        connectorData.classStatus = {
+          location: item[2][0],
+          type: item[2][1],
+          visibility: item[2][2]
+        }
+        return connectorData
+      })
     },
 
     populate(familyTree) {

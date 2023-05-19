@@ -244,123 +244,35 @@ export const pairComponentShapes = {
     enter: ''
   }
 
-
-// WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
-// WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
-// WE ARE COMMENTING OUT THE OLD CONSTANTS UNTIL WE USE THEM IN THE REFACTORED CODE.
-
-
-// export const graphOfPairLinks = {
-//   gen0root: {
-//     parentsOfMaleLocation: 'gen1pair0',
-//     parentsOfFemaleLocation: 'gen1pair0',
-//     childLocation: null,
-//     classes: ['gen0root',  'static',  'singleton']
-//   },
-//
-//   gen1pair0: {
-//     parentsOfMaleLocation: 'gen2pair0',
-//     parentsOfFemaleLocation: 'gen2pair1',
-//     childLocation: 'gen0root',
-//     classes: ['gen1pair0',  'static',  'normal']
-//   },
-//
-//   gen2pair0: {
-//     parentsOfMaleLocation: 'gen3pair0',
-//     parentsOfFemaleLocation: 'gen3pair1',
-//     childLocation: 'gen1pair0',
-//     classes: ['gen2pair0',  'static',  'normal']
-//   },
-//
-//   gen2pair1: {
-//     parentsOfMaleLocation: 'gen3pair2',
-//     parentsOfFemaleLocation: 'gen3pair3',
-//     childLocation: 'gen1pair0',
-//     classes: ['gen2pair1',  'static',  'normal']
-//   },
-//
-//   gen3pair0: {
-//     parentsOfMaleLocation: 'gen4pair0',
-//     parentsOfFemaleLocation: 'gen4pair1',
-//     childLocation: 'gen2pair0',
-//     classes: ['gen3pair0',  'static',  'normal']
-//   },
-//
-//   gen3pair1: {
-//     parentsOfMaleLocation: 'gen4pair2',
-//     parentsOfFemaleLocation: 'gen4pair3',
-//     childLocation: 'gen2pair0',
-//     classes: ['gen3pair1',  'static',  'normal']
-//   },
-//
-//   gen3pair2: {
-//     parentsOfMaleLocation: 'gen4pair4',
-//     parentsOfFemaleLocation: 'gen4pair5',
-//     childLocation: 'gen2pair1',
-//     classes: ['gen3pair2',  'static',  'normal']
-//   },
-//
-//   gen3pair3: {
-//     parentsOfMaleLocation: 'gen4pair6',
-//     parentsOfFemaleLocation: 'gen4pair7',
-//     childLocation: 'gen2pair1',
-//     classes: ['gen3pair3',  'static',  'normal']
-//   },
-//
-//   gen4pair0: {
-//     parentsOfMaleLocation: null,
-//     parentsOfFemaleLocation: null,
-//     childLocation: 'gen3pair0',
-//     classes: ['gen4pair0',  'static',  'compressed']
-//   },
-//
-//   gen4pair1: {
-//     parentsOfMaleLocation: null,
-//     parentsOfFemaleLocation: null,
-//     childLocation: 'gen3pair0',
-//     classes: ['gen4pair1',  'static',  'compressed']
-//   },
-//
-//   gen4pair2: {
-//     parentsOfMaleLocation: null,
-//     parentsOfFemaleLocation: null,
-//     childLocation: 'gen3pair1',
-//     classes: ['gen4pair2',  'static',  'compressed']
-//   },
-//
-//   gen4pair3: {
-//     parentsOfMaleLocation: null,
-//     parentsOfFemaleLocation: null,
-//     childLocation: 'gen3pair1',
-//     classes: ['gen4pair3',  'static',  'compressed']
-//   },
-//
-//   gen4pair4: {
-//     parentsOfMaleLocation: null,
-//     parentsOfFemaleLocation: null,
-//     childLocation: 'gen3pair2',
-//     classes: ['gen4pair4',  'static',  'compressed']
-//   },
-//
-//   gen4pair5: {
-//     parentsOfMaleLocation: null,
-//     parentsOfFemaleLocation: null,
-//     childLocation: 'gen3pair2',
-//     classes: ['gen4pair5',  'static',  'compressed']
-//   },
-//
-//   gen4pair6: {
-//     parentsOfMaleLocation: null,
-//     parentsOfFemaleLocation: null,
-//     childLocation: 'gen3pair3',
-//     classes: ['gen4pair6',  'static',  'compressed']
-//   },
-//
-//   gen4pair7: {
-//     parentsOfMaleLocation: null,
-//     parentsOfFemaleLocation: null,
-//     childLocation: 'gen3pair3',
-//     classes: ['gen4pair7',  'static',  'compressed']
-//   }
-//
-// }
+  export const connectorInitConstants = [
+    ['cnx-0-0', 'cnx-0-0', ['cnx-0-0', 'static', 'visible']],
+    ['cnx-1-0', 'cnx-1-0', ['cnx-1-0', 'static', 'visible']],
+    ['cnx-1-1', 'cnx-1-1', ['cnx-1-1', 'static', 'visible']],
+    ['cnx-2-0', 'cnx-2-0', ['cnx-2-0', 'static', 'visible']],
+    ['cnx-2-1', 'cnx-2-1', ['cnx-2-1', 'static', 'visible']],
+    ['cnx-2-2', 'cnx-2-2', ['cnx-2-2', 'static', 'visible']],
+    ['cnx-2-3', 'cnx-2-3', ['cnx-2-3', 'static', 'visible']],
+    ['cnx-3-0', 'cnx-3-0', ['cnx-3-0', 'static', 'visible']],
+    ['cnx-3-1', 'cnx-3-1', ['cnx-3-1', 'static', 'visible']],
+    ['cnx-3-2', 'cnx-3-2', ['cnx-3-2', 'static', 'visible']],
+    ['cnx-3-3', 'cnx-3-3', ['cnx-3-3', 'static', 'visible']],
+    ['cnx-3-4', 'cnx-3-4', ['cnx-3-4', 'static', 'visible']],
+    ['cnx-3-5', 'cnx-3-5', ['cnx-3-5', 'static', 'visible']],
+    ['cnx-3-6', 'cnx-3-6', ['cnx-3-6', 'static', 'visible']],
+    ['cnx-3-7', 'cnx-3-7', ['cnx-3-7', 'static', 'visible']],
+    ['cnx-0-0-ghost', 'cnx-0-0', ['', 'ghost', 'no-show']],
+    ['cnx-1-0-ghost', 'cnx-1-0', ['', 'ghost', 'no-show']],
+    ['cnx-1-1-ghost', 'cnx-1-1', ['', 'ghost', 'no-show']],
+    ['cnx-2-0-ghost', 'cnx-2-0', ['', 'ghost', 'no-show']],
+    ['cnx-2-1-ghost', 'cnx-2-1', ['', 'ghost', 'no-show']],
+    ['cnx-2-2-ghost', 'cnx-2-2', ['', 'ghost', 'no-show']],
+    ['cnx-2-3-ghost', 'cnx-2-3', ['', 'ghost', 'no-show']],
+    ['cnx-3-0-ghost', 'cnx-3-0', ['', 'ghost', 'no-show']],
+    ['cnx-3-1-ghost', 'cnx-3-1', ['', 'ghost', 'no-show']],
+    ['cnx-3-2-ghost', 'cnx-3-2', ['', 'ghost', 'no-show']],
+    ['cnx-3-3-ghost', 'cnx-3-3', ['', 'ghost', 'no-show']],
+    ['cnx-3-4-ghost', 'cnx-3-4', ['', 'ghost', 'no-show']],
+    ['cnx-3-5-ghost', 'cnx-3-5', ['', 'ghost', 'no-show']],
+    ['cnx-3-6-ghost', 'cnx-3-6', ['', 'ghost', 'no-show']],
+    ['cnx-3-7-ghost', 'cnx-3-7', ['', 'ghost', 'no-show']]
+  ]

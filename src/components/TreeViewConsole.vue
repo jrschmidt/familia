@@ -13,13 +13,13 @@
 import TreeViewWindow from './TreeViewWindow.vue'
 import { useViewModelStore } from '../stores/viewModelStore'
 import { useFamilyTreeStore } from '../stores/familyTreeStore'
-import { pairInitConstants, viewModelConfig as configData } from '../view-model-constants'
+import { pairInitConstants, connectorInitConstants, viewModelConfig as configData } from '../view-model-constants'
 
 const familyTree = useFamilyTreeStore()
 familyTree.loadTree()
 
 const viewModel = useViewModelStore()
-viewModel.initialize(configData, pairInitConstants)
+viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
 viewModel.populate(familyTree)
 
 const shiftFather = () => {

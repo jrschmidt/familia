@@ -3,7 +3,7 @@ import { test, beforeEach, describe, expect } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useViewModelStore } from '../stores/viewModelStore'
 
-import { pairInitConstants, viewModelConfig as configData } from '../view-model-constants'
+import { pairInitConstants, connectorInitConstants, viewModelConfig as configData } from '../view-model-constants'
 
 describe('view model initialization before receiving data ("pre-initialization")', () => {
   beforeEach( () => {
@@ -17,12 +17,13 @@ describe('view model initialization before receiving data ("pre-initialization")
     expect(viewModel.rootPersonId).toEqual(null)
     expect(viewModel.generations).toEqual(0)
     expect(viewModel.peoplePairs).toEqual([])
+    expect(viewModel.connectors).toEqual([])
     expect(viewModel.rows).toEqual(null)
   })
 
   test('the store initializes with correct config values', () => {
     const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants)
+    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
 
     expect(viewModel.storeStatus).toEqual('initialized')
     expect(viewModel.generations).toEqual(5)

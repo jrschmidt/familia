@@ -145,77 +145,77 @@ const pairs = ref(viewModel.peoplePairs)
 
 /* Positioning for the ConnectorSvg components */
 
-.connector-svg.parents-of-0-0 {
+.connector-svg.cnx-0-0 {
   left: 420px;
   top: 310px;
 }
 
-.connector-svg.parents-of-1-0 {
+.connector-svg.cnx-1-0 {
   left: 180px;
   top: 210px;
 }
 
-.connector-svg.parents-of-1-1 {
+.connector-svg.cnx-1-1 {
   left: 480px;
   top: 210px;
 }
 
-.connector-svg.parents-of-2-0 {
+.connector-svg.cnx-2-0 {
   left: 60px;
   top: 110px;
 }
 
-.connector-svg.parents-of-2-1 {
+.connector-svg.cnx-2-1 {
   left: 240px;
   top: 110px;
 }
 
-.connector-svg.parents-of-2-2 {
+.connector-svg.cnx-2-2 {
   left: 540px;
   top: 110px;
 }
 
-.connector-svg.parents-of-2-3 {
+.connector-svg.cnx-2-3 {
   left: 720px;
   top: 110px;
 }
 
-.connector-svg.parents-of-3-0 {
+.connector-svg.cnx-3-0 {
   left: 0px;
   top: 10px;
 }
 
-.connector-svg.parents-of-3-1 {
+.connector-svg.cnx-3-1 {
   left: 120px;
   top: 10px;
 }
 
-.connector-svg.parents-of-3-2 {
+.connector-svg.cnx-3-2 {
   left: 240px;
   top: 10px;
 }
 
-.connector-svg.parents-of-3-3 {
+.connector-svg.cnx-3-3 {
   left: 360px;
   top: 10px;
 }
 
-.connector-svg.parents-of-3-4 {
+.connector-svg.cnx-3-4 {
   left: 480px;
   top: 10px;
 }
 
-.connector-svg.parents-of-3-5 {
+.connector-svg.cnx-3-5 {
   left: 600px;
   top: 10px;
 }
 
-.connector-svg.parents-of-3-6 {
+.connector-svg.cnx-3-6 {
   left: 720px;
   top: 10px;
 }
 
-.connector-svg.parents-of-3-7 {
+.connector-svg.cnx-3-7 {
   left: 840px;
   top: 10px;
 }
