@@ -206,6 +206,42 @@ describe('correctly sets class data for components', () => {
           ['gen4pair6-ghost', ['enter', 'ghost', '', 'no-show'] ],
           ['gen4pair7-ghost', ['enter', 'ghost', '', 'no-show'] ]
         ],
+
+        connectors: [
+          // static connectors:
+          ['cnx-0-0', ['cnx-0-0', 'static', 'no-show']],
+          ['cnx-1-0', ['cnx-1-0', 'static', 'no-show']],
+          ['cnx-1-1', ['cnx-1-1', 'static', 'no-show']],
+          ['cnx-2-0', ['cnx-2-0', 'static', 'no-show']],
+          ['cnx-2-1', ['cnx-2-1', 'static', 'no-show']],
+          ['cnx-2-2', ['cnx-2-2', 'static', 'no-show']],
+          ['cnx-2-3', ['cnx-2-3', 'static', 'no-show']],
+          ['cnx-3-0', ['cnx-3-0', 'static', 'no-show']],
+          ['cnx-3-1', ['cnx-3-1', 'static', 'no-show']],
+          ['cnx-3-2', ['cnx-3-2', 'static', 'no-show']],
+          ['cnx-3-3', ['cnx-3-3', 'static', 'no-show']],
+          ['cnx-3-4', ['cnx-3-4', 'static', 'no-show']],
+          ['cnx-3-5', ['cnx-3-5', 'static', 'no-show']],
+          ['cnx-3-6', ['cnx-3-6', 'static', 'no-show']],
+          ['cnx-3-7', ['cnx-3-7', 'static', 'no-show']],
+          
+          // ghost connectors:
+          ['cnx-0-0-ghost', ['cnx-1-1', 'ghost', 'visible']],
+          ['cnx-1-0-ghost', ['cnx-2-2', 'ghost', 'visible']],
+          ['cnx-1-1-ghost', ['cnx-2-3', 'ghost', 'visible']],
+          ['cnx-2-0-ghost', ['cnx-3-4', 'ghost', 'visible']],
+          ['cnx-2-1-ghost', ['cnx-3-5', 'ghost', 'visible']],
+          ['cnx-2-2-ghost', ['cnx-3-6', 'ghost', 'visible']],
+          ['cnx-2-3-ghost', ['cnx-3-7', 'ghost', 'visible']],
+          ['cnx-3-0-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-1-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-2-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-3-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-4-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-5-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-6-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-7-ghost', ['enter', 'ghost', 'no-show']]
+        ]
       },
           
       shiftBackToRoot: {

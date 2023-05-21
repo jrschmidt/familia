@@ -1,6 +1,12 @@
 // This method changes classes in the peoplePair components when a 'shift to mother' change is triggered.
 
-import { pairLocationsList, shiftPairPositions, pairComponentShapes } from '../view-model-constants'
+import {
+  pairLocationsList,
+  shiftPairPositions,
+  pairComponentShapes,
+  connectorLocationsList,
+  shiftConnectorPositions
+} from '../view-model-constants'
 
 export const shiftMotherClasses = (viewModel, familyTree) => {
 
@@ -19,4 +25,19 @@ export const shiftMotherClasses = (viewModel, familyTree) => {
     pair.classStatus.visibility = location === 'enter' ? 'no-show' : 'visible'
     pair.classStatus.shape = pairComponentShapes[location]
   })
+
+ // Change classes on static connector objects to 'no-show'.
+ connectorLocationsList.forEach( (loc) => {
+  let connector = viewModel.connectors.find( cnx => cnx.label === loc )
+  connector.classStatus.visibility = 'no-show'
+})
+
+// Change classes on ghost connector objects to 'visible' and add the temporary 'from' location.
+connectorLocationsList.forEach( (loc) => {
+  let label = loc + '-ghost'
+  let connector = viewModel.connectors.find( cnx => cnx.label === label )
+  let shiftLoc = shiftConnectorPositions.toMother[loc]
+  connector.classStatus.location = shiftLoc
+  connector.classStatus.visibility = ( shiftLoc === 'enter') ? 'no-show' : 'visible'
+})
 }

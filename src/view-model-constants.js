@@ -312,7 +312,24 @@ export const pairComponentShapes = {
       'cnx-3-5': 'enter',
       'cnx-3-6': 'enter',
       'cnx-3-7': 'enter'
-  
-    },
+      },
 
-  }
+      toMother: {
+        'cnx-0-0': 'cnx-1-1',
+        'cnx-1-0': 'cnx-2-2',
+        'cnx-1-1': 'cnx-2-3',
+        'cnx-2-0': 'cnx-3-4',
+        'cnx-2-1': 'cnx-3-5',
+        'cnx-2-2': 'cnx-3-6',
+        'cnx-2-3': 'cnx-3-7',
+        'cnx-3-0': 'enter',
+        'cnx-3-1': 'enter',
+        'cnx-3-2': 'enter',
+        'cnx-3-3': 'enter',
+        'cnx-3-4': 'enter',
+        'cnx-3-5': 'enter',
+        'cnx-3-6': 'enter',
+        'cnx-3-7': 'enter'
+        },
+  
+    }

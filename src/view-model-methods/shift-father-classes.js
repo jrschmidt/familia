@@ -25,13 +25,14 @@ export const shiftFatherClasses = (viewModel, familyTree) => {
     pair.classStatus.visibility = location === 'enter' ? 'no-show' : 'visible'
     pair.classStatus.shape = pairComponentShapes[location]
   })
-
+  
   // Change classes on static connector objects to 'no-show'.
   connectorLocationsList.forEach( (loc) => {
     let connector = viewModel.connectors.find( cnx => cnx.label === loc )
     connector.classStatus.visibility = 'no-show'
   })
-
+  
+  // Change classes on ghost connector objects to 'visible' and add the temporary 'from' location.
   connectorLocationsList.forEach( (loc) => {
     let label = loc + '-ghost'
     let connector = viewModel.connectors.find( cnx => cnx.label === label )
