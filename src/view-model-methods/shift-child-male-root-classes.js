@@ -1,7 +1,7 @@
 // This method changes classes in the peoplePair components when a 'shift to
 // child - male root' change is triggered.
 
-import { pairLocationsList, shiftPositions, pairComponentShapes } from '../view-model-constants'
+import { pairLocationsList, shiftPairPositions, pairComponentShapes } from '../view-model-constants'
 
 export const shiftChildMaleRootClasses = (viewModel, familyTree) => {
 
@@ -17,7 +17,7 @@ export const shiftChildMaleRootClasses = (viewModel, familyTree) => {
     let pair = viewModel.peoplePairs.find( pp => pp.label === loc + '-ghost' )
     pair.classStatus.visibility = 'visible'
     let targetLocation = pair.classStatus.location
-    pair.classStatus.location = shiftPositions.toMother[targetLocation]
+    pair.classStatus.location = shiftPairPositions.toMother[targetLocation]
     pair.classStatus.shape = pairComponentShapes[targetLocation]
   })
 }

@@ -146,7 +146,7 @@ export const pairLocationsList = [
     'gen4pair7'
   ]
 
-export const shiftPositions = {
+export const shiftPairPositions = {
   toFather: {
     gen0root: 'gen1pair0',
     gen1pair0: 'gen2pair0',
@@ -243,6 +243,24 @@ export const pairComponentShapes = {
     gen4pair7: 'compressed',
     enter: ''
   }
+  
+  export const connectorLocationsList = [
+    'cnx-0-0',
+    'cnx-1-0',
+    'cnx-1-1',
+    'cnx-2-0',
+    'cnx-2-1',
+    'cnx-2-2',
+    'cnx-2-3',
+    'cnx-3-0',
+    'cnx-3-1',
+    'cnx-3-2',
+    'cnx-3-3',
+    'cnx-3-4',
+    'cnx-3-5',
+    'cnx-3-6',
+    'cnx-3-7'
+  ]
 
   export const connectorInitConstants = [
     ['cnx-0-0', 'cnx-0-0', ['cnx-0-0', 'static', 'visible']],
@@ -276,3 +294,25 @@ export const pairComponentShapes = {
     ['cnx-3-6-ghost', 'cnx-3-6', ['', 'ghost', 'no-show']],
     ['cnx-3-7-ghost', 'cnx-3-7', ['', 'ghost', 'no-show']]
   ]
+
+  export const shiftConnectorPositions = {
+    toFather: {
+      'cnx-0-0': 'cnx-1-0',
+      'cnx-1-0': 'cnx-2-0',
+      'cnx-1-1': 'cnx-2-1',
+      'cnx-2-0': 'cnx-3-0',
+      'cnx-2-1': 'cnx-3-1',
+      'cnx-2-2': 'cnx-3-2',
+      'cnx-2-3': 'cnx-3-3',
+      'cnx-3-0': 'enter',
+      'cnx-3-1': 'enter',
+      'cnx-3-2': 'enter',
+      'cnx-3-3': 'enter',
+      'cnx-3-4': 'enter',
+      'cnx-3-5': 'enter',
+      'cnx-3-6': 'enter',
+      'cnx-3-7': 'enter'
+  
+    },
+
+  }

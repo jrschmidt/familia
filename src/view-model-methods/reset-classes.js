@@ -3,7 +3,7 @@
 // pair objects are reset to 'no-show', and location and shape classes are reset
 // to their original values.
 
-import { pairLocationsList, shiftPositions, pairComponentShapes } from '../view-model-constants'
+import { pairLocationsList, shiftPairPositions, pairComponentShapes } from '../view-model-constants'
 
 export const resetClasses = (viewModel) => {
 
