@@ -307,8 +307,28 @@ describe('correctly sets class data for components', () => {
           ['gen4pair5-ghost', ['enter', 'ghost', 'compressed', 'no-show'] ],
           ['gen4pair6-ghost', ['enter', 'ghost', 'compressed', 'no-show'] ],
           ['gen4pair7-ghost', ['enter', 'ghost', 'compressed', 'no-show'] ]
+        ],
+
+        connectors: [
+          // ghost connectors:
+          ['cnx-0-0-ghost', ['cnx-0-0', 'ghost', 'visible']],
+          ['cnx-1-0-ghost', ['cnx-1-0', 'ghost', 'visible']],
+          ['cnx-1-1-ghost', ['cnx-1-1', 'ghost', 'visible']],
+          ['cnx-2-0-ghost', ['cnx-2-0', 'ghost', 'visible']],
+          ['cnx-2-1-ghost', ['cnx-2-1', 'ghost', 'visible']],
+          ['cnx-2-2-ghost', ['cnx-2-2', 'ghost', 'visible']],
+          ['cnx-2-3-ghost', ['cnx-2-3', 'ghost', 'visible']],
+          ['cnx-3-0-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-1-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-2-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-3-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-4-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-5-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-6-ghost', ['enter', 'ghost', 'no-show']],
+          ['cnx-3-7-ghost', ['enter', 'ghost', 'no-show']]
         ]
       }
+          
     }
     
     const testClasses = (viewModel, expectedData) => {
@@ -337,7 +357,7 @@ describe('correctly sets class data for components', () => {
 
   }
 
-  test('correctly sets people pair classes after initializing view model', () => {
+  test('correctly sets classes after initializing view model', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
@@ -345,7 +365,7 @@ describe('correctly sets class data for components', () => {
     testClasses(viewModel, expectedData.initial)
   })
 
-  test('correctly resets people pair classes after shiftToFather()', () => {
+  test('correctly resets classes after shiftToFather()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
@@ -354,7 +374,7 @@ describe('correctly sets class data for components', () => {
     testClasses(viewModel, expectedData.shiftToFather)
   })
 
-  test('correctly resets people pair classes after shiftToMother()', () => {
+  test('correctly resets classes after shiftToMother()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
@@ -363,27 +383,7 @@ describe('correctly sets class data for components', () => {
     testClasses(viewModel, expectedData.shiftToMother)
   })
 
-  test('moveGhosts() function correctly sets ghost pair classes to new locations after shiftToFather', () => {
-    setActivePinia(createPinia())
-    const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
-    viewModel.populate(familyTreeData)
-    viewModel.shiftToFather(familyTreeData)
-    viewModel.moveGhosts()
-    testClasses(viewModel, expectedData.moveGhostsAfterShiftToParent)
-  })
-  
-  test('moveGhosts() function correctly sets ghost pair classes to new locations after shiftToMother', () => {
-    setActivePinia(createPinia())
-    const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
-    viewModel.populate(familyTreeData)
-    viewModel.shiftToMother(familyTreeData)
-    viewModel.moveGhosts()
-    testClasses(viewModel, expectedData.moveGhostsAfterShiftToParent)
-  })
-
-  test('correctly resets people pair classes after shiftToChildMaleRoot()', () => {
+  test('correctly resets classes after shiftToChildMaleRoot()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
@@ -395,7 +395,7 @@ describe('correctly sets class data for components', () => {
     testClasses(viewModel, expectedData.shiftBackToRoot)
   })
   
-  test('correctly resets people pair classes after shiftToChildFemaleRoot()', () => {
+  test('correctly resets classes after shiftToChildFemaleRoot()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
@@ -405,5 +405,25 @@ describe('correctly sets class data for components', () => {
     viewModel.shiftToChildFemaleRoot(familyTreeData)
     viewModel.resetClassesAfterTransition()
     testClasses(viewModel, expectedData.shiftBackToRoot)
+  })
+  
+  test('moveGhosts() function correctly sets ghost classes to their home locations after shiftToFather', () => {
+    setActivePinia(createPinia())
+    const viewModel = useViewModelStore()
+    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
+    viewModel.populate(familyTreeData)
+    viewModel.shiftToFather(familyTreeData)
+    viewModel.moveGhosts()
+    testClasses(viewModel, expectedData.moveGhostsAfterShiftToParent)
+  })
+  
+  test('moveGhosts() function correctly sets ghost classes to their home locations after shiftToMother', () => {
+    setActivePinia(createPinia())
+    const viewModel = useViewModelStore()
+    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
+    viewModel.populate(familyTreeData)
+    viewModel.shiftToMother(familyTreeData)
+    viewModel.moveGhosts()
+    testClasses(viewModel, expectedData.moveGhostsAfterShiftToParent)
   })
 })
