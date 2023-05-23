@@ -1,4 +1,4 @@
-// This method changes classes in the peoplePair components when a 'shift to
+// This method changes classes in the people pair and SVG connector components when a 'shift to
 // child - female root' change is triggered.
 
 import { pairLocationsList, shiftPairPositions, pairComponentShapes } from '../view-model-constants'

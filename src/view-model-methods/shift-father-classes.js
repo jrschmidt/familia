@@ -1,4 +1,4 @@
-// This method changes classes in the peoplePair components when a 'shift to father' change is triggered.
+// This method changes classes in the people pair and SVG connector components when a 'shift to father' change is triggered.
 
 import {
   pairLocationsList,
@@ -26,8 +26,8 @@ export const shiftFatherClasses = (viewModel, familyTree) => {
     pair.classStatus.shape = pairComponentShapes[location]
   })
   
-  // Change classes on static connector objects to 'no-show'.
-  connectorLocationsList.forEach( (loc) => {
+ // Change classes on static connector objects to 'no-show'.
+   connectorLocationsList.forEach( (loc) => {
     let connector = viewModel.connectors.find( cnx => cnx.label === loc )
     connector.classStatus.visibility = 'no-show'
   })

@@ -392,7 +392,7 @@ describe('correctly sets class data for components', () => {
     viewModel.resetClassesAfterTransition()
     viewModel.shiftToChildMaleRoot(familyTreeData)
     viewModel.resetClassesAfterTransition()
-    testClasses(viewModel, expectedData.shiftBackToRoot)
+    testClasses(viewModel, expectedData.initial)
   })
   
   test('correctly resets classes after shiftToChildFemaleRoot()', () => {
@@ -404,7 +404,7 @@ describe('correctly sets class data for components', () => {
     viewModel.resetClassesAfterTransition()
     viewModel.shiftToChildFemaleRoot(familyTreeData)
     viewModel.resetClassesAfterTransition()
-    testClasses(viewModel, expectedData.shiftBackToRoot)
+    testClasses(viewModel, expectedData.initial)
   })
   
   test('moveGhosts() function correctly sets ghost classes to their home locations after shiftToFather', () => {

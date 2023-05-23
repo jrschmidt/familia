@@ -1,7 +1,7 @@
-// This method resets classes after a 'shift' method is triggered, after the
-// class transition occurs. Static pair objects are reset to 'visible', ghost
-// pair objects are reset to 'no-show', and location and shape classes are reset
-// to their original values.
+// This method ...
+// NEED TO REWRITE THIS COMMENT!!
+// NEED TO REWRITE THIS COMMENT!!
+// NEED TO REWRITE THIS COMMENT!!
 
 import { pairLocationsList, pairComponentShapes, connectorLocationsList } from '../view-model-constants'
 
@@ -17,7 +17,6 @@ export const moveGhosts = (viewModel) => {
   })
 
   connectorLocationsList.forEach( (loc) => {
-    let pair = viewModel.peoplePairs.find( pp => pp.label === loc + '-ghost' )
     let connector = viewModel.connectors.find( cnx => cnx.label === loc + '-ghost' )
     if ( connector.classStatus.location != 'enter' ) {
         connector.classStatus.location = loc

@@ -1,4 +1,4 @@
-// This method changes classes in the peoplePair components when a 'shift to mother' change is triggered.
+// This method changes classes in the people pair and SVG connector components when a 'shift to mother' change is triggered.
 
 import {
   pairLocationsList,
