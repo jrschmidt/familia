@@ -3,6 +3,8 @@
     <h6>TreeViewConsole component</h6>
     <button v-on:click="shiftFather()">Shift to father</button>
     <button v-on:click="shiftMother()">Shift to mother</button>
+    <button v-on:click="shiftChildM()">Shift to child (male root)</button>
+    <button v-on:click="shiftChildF()">Shift to child (female root</button>
     <button v-on:click="moveGhosts()">Move ghosts</button>
     <button v-on:click="resetClasses()">Reset after transition</button>
     <TreeViewWindow/>
@@ -30,6 +32,16 @@ const shiftFather = () => {
 const shiftMother = () => {
   console.log('Shift to mother was clicked.')
   viewModel.shiftToMother(familyTree)
+}
+
+const shiftChildM = () => {
+  console.log('Shift to child (male root) was clicked.')
+  viewModel.shiftToChildMaleRoot(familyTree)
+}
+
+const shiftChildF = () => {
+  console.log('Shift to child (female root) was clicked.')
+  viewModel.shiftToChildFemaleRoot(familyTree)
 }
 
 const resetClasses = () => {
