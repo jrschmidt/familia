@@ -10,7 +10,6 @@ import {
 } from '../view-model-constants'
 
 export const shiftChildMaleRootClasses = (viewModel, familyTree) => {
-  console.log('**** CALLING shiftChildMaleRootClasses()')
 
   // Change classes on static pair objects to 'no-show'.
   pairLocationsList.forEach( (loc) => {
@@ -24,6 +23,8 @@ export const shiftChildMaleRootClasses = (viewModel, familyTree) => {
     connector.classStatus.visibility = 'no-show'
   })
 
+  // Change classes on ghost pair objects to 'visible', add the temporary 'from'
+  // location, and change 'shape' tag where needed.
   pairLocationsList.forEach( (loc) => {
     let pair = viewModel.peoplePairs.find( pp => pp.label === loc + '-ghost' )
     let location = shiftPairPositions.toChildMaleRoot[pair.home]
@@ -31,14 +32,6 @@ export const shiftChildMaleRootClasses = (viewModel, familyTree) => {
     pair.classStatus.visibility = location === 'enter' ? 'no-show' : 'visible'
     pair.classStatus.shape = pairComponentShapes[location]
   })
-
-  // Change classes on ghost connector objects to 'visible' and add tag for 'from' location.
-  // connectorLocationsList.forEach( (loc) => {
-  //   let connector = viewModel.connectors.find( cnx => cnx.label === loc  + '-ghost' )
-  //   connector.classStatus.visibility = 'visible'
-  //   let targetLocation = connector.classStatus.location
-  //   connector.classStatus.location = shiftConnectorPositions.toChildMaleRoot[targetLocation]
-  // })
 
   // Change classes on ghost connector objects to 'visible' and add the temporary 'from' location.
   connectorLocationsList.forEach( (loc) => {
@@ -48,7 +41,5 @@ export const shiftChildMaleRootClasses = (viewModel, familyTree) => {
     connector.classStatus.location = shiftLoc
     connector.classStatus.visibility = ( shiftLoc === 'enter') ? 'no-show' : 'visible'
   })
-
-
 
 }

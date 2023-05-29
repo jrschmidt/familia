@@ -9,9 +9,8 @@ import {
   shiftConnectorPositions
 } from '../view-model-constants'
 
-
 export const shiftChildFemaleRootClasses = (viewModel, familyTree) => {
-
+  
   // Change classes on static pair objects to 'no-show'.
   pairLocationsList.forEach( (loc) => {
     let pair = viewModel.peoplePairs.find( pp => pp.label === loc )
@@ -24,22 +23,22 @@ export const shiftChildFemaleRootClasses = (viewModel, familyTree) => {
     connector.classStatus.visibility = 'no-show'
   })
 
-  // Change classes on ghost pair objects to 'visible', add tag for 'from'
+  // Change classes on ghost pair objects to 'visible', add the temporary 'from'
   // location, and change 'shape' tag where needed.
   pairLocationsList.forEach( (loc) => {
     let pair = viewModel.peoplePairs.find( pp => pp.label === loc + '-ghost' )
-    pair.classStatus.visibility = 'visible'
-    let targetLocation = pair.classStatus.location
-    pair.classStatus.location = shiftPairPositions.toMother[targetLocation]
-    pair.classStatus.shape = pairComponentShapes[targetLocation]
+    let location = shiftPairPositions.toChildFemaleRoot[pair.home]
+    pair.classStatus.location = location
+    pair.classStatus.visibility = location === 'enter' ? 'no-show' : 'visible'
+    pair.classStatus.shape = pairComponentShapes[location]
   })
 
-  // Change classes on ghost connector objects to 'visible' and add tag for 'from' location.
+  // Change classes on ghost connector objects to 'visible' and add the temporary 'from' location.
   connectorLocationsList.forEach( (loc) => {
-    let connector = viewModel.connectors.find( cnx => cnx.label === loc  + '-ghost' )
-    connector.classStatus.visibility = 'visible'
-    let targetLocation = connector.classStatus.location
-    connector.classStatus.location = shiftConnectorPositions.toMother[targetLocation]
+    let label = loc + '-ghost'
+    let connector = viewModel.connectors.find( cnx => cnx.label === label )
+    let shiftLoc = shiftConnectorPositions.toChildFemaleRoot[loc]
+    connector.classStatus.location = shiftLoc
+    connector.classStatus.visibility = ( shiftLoc === 'enter') ? 'no-show' : 'visible'
   })
-  
 }
