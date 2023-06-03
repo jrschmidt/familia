@@ -5,19 +5,24 @@
       v-bind:key="pair.label"
       v-bind:pair="pair"
     />
+    <ConnectorSvg
+      v-for="(connector) in connectors"
+      v-bind:key="connector.label"
+      v-bind:connector="connector"
+    />
   </div>
 </template>
 
 <script setup>
 import PersonPair from './PersonPair.vue'
-
+import ConnectorSvg from './ConnectorSvg.vue'
 import { ref } from 'vue'
 import { useViewModelStore } from '../stores/viewModelStore'
+import ConnectorSvgBottom from './ConnectorSvgBottom.vue'
+
 const viewModel = useViewModelStore()
 const pairs = ref(viewModel.peoplePairs)
-
-// ***** LEGACY SNIPPETS WITH SVG COMPONENTS ARE AT THE ENDOF THIS FILE *****
-
+const connectors = ref(viewModel.connectors)
 </script>
 
 <style lang="css">

@@ -1,23 +1,25 @@
 <template>
-  <ConnectorSvgTop />
-  <ConnectorSvgMiddle />
-  <ConnectorSvgBottom />
+  <div class="connector-svg">
+    <ConnectorSvgTop />
+    <ConnectorSvgMiddle />
+    <ConnectorSvgBottom />
+  </div>
 </template>
     
-  <script setup>
+<script setup>
 import { computed } from '@vue/reactivity';
 import ConnectorSvgTop from './ConnectorSvgTop.vue'
 import ConnectorSvgMiddle from './ConnectorSvgMiddle.vue'
 import ConnectorSvgBottom from './ConnectorSvgBottom.vue'
 import { connectorTopShapes, connectorMiddleShapes, connectorBottomShapes } from '../view-model-constants'
 
-  const props = defineProps({
-    location: String,
-    type: String,
-    visibility: String,
-    home: String,
-    label: String
-  })
+const props = defineProps({
+  location: String,
+  type: String,
+  visibility: String,
+  home: String,
+  label: String
+})
 
 const topClasses = computed( () => {
   return [
@@ -44,7 +46,7 @@ const bottomClasses = computed( () => {
   ]
 })
 </script>
-    
-  <style lang="css">
-  </style>
+
+<style lang="css">
+</style>
   
