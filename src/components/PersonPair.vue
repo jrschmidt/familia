@@ -51,6 +51,11 @@ const visibility = computed(() => {
   font-size: 0.6rem;
 }
 
+.person-pair {
+  transition-property: left, top;
+  transition-duration: 2000ms;
+}
+
 .no-show {
   visibility: hidden;
 }

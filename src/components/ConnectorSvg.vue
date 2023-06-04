@@ -1,5 +1,8 @@
 <template>
-  <div class="connector-svg">
+  <div
+    class="connector-svg"
+    v-bind:class="[location, type, visibility]"
+  >
     <ConnectorSvgTop />
     <ConnectorSvgMiddle />
     <ConnectorSvgBottom />
@@ -58,5 +61,73 @@ const bottomClasses = computed( () => {
 </script>
 
 <style lang="css">
+.connector-svg {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.no-show {
+  visibility: hidden;
+}
+
+.cnx-0-0 {
+  width: 120px;
+}
+
+.cnx-1-0 {
+  width: 240px;
+}
+
+.cnx-1-1 {
+  width: 240px;
+}
+
+.cnx-2-0 {
+  width: 120px;
+}
+
+.cnx-2-1 {
+  width: 120px;
+}
+
+.cnx-2-2 {
+  width: 120px;
+}
+
+.cnx-2-3 {
+  width: 120px;
+}
+
+.cnx-3-0 {
+  width: 60px;
+}
+
+.cnx-3-1 {
+  width: 60px;
+}
+
+.cnx-3-2 {
+  width: 60px;
+}
+
+.cnx-3-3 {
+  width: 60px;
+}
+
+.cnx-3-4 {
+  width: 60px;
+}
+
+.cnx-3-5 {
+  width: 60px;
+}
+
+.cnx-3-6 {
+  width: 60px;
+}
+
+.cnx-3-7 {
+  width: 60px;
+}
 </style>
-  
