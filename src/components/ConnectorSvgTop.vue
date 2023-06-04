@@ -1,5 +1,8 @@
 <template>
-  <div class="connector-svg-top" :class="svgClass">
+  <div
+    class="connector-svg-top"
+    v-bind:class="[location, shape, visibility]"
+  >
     <svg height="48px" width="100%">
       <line x1="0%" y1="0" x2="0" y2="24" stroke="#999999" stroke-width="2"/>
       <line x1="100%" y1="0" x2="100%" y2="24" stroke="#999999" stroke-width="2"/>
@@ -10,8 +13,22 @@
 </template>
   
 <script setup>
+import { computed } from '@vue/reactivity';
+
 const props = defineProps({
-  svgClass: String
+  topClasses: Array
+})
+
+const location = computed( () => {
+  return props.topClasses[0]
+})
+
+const visibility = computed( () => {
+  return props.topClasses[1]
+})
+
+const shape = computed( () => {
+  return props.topClasses[2]
 })
 </script>
   

@@ -3,9 +3,9 @@
     class="connector-svg"
     v-bind:class="[location, type, visibility]"
   >
-    <ConnectorSvgTop />
-    <ConnectorSvgMiddle />
-    <ConnectorSvgBottom />
+    <ConnectorSvgTop v-bind:top-classes="topClasses"/>
+    <ConnectorSvgMiddle  v-bind:middle-classes="middleClasses"/>
+    <ConnectorSvgBottom v-bind:bottom-classes="bottomClasses"/>
   </div>
 </template>
     
