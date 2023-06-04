@@ -1,14 +1,14 @@
 <template>
-    <div
+  <div
     class="connector-svg-middle"
-    v-bind:class="[location, shape, visibility]"
-    >
-      <svg height="3px" width="100%">
-        <line x1="0%" y1="1" x2="100%" y2="1" stroke="#999999" stroke-width="3"/>
-      </svg>
-    </div>
-  </template>
-    
+    :class="[location, visibility, shape]"
+  >
+    <svg height="3px" width="100%">
+      <line x1="0%" y1="1" x2="100%" y2="1" stroke="#999999" stroke-width="3"/>
+    </svg>
+  </div>
+</template>
+
 <script setup>
 import { computed } from '@vue/reactivity';
 

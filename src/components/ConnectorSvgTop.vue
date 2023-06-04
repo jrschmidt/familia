@@ -1,7 +1,7 @@
 <template>
   <div
     class="connector-svg-top"
-    v-bind:class="[location, shape, visibility]"
+    :class="[location, visibility, shape]"
   >
     <svg height="48px" width="100%">
       <line x1="0%" y1="0" x2="0" y2="24" stroke="#999999" stroke-width="2"/>
@@ -11,7 +11,7 @@
     </svg>
   </div>
 </template>
-  
+
 <script setup>
 import { computed } from '@vue/reactivity';
 
@@ -33,4 +33,7 @@ const shape = computed( () => {
 </script>
   
 <style lang="css">
+.connector-svg-top {
+  width: 100%;
+}
 </style>

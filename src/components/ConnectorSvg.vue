@@ -35,8 +35,8 @@ const visibility = computed( () => {
 const topClasses = computed( () => {
   let key = props.connector.classStatus.location
   return [
-    location,
-    visibility,
+    location.value,
+    visibility.value,
     connectorTopShapes[key]
   ]
 })
@@ -44,8 +44,8 @@ const topClasses = computed( () => {
 const middleClasses = computed( () => {
   let key = props.connector.classStatus.location
   return [
-    location,
-    visibility,
+    location.value,
+    visibility.value,
     connectorMiddleShapes[key]
   ]
 })
@@ -53,8 +53,8 @@ const middleClasses = computed( () => {
 const bottomClasses = computed( () => {
   let key = props.connector.classStatus.location
   return [
-    location,
-    visibility,
+    location.value,
+    visibility.value,
     connectorBottomShapes[key]
   ]
 })
