@@ -18,7 +18,6 @@ import PersonPair from './PersonPair.vue'
 import ConnectorSvg from './ConnectorSvg.vue'
 import { ref } from 'vue'
 import { useViewModelStore } from '../stores/viewModelStore'
-import ConnectorSvgBottom from './ConnectorSvgBottom.vue'
 
 const viewModel = useViewModelStore()
 const pairs = ref(viewModel.peoplePairs)

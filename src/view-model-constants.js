@@ -408,11 +408,11 @@ export const connectorMiddleShapes = {
 
 export const connectorBottomShapes = {
   'cnx-0-0': 'cnx-bottom-mid',
-  'cnx-1-0': 'nx-bottom-right',
+  'cnx-1-0': 'cnx-bottom-right',
   'cnx-1-1': 'cnx-bottom-left',
-  'cnx-2-0': 'nx-bottom-right',
+  'cnx-2-0': 'cnx-bottom-right',
   'cnx-2-1': 'cnx-bottom-left',
-  'cnx-2-2': 'nx-bottom-right',
+  'cnx-2-2': 'cnx-bottom-right',
   'cnx-2-3': 'cnx-bottom-left',
   'cnx-3-0': 'cnx-bottom-mid',
   'cnx-3-1': 'cnx-bottom-mid',

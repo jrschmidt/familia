@@ -11,38 +11,48 @@ import { computed } from '@vue/reactivity';
 import ConnectorSvgTop from './ConnectorSvgTop.vue'
 import ConnectorSvgMiddle from './ConnectorSvgMiddle.vue'
 import ConnectorSvgBottom from './ConnectorSvgBottom.vue'
-import { connectorTopShapes, connectorMiddleShapes, connectorBottomShapes } from '../view-model-constants'
+import { connectorMiddleShapes, connectorBottomShapes, connectorTopShapes } from '../view-model-constants'
 
 const props = defineProps({
-  location: String,
-  type: String,
-  visibility: String,
-  home: String,
-  label: String
+  connector: Object
+})
+
+const location = computed( () => {
+  return props.connector.classStatus.location
+})
+
+const type = computed( () => {
+  return props.connector.classStatus.type
+})
+
+const visibility = computed( () => {
+  return props.connector.classStatus.visibility
 })
 
 const topClasses = computed( () => {
+  let key = props.connector.classStatus.location
   return [
     location,
     visibility,
-    connectorTopShapes[location]
+    connectorTopShapes[key]
   ]
 })
 
 const middleClasses = computed( () => {
+  let key = props.connector.classStatus.location
   return [
     location,
     visibility,
-    connectorMiddleShapes[location]
+    connectorMiddleShapes[key]
   ]
 })
 
 const bottomClasses = computed( () => {
-  let svgType = getSvgTypeBottom(location)
+  let key = props.connector.classStatus.location
   return [
     location,
     visibility,
-    connectorBottomShapes[location]
+    connectorBottomShapes[key]
   ]
 })
 </script>
