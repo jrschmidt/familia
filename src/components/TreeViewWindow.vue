@@ -128,7 +128,7 @@ const connectors = ref(viewModel.connectors)
 }
 
 .connector-svg.cnx-1-1 {
-  left: 660px;
+  left: 540px;
   top: 262px;
 }
 
