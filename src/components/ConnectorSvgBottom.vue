@@ -3,8 +3,8 @@
     class="connector-svg-bottom"
     :class="[location, visibility, shape]"
   >
-    <svg height="24px" width="3px">
-      <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#999999" stroke-width="2"/>
+    <svg height="17px" width="3px">
+      <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#999999" stroke-width="3"/>
     </svg>
   </div>
 </template>
@@ -30,5 +30,30 @@ const shape = computed( () => {
 </script>
 
 <style lang="css">
+  .connector-svg-bottom {
+    height: 17px;
+  }
+
+  .connector-svg-bottom svg {
+  vertical-align: top;
+}
+
+.connector-svg-bottom {
+  margin-top: -3px;
+  margin-bottom: 0px;
+  padding: 0%;
+}
+
+.connector-svg-bottom.cnx-bottom-mid {
+  margin-left: calc(50% - 1px);
+}
+
+.connector-svg-bottom.cnx-bottom-right {
+  margin-left: 98%;
+}
+
+.connector-svg-bottom.cnx-bottom-left {
+  margin-left: 2%;
+}
 </style>
   

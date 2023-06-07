@@ -3,11 +3,11 @@
     class="connector-svg-top"
     :class="[location, visibility, shape]"
   >
-    <svg height="48px" width="100%">
-      <line x1="2%" y1="0" x2="2%" y2="24" stroke="#999999" stroke-width="3"/>
-      <line x1="98%" y1="0" x2="98%" y2="24" stroke="#999999" stroke-width="3"/>
-      <line x1="0" y1="24" x2="100%" y2="24" stroke="#999999" stroke-width="3"/>
-      <line x1="50%" y1="24" x2="50%" y2="48" stroke="#999999" stroke-width="3"/>
+    <svg height="32px" width="100%">
+      <line x1="2" y1="2" x2="2" y2="16" stroke="#999999" stroke-width="3"/>
+      <line x1="calc(100% - 2px)" y1="2" x2="calc(100% - 2px)" y2="16" stroke="#999999" stroke-width="3"/>
+      <line x1="0" y1="16" x2="100%" y2="16" stroke="#999999" stroke-width="3"/>
+      <line x1="50%" y1="16" x2="50%" y2="32" stroke="#999999" stroke-width="3"/>
     </svg>
   </div>
 </template>
@@ -33,9 +33,20 @@ const shape = computed( () => {
 </script>
   
 <style lang="css">
+  .connector-svg-top {
+    height: 32px;
+  }
+
+  .connector-svg-top svg {
+  vertical-align: top;
+}
+
 .connector-svg-top {
   width: 100%;
   margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0%;
 }
 
 .connector-svg-top.cnx-1-0 {
@@ -45,5 +56,10 @@ const shape = computed( () => {
 .connector-svg-top.cnx-1-1 {
   width: 120px;
   margin-left: 120px;
+}
+
+.connector-svg-top svg {
+  margin: 0px;
+  padding: 0px;
 }
 </style>
