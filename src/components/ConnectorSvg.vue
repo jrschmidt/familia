@@ -67,6 +67,11 @@ const bottomClasses = computed( () => {
   flex-direction: column;
 }
 
+.connector-svg {
+  transition-property: left, top, width;
+  transition-duration: 2000ms;
+}
+
 .no-show {
   visibility: hidden;
 }

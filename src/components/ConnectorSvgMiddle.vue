@@ -44,6 +44,11 @@ const shape = computed( () => {
   padding: 0%;
 }
 
+.connector-svg-middle {
+  transition-property: width, margin-left;
+  transition-duration: 2000ms;
+}
+
 .connector-svg-middle.cnx-middle-zero {
   margin-left: calc(50% - 3px);
   width: 3px;

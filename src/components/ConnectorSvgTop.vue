@@ -35,6 +35,9 @@ const shape = computed( () => {
 <style lang="css">
   .connector-svg-top {
     height: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0%;
   }
 
   .connector-svg-top svg {
@@ -42,15 +45,18 @@ const shape = computed( () => {
 }
 
 .connector-svg-top {
+  transition-property: width, margin-left;
+  transition-duration: 2000ms;
+}
+
+  .connector-svg-top {
   width: 100%;
   margin-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0%;
 }
 
 .connector-svg-top.cnx-1-0 {
   width: 120px;
+  margin-left: 0px;
 }
 
 .connector-svg-top.cnx-1-1 {
@@ -58,8 +64,4 @@ const shape = computed( () => {
   margin-left: 120px;
 }
 
-.connector-svg-top svg {
-  margin: 0px;
-  padding: 0px;
-}
 </style>
