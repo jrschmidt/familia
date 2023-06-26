@@ -16,7 +16,7 @@ describe('correctly sets class data for components', () => {
       pairs: [
         // static pairs:
         ['gen0root', ['gen0root', 'static', 'singleton', 'visible'] ],
-        ['gen1pair0', ['gen1pair0', 'static', 'singleton', 'visible'] ],
+        ['gen1pair0', ['gen1pair0', 'static', 'normal', 'visible'] ],
         ['gen2pair0', ['gen2pair0', 'static', 'normal', 'visible'] ],
         ['gen2pair1', ['gen2pair1', 'static', 'normal', 'visible'] ],
         ['gen3pair0', ['gen3pair0', 'static', 'normal', 'visible'] ],
@@ -40,7 +40,7 @@ describe('correctly sets class data for components', () => {
         ['gen3pair0-ghost', ['gen3pair0', 'ghost', 'normal', 'no-show'] ],
         ['gen3pair1-ghost', ['gen3pair1', 'ghost', 'normal', 'no-show'] ],
         ['gen3pair2-ghost', ['gen3pair2', 'ghost', 'normal', 'no-show'] ],
-        ['gen3pair3-ghost', ['gen3pair3', 'ghost', 'compressed', 'no-show'] ],
+        ['gen3pair3-ghost', ['gen3pair3', 'ghost', 'normal', 'no-show'] ],
         ['gen4pair0-ghost', ['gen4pair0', 'ghost', 'compressed', 'no-show'] ],
         ['gen4pair1-ghost', ['gen4pair1', 'ghost', 'compressed', 'no-show'] ],
         ['gen4pair2-ghost', ['gen4pair2', 'ghost', 'compressed', 'no-show'] ],
