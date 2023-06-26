@@ -18,6 +18,9 @@ export const shiftFatherClasses = (viewModel, familyTree) => {
 
   // Change classes on ghost pair objects to 'visible', add the temporary 'from'
   // location, and change 'shape' tag where needed.
+  // ('from' and 'to' will be switched, in a manner of speaking:
+  // 'ghost' pair and connector components, when activated, will be set to
+  // 'visible' status at their home location, then moved to the new destination.
   pairLocationsList.forEach( (loc) => {
     let pair = viewModel.peoplePairs.find( pp => pp.label === loc + '-ghost' )
     let location = shiftPairPositions.toFather[pair.home]
