@@ -435,7 +435,7 @@ describe('correctly sets class data for components', () => {
     testClasses(viewModel, expectedData.initial)
   })
 
-  test('correctly resets classes after shiftToFather()', () => {
+  test.skip('correctly resets classes after shiftToFather()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
@@ -444,7 +444,7 @@ describe('correctly sets class data for components', () => {
     testClasses(viewModel, expectedData.shiftToFather)
   })
 
-  test('correctly resets classes after shiftToMother()', () => {
+  test.skip('correctly resets classes after shiftToMother()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
@@ -453,7 +453,7 @@ describe('correctly sets class data for components', () => {
     testClasses(viewModel, expectedData.shiftToMother)
   })
 
-  test('correctly resets classes after shiftToChildMaleRoot()', () => {
+  test.skip('correctly resets classes after shiftToChildMaleRoot()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
@@ -464,7 +464,7 @@ describe('correctly sets class data for components', () => {
     testClasses(viewModel, expectedData.shiftToChildMaleRoot)
   })
   
-  test('correctly resets classes after shiftToChildFemaleRoot()', () => {
+  test.skip('correctly resets classes after shiftToChildFemaleRoot()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)

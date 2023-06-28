@@ -1,5 +1,7 @@
 import { defineStore } from 'pinia'
 import * as constants from '../view-model-constants'
+
+import { initializeViewModel } from '../view-model-methods/initialize-view-model'
 import { populateViewModel } from '../view-model-methods/populate-view-model'
 import { shiftToFather } from '../view-model-methods/shift-to-father'
 import { shiftToMother } from '../view-model-methods/shift-to-mother'
@@ -25,35 +27,8 @@ export const useViewModelStore = defineStore('viewModel', {
 
   actions: {
 
-    initialize(configData, pairInitConstants, connectorInitConstants) {
-      this.storeStatus = 'initialized'
-      this.generations = configData.generations
-      this.peoplePairs = pairInitConstants.map( (item) => {
-        let pairData = {}
-        pairData.label = item[0]
-        pairData.home = item[1]
-        pairData.people = []
-        pairData.classStatus = {
-          location: item[2][0],
-          pairtype: item[2][1],
-          shape: item[2][2],
-          visibility: item[2][3]
-        }
-        return pairData
-      })
-      this.rows = Array(this.generations).fill( [] )
-
-      this.connectors = connectorInitConstants.map( (item) => {
-        let connectorData = {}
-        connectorData.label = item[0]
-        connectorData.home = item[1]
-        connectorData.classStatus = {
-          location: item[2][0],
-          type: item[2][1],
-          visibility: item[2][2]
-        }
-        return connectorData
-      })
+    initialize(configData) {
+      initializeViewModel(this, configData)
     },
 
     populate(familyTree) {
