@@ -1,0 +1,1 @@
+export const shiftPeople = (viewModel, familyTree, shiftMode) => {}

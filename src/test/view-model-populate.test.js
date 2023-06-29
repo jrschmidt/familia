@@ -64,7 +64,6 @@ describe('correctly places people pair data', () => {
       ['gen4pair5-ghost', [] ],
       ['gen4pair6-ghost', [] ],
       ['gen4pair7-ghost', [] ]
-
     ],
 
     shiftToMother: [
@@ -101,8 +100,6 @@ describe('correctly places people pair data', () => {
       ['gen4pair5-ghost', [] ],
       ['gen4pair6-ghost', [] ],
       ['gen4pair7-ghost', [] ]
-
-
     ]
   }
 
