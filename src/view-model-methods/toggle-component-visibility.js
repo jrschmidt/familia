@@ -1,6 +1,6 @@
 // This method toggles the visibility of 'static' and 'ghost' pair and connector components.
 
-import { connectorLocationsList } from '../view-model-constants'
+import { pairLocationsList, connectorLocationsList } from '../view-model-constants'
 
 export const toggleVisibility = (viewModel, visibilityMode) => {
   let vClasses = ['', '']
@@ -16,7 +16,7 @@ export const toggleVisibility = (viewModel, visibilityMode) => {
     let pairStatic = viewModel.peoplePairs.find( pp => pp.label === loc )
     pairStatic.classStatus.visibility = vClasses[0]
     let pairGhost = viewModel.peoplePairs.find( pp => pp.label === loc + '-ghost' )
-    pairStatic.classStatus.visibility = vClasses[1]
+    pairGhost.classStatus.visibility = vClasses[1]
   })
   
   // Change classes on static and ghost connector objects.

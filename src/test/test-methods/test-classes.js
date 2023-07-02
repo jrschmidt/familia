@@ -1,3 +1,5 @@
+import { test, beforeEach, describe, expect } from 'vitest'
+
 export const testClasses = (viewModel, expectedData) => {
 
   expectedData.pairs.forEach( (item) => {
