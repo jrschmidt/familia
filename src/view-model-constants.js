@@ -146,25 +146,26 @@ export const pairLocationsList = [
   'gen4pair7'
   ]
 
+export const shiftPairPositionsFather = {
+  gen0root: 'none', 
+  gen1pair0: 'gen0root',
+  gen2pair0: 'gen1pair0',
+  gen2pair1: 'none',
+  gen3pair0: 'gen2pair0',
+  gen3pair1: 'gen2pair1',
+  gen3pair2: 'none',
+  gen3pair3: 'none',
+  gen4pair0: 'gen3pair0',
+  gen4pair1: 'gen3pair1',
+  gen4pair2: 'gen3pair2',
+  gen4pair3: 'gen3pair3',
+  gen4pair4: 'none',
+  gen4pair5: 'none',
+  gen4pair6: 'none',
+  gen4pair7: 'none'
+}
+
 export const shiftPairPositions = {
-  toFather: {
-    gen0root: 'gen1pair0',
-    gen1pair0: 'gen2pair0',
-    gen2pair0: 'gen3pair0',
-    gen2pair1: 'gen3pair1',
-    gen3pair0: 'gen4pair0',
-    gen3pair1: 'gen4pair1',
-    gen3pair2: 'gen4pair2',
-    gen3pair3: 'gen4pair3',
-    gen4pair0: 'enter',
-    gen4pair1: 'enter',
-    gen4pair2: 'enter',
-    gen4pair3: 'enter',
-    gen4pair4: 'enter',
-    gen4pair5: 'enter',
-    gen4pair6: 'enter',
-    gen4pair7: 'enter'
-  },
 
   toMother: {
     gen0root: 'gen1pair0',

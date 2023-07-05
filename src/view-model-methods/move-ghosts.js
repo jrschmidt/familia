@@ -1,8 +1,3 @@
-// This method ...
-// NEED TO REWRITE THIS COMMENT!!
-// NEED TO REWRITE THIS COMMENT!!
-// NEED TO REWRITE THIS COMMENT!!
-
 import { pairLocationsList, pairComponentShapes, connectorLocationsList } from '../view-model-constants'
 
 export const moveGhosts = (viewModel) => {

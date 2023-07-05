@@ -1,54 +1,64 @@
 import { test, describe } from 'vitest'
-import { testToggle } from './test-methods/test-visibility-toggle'
+import { testClasses } from './test-methods/test-classes'
+
+import { expectedToFather } from './test-data/expected-classes-shift-move-father'
+import { expectedToMother } from './test-data/expected-classes-shift-move-mother'
+import { expectedToChildMaleRoot } from './test-data/expected-classes-shift-move-child-m'
+import { expectedToChildFemaleRoot } from './test-data/expected-classes-shift-move-child-f'
 
 import { setActivePinia, createPinia } from 'pinia'
 import { useViewModelStore } from '../stores/viewModelStore'
 
 import { shiftSet } from '../view-model-methods/shift-view-set'
+import { shiftMove } from '../view-model-methods/shift-view-move'
 
 import { pairInitConstants, connectorInitConstants, viewModelConfig as configData } from '../view-model-constants'
 import { familyTreeData as familyTree } from '../data/family-tree-data.js'
 
-describe('shiftSet() functions toggle visibility for static and ghost components', () => {
+describe('shiftMove() changes location related classes for ghost components', () => {
   
-  test('shiftSet(toFather) toggles component visibility', () => {
+  test('shiftSet(toFather) correctly changes location related classes', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
     viewModel.populate(familyTree)
     shiftSet(viewModel, familyTree, 'toFather')
-    testToggle(viewModel, ['no-show', 'visible'])
+    shiftMove(viewModel, familyTree, 'toFather')
+    testClasses(viewModel, expectedToFather)
   })
   
-  test('shiftSet(toMother) toggles component visibility', () => {
+  test('shiftSet(toMother) correctly changes location related classes', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
     viewModel.populate(familyTree)
     shiftSet(viewModel, familyTree, 'toMother')
-    testToggle(viewModel, ['no-show', 'visible'])
+    shiftMove(viewModel, familyTree, 'toMother')
+    testClasses(viewModel, expectedToMother)
   })
   
   // Currently skipping because shift() function is not complete.
-  test.skip('shiftSet(toChildMaleRoot) toggles component visibility', () => {
+  test.skip('shiftSet(toChildMaleRoot) correctly changes location related classes', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
     viewModel.populate(familyTree)
     viewModel.shift(familyTree, 'toFather')
     shiftSet(viewModel, familyTree, 'toChildMaleRoot')
-    testToggle(viewModel, ['no-show', 'visible'])
+    shiftMove(viewModel, familyTree, 'toChildMaleRoot')
+    testClasses(viewModel, expectedToChildMaleRoot)
   })
   
   // Currently skipping because shift() function is not complete.
-  test.skip('shiftSet(toChildFemaleRoot) toggles component visibility', () => {
+  test.skip('shiftSet(toChildFemaleRoot) correctly changes location related classes', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
     viewModel.populate(familyTree)
     viewModel.shift(familyTree, 'toMother')
     shiftSet(viewModel, familyTree, 'toChildFemaleRoot')
-    testToggle(viewModel, ['no-show', 'visible'])
+    shiftMove(viewModel, familyTree, 'toChildFemaleRoot')
+    testClasses(viewModel, expectedToChildFemaleRoot)
   })
   
 })

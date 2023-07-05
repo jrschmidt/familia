@@ -1,17 +1,14 @@
-import { test, beforeEach, describe, expect } from 'vitest'
+import { test, describe, expect } from 'vitest'
+import { testClasses } from './test-methods/test-classes'
+
+import { expectedInit } from './test-data/expected-class-data-init'
 
 import { setActivePinia, createPinia } from 'pinia'
 import { useViewModelStore } from '../stores/viewModelStore'
 
-import { testClasses } from './test-methods/test-classes'
-import { expectedInit } from './test-data/expected-class-data-init'
-
-import { pairInitConstants, connectorInitConstants, viewModelConfig as configData } from '../view-model-constants'
+import { viewModelConfig as configData } from '../view-model-constants'
 
 describe('view model initialization before receiving data ("pre-initialization")', () => {
-  beforeEach( () => {
-    setActivePinia(createPinia())
-  })
   
   test('the store contains empty values before being initialized', () => {
     setActivePinia(createPinia())

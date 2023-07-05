@@ -2,7 +2,7 @@
 
 import {
   pairLocationsList,
-  shiftPairPositions,
+  shiftPairPositionsFather,
   pairComponentShapes,
   connectorLocationsList,
   shiftConnectorPositions
@@ -23,7 +23,7 @@ export const shiftFatherClasses = (viewModel, familyTree) => {
   // 'visible' status at their home location, then moved to the new destination.
   pairLocationsList.forEach( (loc) => {
     let pair = viewModel.peoplePairs.find( pp => pp.label === loc + '-ghost' )
-    let location = shiftPairPositions.toFather[pair.home]
+    let location = shiftPairPositionsFather[pair.home]
     pair.classStatus.location = location
     pair.classStatus.visibility = location === 'enter' ? 'no-show' : 'visible'
     pair.classStatus.shape = pairComponentShapes[location]

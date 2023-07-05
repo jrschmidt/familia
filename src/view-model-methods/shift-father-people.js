@@ -18,7 +18,7 @@ export const shiftFatherPeople = (viewModel, familyTree) => {
   pairLocationsList.forEach( (label) => {
     let pairObject = viewModel.peoplePairs.find( pair => pair.label === label + '-ghost')
     let loc = pairObject.classStatus.location
-    if ( loc != 'enter' ) {
+    if ( loc != 'none' ) {
       let people = getPeopleFromStaticPairAt(viewModel.peoplePairs, loc)
       if ( pairObject.label === 'gen0root-ghost' ) {
         people = [ people[0] ]
