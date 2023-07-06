@@ -31,7 +31,7 @@ export const expectedToMother = {
     ['gen4pair0-ghost', ['none', 'ghost', 'faded', 'fade'] ],
     ['gen4pair1-ghost', ['none', 'ghost', 'faded', 'fade'] ],
     ['gen4pair2-ghost', ['none', 'ghost', 'faded', 'fade'] ],
-    ['gen4pair3-ghost', ['none', 'ghost', 'faded', 'fade'] ]
+    ['gen4pair3-ghost', ['none', 'ghost', 'faded', 'fade'] ],
     ['gen4pair4-ghost', ['gen3pair0', 'ghost', 'normal', 'visible'] ],
     ['gen4pair5-ghost', ['gen3pair1', 'ghost', 'normal', 'visible'] ],
     ['gen4pair6-ghost', ['gen3pair2', 'ghost', 'normal', 'visible'] ],
@@ -68,10 +68,10 @@ export const expectedToMother = {
     ['cnx-3-1-ghost', ['none', 'ghost', 'fade']],
     ['cnx-3-2-ghost', ['none', 'ghost', 'fade']],
     ['cnx-3-3-ghost', ['none', 'ghost', 'fade']],
-    ['cnx-3-4-ghost', ['cnx-2-0', 'ghost', 'no-show']],
-    ['cnx-3-5-ghost', ['cnx-2-1', 'ghost', 'no-show']],
-    ['cnx-3-6-ghost', ['cnx-2-2', 'ghost', 'no-show']],
-    ['cnx-3-7-ghost', ['cnx-2-3', 'ghost', 'no-show']]
+    ['cnx-3-4-ghost', ['cnx-2-0', 'ghost', 'visible']],
+    ['cnx-3-5-ghost', ['cnx-2-1', 'ghost', 'visible']],
+    ['cnx-3-6-ghost', ['cnx-2-2', 'ghost', 'visible']],
+    ['cnx-3-7-ghost', ['cnx-2-3', 'ghost', 'visible']]
   ]
 
 }

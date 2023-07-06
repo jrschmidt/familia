@@ -165,6 +165,25 @@ export const shiftPairPositionsFather = {
   gen4pair7: 'none'
 }
 
+export const shiftPairPositionsMother = {
+  gen0root: 'none', 
+  gen1pair0: 'gen0root',
+  gen2pair0: 'none',
+  gen2pair1: 'gen1pair0',
+  gen3pair0: 'none',
+  gen3pair1: 'none',
+  gen3pair2: 'gen2pair0',
+  gen3pair3: 'gen2pair1',
+  gen4pair0: 'none',
+  gen4pair1: 'none',
+  gen4pair2: 'none',
+  gen4pair3: 'none',
+  gen4pair4: 'gen3pair0',
+  gen4pair5: 'gen3pair1',
+  gen4pair6: 'gen3pair2',
+  gen4pair7: 'gen3pair3'
+}
+
 export const shiftPairPositions = {
 
   toMother: {
@@ -296,42 +315,43 @@ export const connectorInitConstants = [
   ['cnx-3-7-ghost', 'cnx-3-7', ['cnx-3-7', 'ghost', 'no-show']]
 ]
 
-export const shiftConnectorPositions = {
-  toFather: {
-    'cnx-0-0': 'cnx-1-0',
-    'cnx-1-0': 'cnx-2-0',
-    'cnx-1-1': 'cnx-2-1',
-    'cnx-2-0': 'cnx-3-0',
-    'cnx-2-1': 'cnx-3-1',
-    'cnx-2-2': 'cnx-3-2',
-    'cnx-2-3': 'cnx-3-3',
-    'cnx-3-0': 'enter',
-    'cnx-3-1': 'enter',
-    'cnx-3-2': 'enter',
-    'cnx-3-3': 'enter',
-    'cnx-3-4': 'enter',
-    'cnx-3-5': 'enter',
-    'cnx-3-6': 'enter',
-    'cnx-3-7': 'enter'
-    },
+export const shiftConnectorPositionsFather = {
+  'cnx-0-0': 'none',
+  'cnx-1-0': 'cnx-0-0',
+  'cnx-1-1': 'none',
+  'cnx-2-0': 'cnx-1-0',
+  'cnx-2-1': 'cnx-1-1',
+  'cnx-2-2': 'none',
+  'cnx-2-3': 'none',
+  'cnx-3-0': 'cnx-2-0',
+  'cnx-3-1': 'cnx-2-1',
+  'cnx-3-2': 'cnx-2-2',
+  'cnx-3-3': 'cnx-2-3',
+  'cnx-3-4': 'none',
+  'cnx-3-5': 'none',
+  'cnx-3-6': 'none',
+  'cnx-3-7': 'none'
+}
 
-  toMother: {
-    'cnx-0-0': 'cnx-1-1',
-    'cnx-1-0': 'cnx-2-2',
-    'cnx-1-1': 'cnx-2-3',
-    'cnx-2-0': 'cnx-3-4',
-    'cnx-2-1': 'cnx-3-5',
-    'cnx-2-2': 'cnx-3-6',
-    'cnx-2-3': 'cnx-3-7',
-    'cnx-3-0': 'enter',
-    'cnx-3-1': 'enter',
-    'cnx-3-2': 'enter',
-    'cnx-3-3': 'enter',
-    'cnx-3-4': 'enter',
-    'cnx-3-5': 'enter',
-    'cnx-3-6': 'enter',
-    'cnx-3-7': 'enter'
-    },
+export const shiftConnectorPositionsMother = {
+  'cnx-0-0': 'none',
+  'cnx-1-0': 'none',
+  'cnx-1-1': 'cnx-0-0',
+  'cnx-2-0': 'none',
+  'cnx-2-1': 'none',
+  'cnx-2-2': 'cnx-1-0',
+  'cnx-2-3': 'cnx-1-1',
+  'cnx-3-0': 'none',
+  'cnx-3-1': 'none',
+  'cnx-3-2': 'none',
+  'cnx-3-3': 'none',
+  'cnx-3-4': 'cnx-2-0',
+  'cnx-3-5': 'cnx-2-1',
+  'cnx-3-6': 'cnx-2-2',
+  'cnx-3-7': 'cnx-2-3'
+}
+
+export const shiftConnectorPositions = {
 
   toChildMaleRoot: {
     'cnx-0-0': 'enter',

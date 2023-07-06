@@ -17,7 +17,7 @@ import { familyTreeData as familyTree } from '../data/family-tree-data.js'
 
 describe('shiftMove() changes location related classes for ghost components', () => {
   
-  test('shiftSet(toFather) correctly changes location related classes', () => {
+  test('shiftMove(toFather) correctly changes location related classes', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
@@ -27,7 +27,7 @@ describe('shiftMove() changes location related classes for ghost components', ()
     testClasses(viewModel, expectedToFather)
   })
   
-  test('shiftSet(toMother) correctly changes location related classes', () => {
+  test('shiftMove(toMother) correctly changes location related classes', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
@@ -38,7 +38,7 @@ describe('shiftMove() changes location related classes for ghost components', ()
   })
   
   // Currently skipping because shift() function is not complete.
-  test.skip('shiftSet(toChildMaleRoot) correctly changes location related classes', () => {
+  test.skip('shiftMove(toChildMaleRoot) correctly changes location related classes', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
@@ -50,7 +50,7 @@ describe('shiftMove() changes location related classes for ghost components', ()
   })
   
   // Currently skipping because shift() function is not complete.
-  test.skip('shiftSet(toChildFemaleRoot) correctly changes location related classes', () => {
+  test.skip('shiftMove(toChildFemaleRoot) correctly changes location related classes', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
