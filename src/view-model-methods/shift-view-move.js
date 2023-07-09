@@ -4,11 +4,14 @@ import { getPairShape } from "./get-pair-shape"
 
 import {
   pairLocationsList,
-  connectorLocationsList,
   shiftPairPositionsFather,
   shiftPairPositionsMother,
   shiftPairPositionsChildMaleRoot,
-  shiftPairPositionsChildFemaleRoot,
+  shiftPairPositionsChildFemaleRoot
+} from '../view-model-constants'
+
+import {
+  connectorLocationsList,
   shiftConnectorPositionsFather,
   shiftConnectorPositionsMother,
   shiftConnectorPositionsChildMaleRoot,

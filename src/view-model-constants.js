@@ -184,64 +184,43 @@ export const shiftPairPositionsMother = {
   gen4pair7: 'gen3pair3'
 }
 
-export const shiftPairPositions = {
 
-  toMother: {
-    gen0root: 'gen1pair0',
-    gen1pair0: 'gen2pair1',
-    gen2pair0: 'gen3pair2',
-    gen2pair1: 'gen3pair3',
-    gen3pair0: 'gen4pair4',
-    gen3pair1: 'gen4pair5',
-    gen3pair2: 'gen4pair6',
-    gen3pair3: 'gen4pair7',
-    gen4pair0: 'enter',
-    gen4pair1: 'enter',
-    gen4pair2: 'enter',
-    gen4pair3: 'enter',
-    gen4pair4: 'enter',
-    gen4pair5: 'enter',
-    gen4pair6: 'enter',
-    gen4pair7: 'enter'
-  },
+export const shiftPairPositionsChildMaleRoot = {
+  gen0root: 'gen1pair0',
+  gen1pair0: 'gen2pair0',
+  gen2pair0: 'gen3pair0',
+  gen2pair1: 'gen3pair1',
+  gen3pair0: 'gen4pair0',
+  gen3pair1: 'gen4pair1',
+  gen3pair2: 'gen4pair2',
+  gen3pair3: 'gen4pair3',
+  gen4pair0: 'fade',
+  gen4pair1: 'fade',
+  gen4pair2: 'fade',
+  gen4pair3: 'fade',
+  gen4pair4: 'fade',
+  gen4pair5: 'fade',
+  gen4pair6: 'fade',
+  gen4pair7: 'fade'
+}
 
-  toChildMaleRoot: {
-    gen0root: 'enter',
-    gen1pair0: 'gen0root',
-    gen2pair0: 'gen1pair0',
-    gen2pair1: 'enter',
-    gen3pair0: 'gen2pair0',
-    gen3pair1: 'gen2pair1',
-    gen3pair2: 'enter',
-    gen3pair3: 'enter',
-    gen4pair0: 'gen3pair0',
-    gen4pair1: 'gen3pair1',
-    gen4pair2: 'gen3pair2',
-    gen4pair3: 'gen3pair3',
-    gen4pair4: 'enter',
-    gen4pair5: 'enter',
-    gen4pair6: 'enter',
-    gen4pair7: 'enter'
-  },
-
-  toChildFemaleRoot: {
-    gen0root: 'enter',
-    gen1pair0: 'gen0root',
-    gen2pair0: 'enter',
-    gen2pair1: 'gen1pair0',
-    gen3pair0: 'enter',
-    gen3pair1: 'enter',
-    gen3pair2: 'gen2pair0',
-    gen3pair3: 'gen2pair1',
-    gen4pair0: 'enter',
-    gen4pair1: 'enter',
-    gen4pair2: 'enter',
-    gen4pair3: 'enter',
-    gen4pair4: 'gen3pair0',
-    gen4pair5: 'gen3pair1',
-    gen4pair6: 'gen3pair2',
-    gen4pair7: 'gen3pair3'
-  },
+export const shiftPairPositionsChildFemaleRoot = {
+  gen0root: 'gen1pair0',
+  gen1pair0: 'gen2pair1',
+  gen2pair0: 'gen3pair2',
+  gen2pair1: 'gen3pair3',
+  gen3pair0: 'gen4pair4',
+  gen3pair1: 'gen4pair5',
+  gen3pair2: 'gen4pair6',
+  gen3pair3: 'gen4pair7',
+  gen4pair0: 'fade',
+  gen4pair1: 'fade',
+  gen4pair2: 'fade',
+  gen4pair3: 'fade',
+  gen4pair4: 'fade',
+  gen4pair5: 'fade',
+  gen4pair6: 'fade',
+  gen4pair7: 'fade'
 }
 
 export const pairComponentShapes = {
@@ -351,44 +330,40 @@ export const shiftConnectorPositionsMother = {
   'cnx-3-7': 'cnx-2-3'
 }
 
-export const shiftConnectorPositions = {
+export const shiftConnectorPositionsChildMaleRoot = {
+  'cnx-0-0': 'enter',
+  'cnx-1-0': 'cnx-0-0',
+  'cnx-1-1': 'enter',
+  'cnx-2-0': 'cnx-1-0',
+  'cnx-2-1': 'cnx-1-1',
+  'cnx-2-2': 'enter',
+  'cnx-2-3': 'enter',
+  'cnx-3-0': 'cnx-2-0',
+  'cnx-3-1': 'cnx-2-1',
+  'cnx-3-2': 'cnx-2-2',
+  'cnx-3-3': 'cnx-2-3',
+  'cnx-3-4': 'enter',
+  'cnx-3-5': 'enter',
+  'cnx-3-6': 'enter',
+  'cnx-3-7': 'enter'
+}
 
-  toChildMaleRoot: {
-    'cnx-0-0': 'enter',
-    'cnx-1-0': 'cnx-0-0',
-    'cnx-1-1': 'enter',
-    'cnx-2-0': 'cnx-1-0',
-    'cnx-2-1': 'cnx-1-1',
-    'cnx-2-2': 'enter',
-    'cnx-2-3': 'enter',
-    'cnx-3-0': 'cnx-2-0',
-    'cnx-3-1': 'cnx-2-1',
-    'cnx-3-2': 'cnx-2-2',
-    'cnx-3-3': 'cnx-2-3',
-    'cnx-3-4': 'enter',
-    'cnx-3-5': 'enter',
-    'cnx-3-6': 'enter',
-    'cnx-3-7': 'enter'
-    },
-
-  toChildFemaleRoot: {
-    'cnx-0-0': 'enter',
-    'cnx-1-0': 'enter',
-    'cnx-1-1': 'cnx-0-0',
-    'cnx-2-0': 'enter',
-    'cnx-2-1': 'enter',
-    'cnx-2-2': 'cnx-1-0',
-    'cnx-2-3': 'cnx-1-1',
-    'cnx-3-0': 'enter',
-    'cnx-3-1': 'enter',
-    'cnx-3-2': 'enter',
-    'cnx-3-3': 'enter',
-    'cnx-3-4': 'cnx-2-0',
-    'cnx-3-5': 'cnx-2-1',
-    'cnx-3-6': 'cnx-2-2',
-    'cnx-3-7': 'cnx-2-3'
-    },
-
+export const shiftConnectorPositionsChildFemaleRoot = {
+  'cnx-0-0': 'enter',
+  'cnx-1-0': 'enter',
+  'cnx-1-1': 'cnx-0-0',
+  'cnx-2-0': 'enter',
+  'cnx-2-1': 'enter',
+  'cnx-2-2': 'cnx-1-0',
+  'cnx-2-3': 'cnx-1-1',
+  'cnx-3-0': 'enter',
+  'cnx-3-1': 'enter',
+  'cnx-3-2': 'enter',
+  'cnx-3-3': 'enter',
+  'cnx-3-4': 'cnx-2-0',
+  'cnx-3-5': 'cnx-2-1',
+  'cnx-3-6': 'cnx-2-2',
+  'cnx-3-7': 'cnx-2-3'
 }
 
 export const connectorTopShapes = {
