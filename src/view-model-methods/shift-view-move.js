@@ -18,7 +18,7 @@ import {
   shiftConnectorPositionsChildFemaleRoot
 } from '../view-model-constants'
 
-export const shiftMove = (viewModel, familyTree, shiftMode) => {
+export const shiftMove = (viewModel, shiftMode) => {
   const shiftPairPositions = {
     toFather: shiftPairPositionsFather,
     toMother: shiftPairPositionsMother,
@@ -49,18 +49,16 @@ export const shiftMove = (viewModel, familyTree, shiftMode) => {
     }
   })
   
-  // Change classes on ghost connector objects to 'visible' and add the temporary 'from' location.
   connectorLocationsList.forEach( (loc) => {
-    let label = loc + '-ghost'
-    let connector = viewModel.connectors.find( cnx => cnx.label === label )
-    let shiftLoc = shiftConnectorPositions[shiftMode][loc]
+    let connector = viewModel.connectors.find( cnx => cnx.label === loc + '-ghost' )
+    let location = shiftConnectorPositions[shiftMode][loc]
     
-    if ( shiftLoc === 'none' ) {
+    if ( location === 'none' ) {
       connector.classStatus.location = 'none'
       connector.classStatus.visibility = 'fade'
     }
     else {
-      connector.classStatus.location = shiftLoc
+      connector.classStatus.location = location
     }
 
 })

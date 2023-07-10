@@ -8,6 +8,6 @@ import {
 } from '../view-model-constants'
 
 export const shiftSet = (viewModel, familyTree, shiftMode) => {
-  shiftPeople(viewModel, familyTree, shiftMode)
   toggleVisibility(viewModel, 'show-ghost-components')
+  shiftPeople(viewModel, familyTree, shiftMode)
 }
