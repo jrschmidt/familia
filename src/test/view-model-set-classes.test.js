@@ -6,7 +6,7 @@ import { useViewModelStore } from '../stores/viewModelStore'
 
 import { shiftSet } from '../view-model-methods/shift-view-set'
 
-import { pairInitConstants, connectorInitConstants, viewModelConfig as configData } from '../view-model-constants'
+import { viewModelConfig as configData } from '../view-model-constants'
 import { familyTreeData as familyTree } from '../data/family-tree-data.js'
 
 describe('shiftSet() toggles component visibility for static and ghost components', () => {

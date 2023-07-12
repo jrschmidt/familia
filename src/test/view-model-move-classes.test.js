@@ -12,7 +12,7 @@ import { useViewModelStore } from '../stores/viewModelStore'
 import { shiftSet } from '../view-model-methods/shift-view-set'
 import { shiftMove } from '../view-model-methods/shift-view-move'
 
-import { pairInitConstants, connectorInitConstants, viewModelConfig as configData } from '../view-model-constants'
+import { viewModelConfig as configData } from '../view-model-constants'
 import { familyTreeData as familyTree } from '../data/family-tree-data.js'
 
 describe('shiftMove() changes location related classes for ghost components', () => {
