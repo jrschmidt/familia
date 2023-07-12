@@ -11,6 +11,6 @@ import { shiftReset } from '../view-model-methods/shift-view-reset'
 
 export const shiftTree = (viewModel, familyTree, shiftMode) => {
   shiftSet(viewModel, familyTree, shiftMode)
-  shiftMove(viewModel, familyTree, shiftMode)
+  shiftMove(viewModel, shiftMode)
   shiftReset(viewModel, familyTree, shiftMode)
 }

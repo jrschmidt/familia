@@ -17,7 +17,7 @@ export const movePairGhosts = (viewModel, shiftMode) => {
     toChildMaleRoot: shiftPairPositionsChildMaleRoot,
     toChildFemaleRoot: shiftPairPositionsChildFemaleRoot
   }
-
+  
   pairLocationsList.forEach( (loc) => {
     let pair = viewModel.peoplePairs.find( pp => pp.label === loc + '-ghost' )
     let location = shiftPairPositions[shiftMode][loc]
