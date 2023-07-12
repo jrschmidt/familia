@@ -123,7 +123,7 @@ describe('correctly places people pair data', () => {
   test('correctly populates people pair data in initial positions', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
+    viewModel.initialize(configData)
     viewModel.populate(familyTreeData)
     testPositions(viewModel, expectedData.initial)
   })
@@ -131,7 +131,7 @@ describe('correctly places people pair data', () => {
   test.skip('correctly places people pair data after shiftToFather()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
+    viewModel.initialize(configData)
     viewModel.populate(familyTreeData)
     viewModel.shiftToFather(familyTreeData)
     testPositions(viewModel, expectedData.shiftToFather)
@@ -140,7 +140,7 @@ describe('correctly places people pair data', () => {
   test.skip('correctly places people pair data after shiftToMother()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
+    viewModel.initialize(configData)
     viewModel.populate(familyTreeData)
     viewModel.shiftToMother(familyTreeData)
     testPositions(viewModel, expectedData.shiftToMother)
@@ -149,7 +149,7 @@ describe('correctly places people pair data', () => {
   test.skip('correctly places people pair data after shiftToChildMaleRoot()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
+    viewModel.initialize(configData)
     viewModel.populate(familyTreeData)
     viewModel.shiftToFather(familyTreeData)
     viewModel.shiftToChildMaleRoot(familyTreeData)
@@ -159,7 +159,7 @@ describe('correctly places people pair data', () => {
   test.skip('correctly places people pair data after shiftToChildFemaleRoot()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
+    viewModel.initialize(configData)
     viewModel.populate(familyTreeData)
     viewModel.shiftToMother(familyTreeData)
     viewModel.shiftToChildFemaleRoot(familyTreeData)

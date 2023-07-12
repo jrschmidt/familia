@@ -14,7 +14,7 @@ describe('shiftSet() toggles component visibility for static and ghost component
   test('shiftSet(toFather) toggles component visibility', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
+    viewModel.initialize(configData)
     viewModel.populate(familyTree)
     shiftSet(viewModel, familyTree, 'toFather')
     testToggle(viewModel, ['no-show', 'visible'])
@@ -23,7 +23,7 @@ describe('shiftSet() toggles component visibility for static and ghost component
   test('shiftSet(toMother) toggles component visibility', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
+    viewModel.initialize(configData)
     viewModel.populate(familyTree)
     shiftSet(viewModel, familyTree, 'toMother')
     testToggle(viewModel, ['no-show', 'visible'])
@@ -33,7 +33,7 @@ describe('shiftSet() toggles component visibility for static and ghost component
   test.skip('shiftSet(toChildMaleRoot) toggles component visibility', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
+    viewModel.initialize(configData)
     viewModel.populate(familyTree)
     viewModel.shift(familyTree, 'toFather')
     shiftSet(viewModel, familyTree, 'toChildMaleRoot')
@@ -44,7 +44,7 @@ describe('shiftSet() toggles component visibility for static and ghost component
   test.skip('shiftSet(toChildFemaleRoot) toggles component visibility', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
-    viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
+    viewModel.initialize(configData)
     viewModel.populate(familyTree)
     viewModel.shift(familyTree, 'toMother')
     shiftSet(viewModel, familyTree, 'toChildFemaleRoot')

@@ -21,7 +21,7 @@ const familyTree = useFamilyTreeStore()
 familyTree.loadTree()
 
 const viewModel = useViewModelStore()
-viewModel.initialize(configData, pairInitConstants, connectorInitConstants)
+viewModel.initialize(configData)
 viewModel.populate(familyTree)
 
 const shiftFather = () => {
