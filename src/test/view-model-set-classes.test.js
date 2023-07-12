@@ -9,7 +9,7 @@ import { shiftSet } from '../view-model-methods/shift-view-set'
 import { pairInitConstants, connectorInitConstants, viewModelConfig as configData } from '../view-model-constants'
 import { familyTreeData as familyTree } from '../data/family-tree-data.js'
 
-describe('shiftSet() functions toggle visibility for static and ghost components', () => {
+describe('shiftSet() toggles component visibility for static and ghost components', () => {
   
   test('shiftSet(toFather) toggles component visibility', () => {
     setActivePinia(createPinia())
