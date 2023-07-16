@@ -1,12 +1,11 @@
 <template>
   <div class="tree-view-console">
     <h6>TreeViewConsole component</h6>
-    <button v-on:click="shiftFather()">Shift to father</button>
-    <button v-on:click="shiftMother()">Shift to mother</button>
-    <button v-on:click="shiftChildM()">Shift to child (male root)</button>
-    <button v-on:click="shiftChildF()">Shift to child (female root</button>
-    <button v-on:click="moveGhosts()">Move ghosts</button>
-    <button v-on:click="resetClasses()">Reset after transition</button>
+    <div>
+      <button v-on:click="shiftFatherSet()">shiftSet(toFather)</button>
+      <button v-on:click="shiftFatherMove()">shiftMove(toFather)</button>
+      <button v-on:click="shiftFatherReset()">shiftReset(toFather)</button>
+    </div>
     <TreeViewWindow/>
   </div>
 </template>
@@ -15,7 +14,7 @@
 import TreeViewWindow from './TreeViewWindow.vue'
 import { useViewModelStore } from '../stores/viewModelStore'
 import { useFamilyTreeStore } from '../stores/familyTreeStore'
-import { pairInitConstants, connectorInitConstants, viewModelConfig as configData } from '../view-model-constants'
+import { viewModelConfig as configData } from '../view-model-constants'
 
 const familyTree = useFamilyTreeStore()
 familyTree.loadTree()
@@ -24,35 +23,47 @@ const viewModel = useViewModelStore()
 viewModel.initialize(configData)
 viewModel.populate(familyTree)
 
-const shiftFather = () => {
-  console.log('Shift to father was clicked.')
-  viewModel.shiftToFather(familyTree)
+// ***  Temporary methods to make butons for testing:
+
+const shiftFatherSet = () => {
+  console.log('shiftFatherSet) was clicked.')
+  viewModel.tempShiftSet(familyTree, 'toFather')
 }
 
-const shiftMother = () => {
-  console.log('Shift to mother was clicked.')
-  viewModel.shiftToMother(familyTree)
-}
 
-const shiftChildM = () => {
-  console.log('Shift to child (male root) was clicked.')
-  viewModel.shiftToChildMaleRoot(familyTree)
-}
 
-const shiftChildF = () => {
-  console.log('Shift to child (female root) was clicked.')
-  viewModel.shiftToChildFemaleRoot(familyTree)
-}
+// =========================================
+// ***  ***  ***  OLD METHODS  ***  ***  ***
 
-const resetClasses = () => {
-  console.log('Reset was clicked.')
-  viewModel.resetClassesAfterTransition()
-}
+// const shiftFather = () => {
+//   console.log('shift to father was clicked.')
+//   viewModel.shiftSet(familyTree)
+// }
 
-const moveGhosts = () => {
-  console.log('move ghosts was clicked.')
-  viewModel.moveGhosts()
-}
+// const shiftMother = () => {
+//   console.log('Shift to mother was clicked.')
+//   viewModel.shiftToMother(familyTree)
+// }
+
+// const shiftChildM = () => {
+//   console.log('Shift to child (male root) was clicked.')
+//   viewModel.shiftToChildMaleRoot(familyTree)
+// }
+
+// const shiftChildF = () => {
+//   console.log('Shift to child (female root) was clicked.')
+//   viewModel.shiftToChildFemaleRoot(familyTree)
+// }
+
+// const resetClasses = () => {
+//   console.log('Reset was clicked.')
+//   viewModel.resetClassesAfterTransition()
+// }
+
+// const moveGhosts = () => {
+//   console.log('move ghosts was clicked.')
+//   viewModel.moveGhosts()
+// }
 </script>
 
 <style lang="css">

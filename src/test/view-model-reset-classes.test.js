@@ -1,4 +1,4 @@
-import { test, describe, expect } from 'vitest'
+import { test, describe } from 'vitest'
 import { testClasses } from './test-methods/test-classes'
 
 import { expectedInit } from './test-data/expected-class-data-init'
