@@ -41,6 +41,10 @@ export const useViewModelStore = defineStore('viewModel', {
     
     tempShiftSet(familyTree, shiftMode) {
       shiftSet(this, familyTree, shiftMode)
+    },
+    
+    tempShiftMove(familyTree, shiftMode) {
+      shiftMove(this, shiftMode)
     }
 
   }

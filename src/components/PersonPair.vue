@@ -56,7 +56,7 @@ const visibility = computed(() => {
   transition-duration: 2000ms;
 }
 
-.no-show {
+.no-show, .fade {
   visibility: hidden;
 }
 

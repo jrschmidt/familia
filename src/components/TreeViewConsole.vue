@@ -30,6 +30,11 @@ const shiftFatherSet = () => {
   viewModel.tempShiftSet(familyTree, 'toFather')
 }
 
+const shiftFatherMove = () => {
+  console.log('shiftFatherMove) was clicked.')
+  viewModel.tempShiftMove(familyTree, 'toFather')
+}
+
 
 
 // =========================================

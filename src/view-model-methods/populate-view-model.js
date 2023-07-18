@@ -27,11 +27,14 @@ export const populateViewModel = (viewModel, familyTree) => {
 
   let label = null
   let pairObject = null
+  let pairObjectGhost = null
   rows.forEach( (row, index1) => {
     row.forEach( (personId, index2) => {
       label = pairLabelMap[index1][index2]
       pairObject = viewModel.peoplePairs.find(pair => pair.label === label)
+      pairObjectGhost = viewModel.peoplePairs.find(pair => pair.label === label + '-ghost')
       pairObject.people.push(rows[index1][index2])
+      pairObjectGhost.people.push(rows[index1][index2])
     })
   })
 
