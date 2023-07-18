@@ -52,7 +52,7 @@ const visibility = computed(() => {
 }
 
 .person-pair {
-  transition-property: left, top;
+  transition-property: left, top, width;
   transition-duration: 2000ms;
 }
 
