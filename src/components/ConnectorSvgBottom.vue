@@ -50,7 +50,7 @@ const shape = computed( () => {
 }
 
 .connector-svg-bottom.cnx-bottom-mid {
-  margin-left: calc(50% - 1px);
+  margin-left: calc(50% - 2px);
 }
 
 .connector-svg-bottom.cnx-bottom-right {
