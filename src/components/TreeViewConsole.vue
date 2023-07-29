@@ -6,6 +6,21 @@
       <button v-on:click="shiftFatherMove()">shiftMove(toFather)</button>
       <button v-on:click="shiftFatherReset()">shiftReset(toFather)</button>
     </div>
+    <div>
+      <button v-on:click="shiftMotherSet()">shiftSet(toMother)</button>
+      <button v-on:click="shiftMotherMove()">shiftMove(toMother)</button>
+      <button v-on:click="shiftMotherReset()">shiftReset(toMother)</button>
+    </div>
+    <div>
+      <button v-on:click="shiftChildMaleSet()">shiftSet(toChildMaleRoot)</button>
+      <button v-on:click="shiftChildMaleMove()">shiftMove(toChildMaleRoot)</button>
+      <button v-on:click="shiftChildMaleReset()">shiftReset(toChildMaleRoot)</button>
+    </div>
+    <div>
+      <button v-on:click="shiftChildFemaleSet()">shiftSet(toChildFemaleRoot)</button>
+      <button v-on:click="shiftChildFemaleMove()">shiftMove(toChildFemaleRoot)</button>
+      <button v-on:click="shiftChildFemaleReset()">shiftReset(toChildFemaleRoot)</button>
+    </div>
     <TreeViewWindow/>
   </div>
 </template>
@@ -26,60 +41,53 @@ viewModel.populate(familyTree)
 // ***  Temporary methods to make butons for testing:
 
 const shiftFatherSet = () => {
-  console.log('shiftFatherSet) was clicked.')
+  console.log('shiftFatherSet was clicked.')
   viewModel.tempShiftSet(familyTree, 'toFather')
 }
 
 const shiftFatherMove = () => {
-  console.log('shiftFatherMove) was clicked.')
+  console.log('shiftFatherMove was clicked.')
   viewModel.tempShiftMove(familyTree, 'toFather')
 }
 
+const shiftMotherSet = () => {
+  console.log('shiftMotherSet was clicked.')
+  viewModel.tempShiftSet(familyTree, 'toMother')
+}
 
+const shiftMotherMove = () => {
+  console.log('shiftMotherMove was clicked.')
+  viewModel.tempShiftMove(familyTree, 'toMother')
+}
 
-// =========================================
-// ***  ***  ***  OLD METHODS  ***  ***  ***
+const shiftChildMaleSet = () => {
+console.log('shiftChildMaleSet was clicked.')
+viewModel.tempShiftSet(familyTree, 'toChildMaleRoot')
+}
 
-// const shiftFather = () => {
-//   console.log('shift to father was clicked.')
-//   viewModel.shiftSet(familyTree)
-// }
+const shiftChildMaleMove = () => {
+console.log('shiftChildMaleMove was clicked.')
+viewModel.tempShiftMove(familyTree, 'toChildMaleRoot')
+}
 
-// const shiftMother = () => {
-//   console.log('Shift to mother was clicked.')
-//   viewModel.shiftToMother(familyTree)
-// }
+const shiftChildFemaleSet = () => {
+  console.log('shiftChildFemaleSet was clicked.')
+  viewModel.tempShiftSet(familyTree, 'toChildFemaleRoot')
+}
 
-// const shiftChildM = () => {
-//   console.log('Shift to child (male root) was clicked.')
-//   viewModel.shiftToChildMaleRoot(familyTree)
-// }
+const shiftChildFemaleMove = () => {
+  console.log('shiftChildFemaleMove was clicked.')
+  viewModel.tempShiftMove(familyTree, 'toChildFemaleRoot')
+}
 
-// const shiftChildF = () => {
-//   console.log('Shift to child (female root) was clicked.')
-//   viewModel.shiftToChildFemaleRoot(familyTree)
-// }
-
-// const resetClasses = () => {
-//   console.log('Reset was clicked.')
-//   viewModel.resetClassesAfterTransition()
-// }
-
-// const moveGhosts = () => {
-//   console.log('move ghosts was clicked.')
-//   viewModel.moveGhosts()
-// }
 </script>
 
 <style lang="css">
-
-
 
 .tree-view-console {
   border-color: maroon;
   border-style: dotted;
 }
-
 
 .tree-view-console h6 {
   margin: 2px 0px 8px 8px;

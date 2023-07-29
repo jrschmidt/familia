@@ -329,17 +329,17 @@ export const shiftConnectorPositionsMother = {
 }
 
 export const shiftConnectorPositionsChildMaleRoot = {
-  'cnx-0-0': 'none',
-  'cnx-1-0': 'cnx-0-0',
-  'cnx-1-1': 'none',
-  'cnx-2-0': 'cnx-1-0',
-  'cnx-2-1': 'cnx-1-1',
-  'cnx-2-2': 'none',
-  'cnx-2-3': 'none',
-  'cnx-3-0': 'cnx-2-0',
-  'cnx-3-1': 'cnx-2-1',
-  'cnx-3-2': 'cnx-2-2',
-  'cnx-3-3': 'cnx-2-3',
+  'cnx-0-0': 'cnx-1-0',
+  'cnx-1-0': 'cnx-2-0',
+  'cnx-1-1': 'cnx-2-1',
+  'cnx-2-0': 'cnx-3-0',
+  'cnx-2-1': 'cnx-3-1',
+  'cnx-2-2': 'cnx-3-2',
+  'cnx-2-3': 'cnx-3-3',
+  'cnx-3-0': 'none',
+  'cnx-3-1': 'none',
+  'cnx-3-2': 'none',
+  'cnx-3-3': 'none',
   'cnx-3-4': 'none',
   'cnx-3-5': 'none',
   'cnx-3-6': 'none',
@@ -347,21 +347,21 @@ export const shiftConnectorPositionsChildMaleRoot = {
 }
 
 export const shiftConnectorPositionsChildFemaleRoot = {
-  'cnx-0-0': 'none',
-  'cnx-1-0': 'none',
-  'cnx-1-1': 'cnx-0-0',
-  'cnx-2-0': 'none',
-  'cnx-2-1': 'none',
-  'cnx-2-2': 'cnx-1-0',
-  'cnx-2-3': 'cnx-1-1',
+  'cnx-0-0': 'cnx-1-1',
+  'cnx-1-0': 'cnx-2-2',
+  'cnx-1-1': 'cnx-2-3',
+  'cnx-2-0': 'cnx-3-4',
+  'cnx-2-1': 'cnx-3-5',
+  'cnx-2-2': 'cnx-3-6',
+  'cnx-2-3': 'cnx-3-7',
   'cnx-3-0': 'none',
   'cnx-3-1': 'none',
   'cnx-3-2': 'none',
   'cnx-3-3': 'none',
-  'cnx-3-4': 'cnx-2-0',
-  'cnx-3-5': 'cnx-2-1',
-  'cnx-3-6': 'cnx-2-2',
-  'cnx-3-7': 'cnx-2-3'
+  'cnx-3-4': 'none',
+  'cnx-3-5': 'none',
+  'cnx-3-6': 'none',
+  'cnx-3-7': 'none'
 }
 
 export const connectorTopShapes = {
