@@ -5,7 +5,7 @@
   >
     <svg height="32px" width="100%">
       <line x1="2" y1="2" x2="2" y2="16" stroke="#999999" stroke-width="3"/>
-      <line x1="calc(100% - 2px)" y1="2" x2="calc(100% - 2px)" y2="16" stroke="#999999" stroke-width="3"/>
+      <line x1="98%" y1="2" x2="98%" y2="16" stroke="#999999" stroke-width="3"/>
       <line x1="0" y1="16" x2="100%" y2="16" stroke="#999999" stroke-width="3"/>
       <line x1="50%" y1="16" x2="50%" y2="32" stroke="#999999" stroke-width="3"/>
     </svg>

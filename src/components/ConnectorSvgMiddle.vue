@@ -4,7 +4,7 @@
     :class="[location, visibility, shape]"
   >
     <svg height="3px" width="100%">
-      <line x1="1px" y1="1.5px" x2="calc(100% - 1px)" y2="1.5px" stroke="#999999" stroke-width="3"/>
+      <line x1="1px" y1="1.5px" x2="100%" y2="1.5px" stroke="#999999" stroke-width="3"/>
     </svg>
   </div>
 </template>
@@ -32,16 +32,13 @@ const shape = computed( () => {
 <style lang="css">
   .connector-svg-middle {
     height: 3px;
+    margin-right: 32px;
+    margin-bottom: 0px;
+    padding: 0%;
   }
 
   .connector-svg-middle svg {
   vertical-align: top;
-}
-
-.connector-svg-middle {
-  margin-top: -3px;
-  margin-bottom: 0px;
-  padding: 0%;
 }
 
 .connector-svg-middle {
