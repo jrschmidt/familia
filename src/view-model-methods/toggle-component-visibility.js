@@ -3,6 +3,8 @@
 import { pairLocationsList, connectorLocationsList } from '../view-model-constants'
 
 export const toggleVisibility = (viewModel, visibilityMode) => {
+  console.log('#####  toggleVisibility')
+  console.log(`visibilityMode = ${visibilityMode}`)
   let vClasses = ['', '']
   if ( visibilityMode === 'show-ghost-components' ) {
     vClasses = ['no-show', 'visible']

@@ -50,6 +50,11 @@ const shiftFatherMove = () => {
   viewModel.tempShiftMove(familyTree, 'toFather')
 }
 
+const shiftFatherReset = () => {
+  console.log('shiftFatherReset was clicked.')
+  viewModel.tempShiftReset(familyTree, 'toFather')
+}
+
 const shiftMotherSet = () => {
   console.log('shiftMotherSet was clicked.')
   viewModel.tempShiftSet(familyTree, 'toMother')
@@ -60,14 +65,24 @@ const shiftMotherMove = () => {
   viewModel.tempShiftMove(familyTree, 'toMother')
 }
 
+const shiftMotherReset = () => {
+  console.log('shiftMotherReset was clicked.')
+  viewModel.tempShiftReset(familyTree, 'toMother')
+}
+
 const shiftChildMaleSet = () => {
 console.log('shiftChildMaleSet was clicked.')
 viewModel.tempShiftSet(familyTree, 'toChildMaleRoot')
 }
 
 const shiftChildMaleMove = () => {
-console.log('shiftChildMaleMove was clicked.')
-viewModel.tempShiftMove(familyTree, 'toChildMaleRoot')
+  console.log('shiftChildMaleMove was clicked.')
+  viewModel.tempShiftMove(familyTree, 'toChildMaleRoot')
+}
+
+const shiftChildMaleReset = () => {
+console.log('shiftChildMaleReset was clicked.')
+viewModel.tempShiftReset(familyTree, 'toChildMaleRoot')
 }
 
 const shiftChildFemaleSet = () => {
@@ -78,6 +93,11 @@ const shiftChildFemaleSet = () => {
 const shiftChildFemaleMove = () => {
   console.log('shiftChildFemaleMove was clicked.')
   viewModel.tempShiftMove(familyTree, 'toChildFemaleRoot')
+}
+
+const shiftChildFemaleReset = () => {
+  console.log('shiftChildFemaleReset was clicked.')
+  viewModel.tempShiftReset(familyTree, 'toChildFemaleRoot')
 }
 
 </script>

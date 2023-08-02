@@ -39,41 +39,4 @@ describe('correctly places people pair data', () => {
     testPositions(viewModel, expectedIdsInit)
   })
 
-  test.skip('correctly places people pair data after shiftToFather()', () => {
-    setActivePinia(createPinia())
-    const viewModel = useViewModelStore()
-    viewModel.initialize(configData)
-    viewModel.populate(familyTreeData)
-    viewModel.shiftToFather(familyTreeData)
-    testPositions(viewModel, expectedIdsToFather)
-  })
-  
-  test.skip('correctly places people pair data after shiftToMother()', () => {
-    setActivePinia(createPinia())
-    const viewModel = useViewModelStore()
-    viewModel.initialize(configData)
-    viewModel.populate(familyTreeData)
-    viewModel.shiftToMother(familyTreeData)
-    testPositions(viewModel, expectedIdsToMother)
-  })
-  
-  test.skip('correctly places people pair data after shiftToChildMaleRoot()', () => {
-    setActivePinia(createPinia())
-    const viewModel = useViewModelStore()
-    viewModel.initialize(configData)
-    viewModel.populate(familyTreeData)
-    viewModel.shiftToFather(familyTreeData)
-    viewModel.shiftToChildMaleRoot(familyTreeData)
-    testPositions(viewModel, expectedIdsInit)
-  })
-  
-  test.skip('correctly places people pair data after shiftToChildFemaleRoot()', () => {
-    setActivePinia(createPinia())
-    const viewModel = useViewModelStore()
-    viewModel.initialize(configData)
-    viewModel.populate(familyTreeData)
-    viewModel.shiftToMother(familyTreeData)
-    viewModel.shiftToChildFemaleRoot(familyTreeData)
-    testPositions(viewModel, expectedIdsInit)
-  })
 })
