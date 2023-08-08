@@ -4,9 +4,6 @@
 import { toggleVisibility } from './toggle-component-visibility'
 import { shiftPeople } from '../view-model-methods/shift-people.js'
 
-import {
-} from '../view-model-constants'
-
 export const shiftSet = (viewModel, familyTree, shiftMode) => {
   toggleVisibility(viewModel, 'show-ghost-components')
   shiftPeople(viewModel, familyTree, shiftMode)

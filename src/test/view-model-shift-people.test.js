@@ -10,6 +10,8 @@ import { useViewModelStore } from '../stores/viewModelStore'
 import { viewModelConfig as configData } from '../view-model-constants'
 import { familyTreeData } from '../data/family-tree-data.js'
 
+import { shiftSet } from '../view-model-methods/shift-view-set'
+
 describe('correctly shifts people to new positions', () => {
 
   const testPositions = (viewModel, expectedData) => {
@@ -34,7 +36,7 @@ describe('correctly shifts people to new positions', () => {
     const viewModel = useViewModelStore()
     viewModel.initialize(configData)
     viewModel.populate(familyTreeData)
-    viewModel.shiftToFather(familyTreeData)
+    shiftSet(viewModel, familyTreeData, 'toFather')
     testPositions(viewModel, expectedIdsToFather)
   })
   
@@ -43,27 +45,27 @@ describe('correctly shifts people to new positions', () => {
     const viewModel = useViewModelStore()
     viewModel.initialize(configData)
     viewModel.populate(familyTreeData)
-    viewModel.shiftToMother(familyTreeData)
+    shiftSet(viewModel, familyTreeData, 'toMother')
     testPositions(viewModel, expectedIdsToMother)
   })
   
-  test.skip('correctly places people pair data after shiftToChildMaleRoot()', () => {
+  test('correctly places people pair data after shiftToChildMaleRoot()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData)
     viewModel.populate(familyTreeData)
-    viewModel.shiftToFather(familyTreeData)
-    viewModel.shiftToChildMaleRoot(familyTreeData)
+    shiftSet(viewModel, familyTreeData, 'toFather')
+    shiftSet(viewModel, familyTreeData, 'toChildMaleRoot')
     testPositions(viewModel, expectedIdsInit)
   })
   
-  test.skip('correctly places people pair data after shiftToChildFemaleRoot()', () => {
+  test('correctly places people pair data after shiftToChildFemaleRoot()', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData)
     viewModel.populate(familyTreeData)
-    viewModel.shiftToMother(familyTreeData)
-    viewModel.shiftToChildFemaleRoot(familyTreeData)
+    shiftSet(viewModel, familyTreeData, 'toMother')
+    shiftSet(viewModel, familyTreeData, 'toChildFemaleRoot')
     testPositions(viewModel, expectedIdsInit)
   })
 })
