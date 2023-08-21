@@ -10,7 +10,7 @@ export const injectIdsIntoPairs = (viewModel, rows) => {
     let label = null
     let pairObject = null
 
-  rows.forEach( (row, index1) => {
+    rows.forEach( (row, index1) => {
       row.forEach( (personId, index2) => {
         label = pairLabelMap[index1][index2]
         pairObject = viewModel.peoplePairs.find(pair => pair.label === label)
