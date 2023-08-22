@@ -38,7 +38,7 @@ describe('shiftMove() changes location related classes for ghost components', ()
   })
   
   // Currently skipping because shift() function is not complete.
-  test.skip('shiftMove(toChildMaleRoot) correctly changes location related classes', () => {
+  test('shiftMove(toChildMaleRoot) correctly changes location related classes', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData)
@@ -50,7 +50,7 @@ describe('shiftMove() changes location related classes for ghost components', ()
   })
   
   // Currently skipping because shift() function is not complete.
-  test.skip('shiftMove(toChildFemaleRoot) correctly changes location related classes', () => {
+  test('shiftMove(toChildFemaleRoot) correctly changes location related classes', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData)

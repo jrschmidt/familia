@@ -57,7 +57,7 @@ export const expectedToChildFemaleRoot = {
     ['cnx-3-7', ['cnx-3-7', 'static', 'no-show']],
     
     // ghost connectors:
-    ['cnx-0-0-ghost', ['cnx-1-0', 'ghost', 'visible']],
+    ['cnx-0-0-ghost', ['cnx-1-1', 'ghost', 'visible']],
     ['cnx-1-0-ghost', ['cnx-2-2', 'ghost', 'visible']],
     ['cnx-1-1-ghost', ['cnx-2-3', 'ghost', 'visible']],
     ['cnx-2-0-ghost', ['cnx-3-4', 'ghost', 'visible']],

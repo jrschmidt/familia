@@ -30,7 +30,7 @@ describe('shiftSet() toggles component visibility for static and ghost component
   })
   
   // Currently skipping because shift() function is not complete.
-  test.skip('shiftSet(toChildMaleRoot) toggles component visibility', () => {
+  test('shiftSet(toChildMaleRoot) toggles component visibility', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData)
@@ -41,7 +41,7 @@ describe('shiftSet() toggles component visibility for static and ghost component
   })
   
   // Currently skipping because shift() function is not complete.
-  test.skip('shiftSet(toChildFemaleRoot) toggles component visibility', () => {
+  test('shiftSet(toChildFemaleRoot) toggles component visibility', () => {
     setActivePinia(createPinia())
     const viewModel = useViewModelStore()
     viewModel.initialize(configData)
