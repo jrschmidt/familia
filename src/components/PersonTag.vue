@@ -9,6 +9,15 @@ const props = defineProps({
   personId: String
 })
 
+import { ref } from 'vue'
+import { useFamilyTreeStore } from '../stores/familyTreeStore'
+
+const familyTree = useFamilyTreeStore()
+
+// use getter from familyTreeStore ...
+// const personInfo = 
+// use getter from familyTreeStore ...
+
 
 // <p class="year">{{ getBirthYearLabel(personData) }}</p>
 // <p class="year">{{ getDeathYearLabel(personData) }}</p>
