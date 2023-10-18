@@ -5,9 +5,9 @@
 // pair and connector components, and change people in people pair components,
 // to effect the changes in the family tree display.
 
-import { shiftSet } from '../view-model-methods/shift-view-set'
-import { shiftMove } from '../view-model-methods/shift-view-move'
-import { shiftReset } from '../view-model-methods/shift-view-reset'
+import { shiftSet } from './shift-view-set'
+import { shiftMove } from './shift-view-move'
+import { shiftReset } from './shift-view-reset'
 
 export const shiftTree = (viewModel, familyTree, shiftMode) => {
   shiftSet(viewModel, familyTree, shiftMode)

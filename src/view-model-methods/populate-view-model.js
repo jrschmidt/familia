@@ -5,9 +5,9 @@
 
 import { pairLabelMap } from '../view-model-constants'
 
-import { rowsPopulate } from '../view-model-methods/rows-populate.js'
-import { injectIdsIntoPairs } from '../view-model-methods/inject-ids-into-pairs.js'
-import { copyPeopleIdsToGhosts } from '../view-model-methods/copy-people-ids-to-ghosts.js'
+import { rowsPopulate } from './rows-populate.js'
+import { injectIdsIntoPairs } from './inject-ids-into-pairs.js'
+import { copyPeopleIdsToGhosts } from './copy-people-ids-to-ghosts.js'
 
 export const populateViewModel = (viewModel, familyTree) => {
   viewModel.storeStatus = 'populated'
