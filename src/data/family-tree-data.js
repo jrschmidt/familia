@@ -15,8 +15,8 @@ export const familyTreeData = {
         birthdate: '07-may-1957',
         fatherId: 'p0002',
         motherId: 'p0017',
-        spouseId: null,
-        childId: null
+        spouseId: 'p701',
+        childId: 'p901'
       },
 
     p0002:
@@ -885,6 +885,454 @@ export const familyTreeData = {
         motherId: null,
         spouseId: 'p0531',
         childId: 'p0031'
+      },
+
+    p701:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p702',
+        motherId: 'p703',
+        spouseId: 'p001',
+        childId: 'p901'
+      },
+
+    p702:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p704',
+        motherId: 'p705',
+        spouseId: 'p703',
+        childId: 'p701'
+      },
+
+    p703:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p706',
+        motherId: 'p707',
+        spouseId: 'p702',
+        childId: 'p701'
+      },
+
+    p704:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p708',
+        motherId: 'p709',
+        spouseId: 'p705',
+        childId: 'p702'
+      },
+
+    p705:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p710',
+        motherId: 'p711',
+        spouseId: 'p704',
+        childId: 'p702'
+      },
+
+    p706:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p712',
+        motherId: 'p713',
+        spouseId: 'p707',
+        childId: 'p703'
+      },
+
+    p707:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p714',
+        motherId: 'p715',
+        spouseId: 'p706',
+        childId: 'p703'
+      },
+
+    p708:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p716',
+        motherId: 'p717',
+        spouseId: 'p709',
+        childId: 'p704'
+      },
+
+    p709:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p718',
+        motherId: 'p719',
+        spouseId: 'p708',
+        childId: 'p704'
+      },
+
+    p710:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p720',
+        motherId: 'p721',
+        spouseId: 'p711',
+        childId: 'p705'
+      },
+
+    p711:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p722',
+        motherId: 'p723',
+        spouseId: 'p710',
+        childId: 'p705'
+      },
+
+    p712:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p724',
+        motherId: 'p725',
+        spouseId: 'p713',
+        childId: 'p706'
+      },
+
+    p713:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p726',
+        motherId: 'p727',
+        spouseId: 'p712',
+        childId: 'p706'
+      },
+
+    p714:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p728',
+        motherId: 'p729',
+        spouseId: 'p715',
+        childId: 'p707'
+      },
+
+    p715:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p730',
+        motherId: 'p731',
+        spouseId: 'p714',
+        childId: 'p707'
+      },
+
+    p716:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p717',
+        childId: 'p708'
+      },
+
+    p717:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p716',
+        childId: 'p708'
+      },
+
+    p718:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p719',
+        childId: 'p709'
+      },
+
+    p719:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p718',
+        childId: 'p709'
+      },
+
+    p720:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p721',
+        childId: 'p710'
+      },
+
+    p721:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p720',
+        childId: 'p710'
+      },
+
+    p722:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p723',
+        childId: 'p711'
+      },
+
+    p723:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p722',
+        childId: 'p711'
+      },
+
+    p724:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p725',
+        childId: 'p712'
+      },
+
+    p725:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p724',
+        childId: 'p712'
+      },
+
+    p726:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p727',
+        childId: 'p713'
+      },
+
+    p727:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p726',
+        childId: 'p713'
+      },
+
+    p728:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p729',
+        childId: 'p714'
+      },
+
+    p729:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p728',
+        childId: 'p714'
+      },
+
+    p730:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p731',
+        childId: 'p715'
+      },
+
+    p731:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'female',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: null,
+        motherId: null,
+        spouseId: 'p730',
+        childId: 'p715'
+      },
+
+    p901:
+      {
+        firstname: '',
+        lastname: '',
+        gender: 'male',
+        generation: -1,
+        birthdate: '1701',
+        deathdate: '1799',
+        fatherId: 'p001',
+        motherId: 'p701',
+        spouseId: null,
+        childId: null
       }
     }
 
